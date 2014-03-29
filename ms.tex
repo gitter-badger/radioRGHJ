@@ -77,7 +77,7 @@
 %
 David S. Spiegel\altaffilmark{1} \\
 %
-and some order: \\
+{\bf and some order:} \\
 %
 Nikku Madhusudhan\altaffilmark{?} [Add correct affiliation] \\
 %
@@ -112,7 +112,7 @@ dave@ias.edu
   planet passing through the dense winds of its AGB host can capture
   stellar wind in its magnetosphere.  The cyclotron frequency of
   electrons from the stellar wind accreting onto the planet scales as
-  100~MHz~$(B/3 {\rm~Gauss})$.  Such a planet might generate a radio
+  100~MHz~$(B/30 {\rm~Gauss})$.  Such a planet might generate a radio
   luminosity that would be visible from kiloparsec distances.
 \end{abstract}
 
@@ -127,6 +127,16 @@ dave@ias.edu
 \label{sec:intro}
 
 % fix
+When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
+they go through stages on the red-giant branch (RGB) and the
+asymptotic-giant branch (AGB) when their radii and luminosities
+increase by orders of magnitude.  Jovian planets in orbit around such
+stars can be transiently heated to hot-Jupiter temperatures
+($\sim$1000~K or more) at distances out to tens of AU, depending on
+the star's mass.  These planets' existence was predicted by
+\citet{spiegel+madhusudhan2012} and we will refer to them as
+``red-giant hot Jupiters'' (RGHJs).
+
 Roughly 20\% of the more than 700 currently known
 exoplanets\footnote{See online catalogs such as
   http://www.openexoplanetcatalogue.com/ \citep{rein2012},
@@ -139,7 +149,7 @@ the hot Neptune
 
 The cyclotron frequency is
 \begin{equation}
-f_{\rm cyclotron} = \frac{eB}{2\pi m_e c} \approx 3 {\rm~MHz} \left( \frac{B}{1 \rm~G} \right) \, .
+f_{\rm cyclotron} = \frac{eB}{2\pi m_e c} \approx 2.8 {\rm~MHz} \left( \frac{B}{1 \rm~G} \right) \, .
 \label{eq:cyc}
 \end{equation}
 For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
@@ -225,10 +235,10 @@ d_A & = & d_0 \left( \frac{B_0^2 r^2}{\dot{M}_* v} \right)^{1/6} \\
   & \sim & 4 R_J \left( \frac{d_0}{R_J}\right) \left\{ \frac{\left( \frac{B}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^2}{\left( \frac{\dot{M}_*}{10^{-6} M_\odot/\rm yr} \right) \left( \frac{v}{20 \rm~km/s} \right)} \right\}^{1/6}
 \label{eq:Chapman-Ferraro}
 \end{eqnarray}
-In the above, $d_A$ is the distance away from the planet where the
-magnetic energy density equals the kinetic energy density in the
-stellar wind, if $B_0$ is the magnetic field strength at distance
-$d_0$.
+In the above, $d_A$ is the distance from the planet to the Alfven
+point, where the magnetic energy density $u_B = B^2 / 8\pi$ equals the
+kinetic energy density in the stellar wind $u_w = \rho v^2/2$, and
+$B_0$ is the magnetic field strength at distance $d_0$.
 
 The escape speed is
 \begin{equation}
