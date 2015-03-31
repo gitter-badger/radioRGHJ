@@ -14,7 +14,9 @@
 
 \bibliographystyle{apj}
 
-\def\memo#1{\color{red}$[${\bf #1}$]$ \color{black}}
+\def\memoYF#1{\color{red}$[${\bf #1}$]$ \color{black}}
+
+\def\memoDS#1{\color{blue}$[${\bf #1}$]$ \color{black}}
 
 \def\plotonesc#1{\centering \leavevmode
 \includegraphics[clip=, width=1.70\columnwidth]{#1}}
@@ -141,12 +143,12 @@ dave@ias.edu
 \label{sec:intro}
 
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
-It has been known that Jupiter emits radio wave around 20 MHz due to the interaction with plasmas from the satellite Io \memo{?}, and 100-3000 MHz, which is cyclotron radiation from electrons that are accelerated in Jupiter's magnetic field \memo{?}. 
+It has been known that Jupiter emits radio wave around 20 MHz due to the interaction with plasmas from the satellite Io \memoYF{?}, and 100-3000 MHz, which is cyclotron radiation from electrons that are accelerated in Jupiter's magnetic field \memoYF{?}. 
 Similarly, large exoplanets can emit radio waves, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
 Radio emission from exoplanets have been estimated taking account of several possible processes \citep{griebmeier2007}, and the search for these radio signatures are being conducted. 
 %In general, there are four proposed models for a planet to emit radio wave \citep{griebmeier2007}: 1) the magnetic energy model, 2) kinetic energy model, 3) CME model, and 4) the unipolar interaction model. 
 %The search for these radio emissions from extrasolar Jovian planets has been performed. 
-While some indications were obtained \memo{?} \citep{lecavelier_et_al2013},  there is no clear detection claimed so far. 
+While some indications were obtained \memoYF{?} \citep{lecavelier_et_al2013},  there is no clear detection claimed so far. 
 
 
 %It has been predicted that
@@ -158,21 +160,21 @@ increase by orders of magnitude.
 
 
 
-Not only luminous, red giants lose their masses at high rate, typically $\sim  10^{-8} M_{\odot }$/yr \citep{judge1991} \memo{How these values are observationally obtained?} \memo{Dave mentioned $\sim  10^{-5} M_{\odot }$/yr, where does this come from?} through massive (but slow) stellar wind \citep{suzuki2008} \memo{cite more papers?}. 
+Not only luminous, red giants lose their masses at high rate, typically $\sim  10^{-8} M_{\odot }$/yr \citep{judge1991} \memoYF{How these values are observationally obtained?} \memoYF{Dave mentioned $\sim  10^{-5} M_{\odot }$/yr, where does this come from?} through massive (but slow) stellar wind \citep{suzuki2008} \memoYF{cite more papers?}. 
 Jovian planets in orbit around such
 stars can be transiently heated to hot-Jupiter temperatures
 ($\sim$1000~K or more) at distances out to tens of AU, depending on
 the star's mass. These planets' existence was predicted by
 \citet{spiegel+madhusudhan2012} and we will refer to them as
 ``red-giant hot Jupiters'' (RGHJs). 
-When massive stellar wind reach the planetary magnetosphere standoff points  \memo{??}, they presumably deposit part of their energy generating bright radio emission. 
+When massive stellar wind reach the planetary magnetosphere standoff points  \memoYF{??}, they presumably deposit part of their energy generating bright radio emission. 
 In this paper, we examine the radio brightness of RGHJs. 
 
 
 %Red giants lose their masses at a high rate, typically $\sim  10^{-5} M_{\odot }/yr $ through massive stellar wind. These stellar wind particle can 
 
 
-%Roughly 20\% of the more than 700 \memo{check!} currently known exoplanets around main-sequence stars \footnote{See online catalogs such as http://www.openexoplanetcatalogue.com/ \citep{rein2012}, http://exoplanet.eu \citep{schneider_et_al2011}, or http://exoplanets.org \citep{wright_et_al2011} for up-to-date lists.} have masses greater than half of Jupiter's, orbital radii greater than 1~AU, and will become hot Jupiters (i.e., for the present purposes, this means they will receive at least as much irradiation as the currently known hot Jupiters/Neptunes \citep{spiegel+madhusudhan2012}. 
+%Roughly 20\% of the more than 700 \memoYF{check!} currently known exoplanets around main-sequence stars \footnote{See online catalogs such as http://www.openexoplanetcatalogue.com/ \citep{rein2012}, http://exoplanet.eu \citep{schneider_et_al2011}, or http://exoplanets.org \citep{wright_et_al2011} for up-to-date lists.} have masses greater than half of Jupiter's, orbital radii greater than 1~AU, and will become hot Jupiters (i.e., for the present purposes, this means they will receive at least as much irradiation as the currently known hot Jupiters/Neptunes \citep{spiegel+madhusudhan2012}. 
 
 
 
@@ -183,7 +185,8 @@ In this paper, we examine the radio brightness of RGHJs.
 
 \subsection{Properties for Stellar Wind of RGs}
 
-The mass loss rate of the stellar wind can be estimated from observation \memo{How?}. For the known red giants, the values are typically $\dot M \sim 10^{-8} M_{\odot}$/yr, significantly greater than the solar mass-loss rate $\sim 10^{-14} M_{\odot}$/yr. 
+The mass loss rate of the stellar wind can be estimated from observation \memoYF{How?}.
+For the known red giants, the values are typically $\dot M \sim 10^{-8} M_{\odot}$/yr, significantly greater than the solar mass-loss rate $\sim 10^{-14} M_{\odot}$/yr. \memoDS{Can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases.  I'm calling it ``red giant'' but we're really thinking of AGB stars for maximum mass-loss and brightness.}
 \begin{equation}
 \frac{\dot M}{\dot M_{\odot}} \sim 10^6
 \end{equation}
@@ -229,11 +232,11 @@ f_{\rm plasma} &=& \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
 &\approx & 4\mbox{MHz} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
 \end{eqnarray}
 
-...OK!\memo{double-check}
+...OK!\memoYF{double-check}
 
 \subsection{Estimates of intensity}
 
-According to \citet{griebmeier2007} \memo{The following equations are quoted from the paper. Needs to elaborate. }
+According to \citet{griebmeier2007} \memoYF{The following equations are quoted from the paper. Needs to elaborate. }
 \begin{enumerate}
 \item kinetic energy model
 \begin{equation}
@@ -255,7 +258,7 @@ $r_s$ is determined by the balance between the magnetic pressure of planetary ma
 r_s = \left[ \frac{\mu_0 f_0^2 \mathcal{M}}{8\pi^2 (m_p n(d) v(d)^2 + 2 n(d) k_B T)} \right]^{1/6}
 \end{equation}
 where $\mathcal{M}$ is the planetary magnetic moment and $m_p$ is the proton mass. 
-In the following arguments based on Dave's sketch, the second term in the denominator is ignored. This is valid for Solar wind where the first term is larger than the second term by 2 orders of magnitude. \memo{check!}}. Thus, 
+In the following arguments based on Dave's sketch, the second term in the denominator is ignored. This is valid for Solar wind where the first term is larger than the second term by 2 orders of magnitude. \memoYF{check!}}. Thus, 
 \begin{equation}
 \frac{m_p n v ^2}{2} = \frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6} 
 \end{equation}
@@ -275,7 +278,7 @@ P_{\rm inp} &=& P_{\rm inp, J} \left(\frac{\dot M }{\dot M_{\odot }} \right) \le
 \end{eqnarray}
 
 
-\memo{Following arguments are based on \citep{griebmeier2007}. }
+\memoYF{Following arguments are based on \citep{griebmeier2007}. }
 Assuming $P_{\rm inp, J} = 2.1\times 10^{11}$ W \citep{griebmeier2007}, observed RGHJ radio emission at distance $l$ is
 \begin{eqnarray}
 P_{\rm ons} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
