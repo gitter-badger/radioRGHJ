@@ -1,0 +1,322 @@
+\documentclass{emulateapj}
+
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{rotating}
+\usepackage{natbib}
+%\usepackage{lscape}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{appendix}
+\usepackage{comment}
+
+\bibliographystyle{apj}
+
+\def\plotonesc#1{\centering \leavevmode
+\includegraphics[clip=, width=1.70\columnwidth]{#1}}
+\def\plotoneh#1{\centering \leavevmode
+\includegraphics[clip=, width=.95\columnwidth]{#1}}
+\def\plotone#1{\centering \leavevmode
+\includegraphics[clip=, width=.85\columnwidth]{#1}}
+\def\plotoneShrinkSmall#1{\centering \leavevmode
+\includegraphics[clip=, width=.49\columnwidth]{#1}}
+\def\plotoneShrinkMed#1{\centering \leavevmode
+\includegraphics[clip=, width=.55\columnwidth]{#1}}
+\def\plotoneShrinkBig#1{\centering \leavevmode
+\includegraphics[clip=, width=.65\columnwidth]{#1}}
+\def\plottwo#1#2{\centering \leavevmode
+\includegraphics[width=.45\columnwidth]{#1} \hfil
+\includegraphics[width=.45\columnwidth]{#2}}
+\def\plottwob#1#2{\centering \leavevmode
+\includegraphics[width=.49\columnwidth]{#1} \hfil
+\includegraphics[width=.49\columnwidth]{#2}}
+\def\plottwor#1#2{\centering \leavevmode
+\includegraphics[width=.55\columnwidth,angle=90]{#1} \hfil
+\includegraphics[width=.55\columnwidth,angle=90]{#2}}
+\def\plotthree#1#2#3{\centering \leavevmode
+\includegraphics[width=.3\columnwidth]{#1} \hfil
+\includegraphics[width=.3\columnwidth]{#2} \hfil
+\includegraphics[width=.3\columnwidth]{#3}}
+
+\newcommand{\cN}[1]{\mathcal{N}}
+\newcommand{\pn}[1]{\mbox{$(#1)$}}
+\newcommand{\spa}{\mbox{ }}
+\def\gsim{\;\rlap{\lower 2.5pt
+ \hbox{$\sim$}}\raise 1.5pt\hbox{$>$}\;}
+\def\lsim{\;\rlap{\lower 2.5pt
+   \hbox{$\sim$}}\raise 1.5pt\hbox{$<$}\;}
+
+% set formatting properties
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\hoffset}{0.0in}
+\setlength{\voffset}{-0.4in}
+%\setlength{\voffset}{0.3in}
+\parindent 0.2in
+\parskip 0.1in
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE DOCUMENT BEGINS HERE                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\slugcomment{Submitted to ApJ, 20 October 2011}
+
+\begin{document}
+
+
+%%% Begin front material
+%\twocolumn[%%% Begin front material
+
+\title{Red-Giant Hot Jupiters: Brilliant Radio Beacons}
+
+
+\author{
+%
+David S. Spiegel\altaffilmark{1, 2} \\
+%
+{\bf and some order:} \\
+%
+Jason Nordhaus\altaffilmark{3} \\
+%
+Nikku Madhusudhan\altaffilmark{4} \\
+%
+Mehrdad Mirbabayi\altaffilmark{1} \\
+%
+Aaron Parsons\altaffilmark{5} \\
+%
+Tony Mroczkowski\altaffilmark{6} \\
+%
+Neil Zimmerman\altaffilmark{7}
+}
+
+\affil{$^1$Astrophysics Department, Institute for Advanced Study,
+  Princeton, NJ 08540}
+
+\affil{$^2$Research \& Development, Project Florida Labs,
+  New York, NY  10001}
+
+\affil{$^2$Department of Mathematics, Rochester Institute of Technology}
+
+\affil{$^3$Astronomy Department, University of Cambridge, UK}
+
+\affil{$^4$Astronomy Department, UC Berkeley}
+
+\affil{$^5$Naval Research Laboratory}
+
+\affil{$^6$Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ 08544}
+
+
+\vspace{0.5\baselineskip}
+
+\email{
+dave@ias.edu
+}
+
+
+\begin{abstract}
+  Red-giant hot Jupiters are jovian planets orbiting red-giant-branch
+  or asymptotic-giant-branch (AGB) stars.  Post-main-sequence stars
+  lose mass at much higher rates than main-sequence stars.  A jovian
+  planet passing through the dense winds of its AGB host can capture
+  stellar wind in its magnetosphere.  The cyclotron frequency of
+  electrons from the stellar wind accreting onto the planet scales as
+  100~MHz~$(B/30 {\rm~Gauss})$.  Such a planet might generate a radio
+  luminosity that would be visible from kiloparsec distances.
+\end{abstract}
+
+
+\keywords{planets and satellites: Jupiter --- Sun: evolution ---
+  planetary systems --- radiative transfer --- stars: evolution ---
+  stars: AGB and post-AGB}
+%]%%% End front material
+
+
+\section{Introduction}
+\label{sec:intro}
+
+% fix
+When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
+they go through stages on the red-giant branch (RGB) and the
+asymptotic-giant branch (AGB) when their radii and luminosities
+increase by orders of magnitude.  Jovian planets in orbit around such
+stars can be transiently heated to hot-Jupiter temperatures
+($\sim$1000~K or more) at distances out to tens of AU, depending on
+the star's mass.  These planets' existence was predicted by
+\citet{spiegel+madhusudhan2012} and we will refer to them as
+``red-giant hot Jupiters'' (RGHJs).
+
+Roughly 20\% of the more than 700 currently known
+exoplanets\footnote{See online catalogs such as
+  http://www.openexoplanetcatalogue.com/ \citep{rein2012},
+  http://exoplanet.eu \citep{schneider_et_al2011}, or
+  http://exoplanets.org \citep{wright_et_al2011} for up-to-date
+  lists.} have masses greater than half of Jupiter's, orbital radii
+greater than 1~AU, and will become hot Jupiters (i.e., for the present
+purposes, this means they will receive at least as much irradiation as
+the hot Neptune
+
+The cyclotron frequency is
+\begin{equation}
+f_{\rm cyclotron} = \frac{eB}{2\pi m_e c} \approx 2.8 {\rm~MHz} \left( \frac{B}{1 \rm~G} \right) \, .
+\label{eq:cyc}
+\end{equation}
+For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
+the cyclotron frequency will be in the range $\sim$75-150~MHz.
+
+\citep{spiegel2008}
+
+\citep{lecavelier_et_al2013}
+
+\citep{janhunen_et_al2003}
+
+\citep{zarka1992, zarka1998}
+
+\citep{farrell_et_al2004}
+
+\citep{lazio+farrell2007}: likelihood function, tau Boo search
+
+\citep{lecavelier_et_al2009}
+
+\citep{spiegel2012}
+
+\citep{nordhaus+spiegel2013}
+
+\citep{spiegel+madhusudhan2012}
+
+\citep{jiang+jin1996}: 12cm radio of Jupiter during Shoemake-Levy-9
+
+\citep{morin2012, morin_et_al2013}
+
+\citep{christensen_et_al2009, christensen2010}
+
+\citep{saar2001}: Inverse rossby number scaling of magnetic field: $B
+\sim 60 {\rm~G} \times Ro^{-1.2}$.  Here, he takes $Ro = \tau_c/P_{\rm
+  rot}$, where $\tau_c$ is the convective turnover time = ?
+\citep{gilliland1986}.  Well, $F \sim \rho v_c^3 \sim \rho
+(H/\tau_c)^3$, so $\tau_c \sim H (\rho / F)^{1/3} = H / (\sigma T_{\rm
+  eff}^4 / \rho)^{1/3}$.  Alternatively, $\tau_{\rm conv} \sim (M R^2
+/ L)^{1/3}$.
+
+On dimensional grounds, the convective turnover time goes as
+$\tau_{\rm conv} \sim (M R^2 / L)^{1/3}$.  According to
+\citet{burrows_et_al2001}, radius $R$ and luminosity scale with time
+as $R \sim R_J$, where $R_J$ is the radius of Jupiter, and
+\begin{equation}
+\frac{L}{10^{-9} L_\odot} \sim \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M}{1~M_J} \right)^{2.64} \, .
+\label{eq:burrowsLum}
+\end{equation}
+So,
+%\begin{eqnarray}
+%\nonumber \tau_{\rm conv} & \sim & 3 {\rm~days} \times \left( \frac{M}{M_J} \right)^{1/3} \left( \frac{R}{R_J} \right)^{2/3} \left( \frac{L}{L_\odot} \right)^{-1/3} \\
+% & = & 
+%\end{eqnarray}
+\begin{eqnarray}
+\nonumber \tau_c & \sim & 3 {\rm~hrs} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{L}{10^{-9} L_\odot} \right)^{1/3}} \\
+ & = & 3 {\rm~hrs} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{M}{1 ~M_J} \right)^{0.88} \left( \frac{t}{1 \rm~Gyr} \right)^{0.43}} \\
+\end{eqnarray}
+So the Rossby number $Ro = \tau_c/P_{\rm rot}$ is
+\begin{eqnarray}
+Ro & = & \frac{\tau_c}{P_{\rm rot}} \\
+ & = & \left( \frac{P_{\rm rot}}{3 \rm~hrs} \right)^{-1} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{M}{1 ~M_J} \right)^{0.88} \left( \frac{t}{1 \rm~Gyr} \right)^{0.43}}
+\end{eqnarray}
+
+\citep{hallinan_et_al2013}
+
+\citep{desch+kaiser1984} radiometric Bode's law
+
+Noting that
+\begin{equation}
+\dot{M}_* = 4\pi r^2 \rho[r] v \, ,
+\label{eq:mdot
+}\end{equation}
+so $\rho[r] = \dot{M}_*/(4\pi r^2 v)$,
+\begin{eqnarray}
+\frac{\rho v^2}{2} = \frac{B^2}{8\pi} \sim \frac{B_0^2}{8\pi} \left( \frac{d}{d_0} \right)^{-3} \, ,
+\end{eqnarray}
+where $B_0$ is the field strength at a distance $d_0$ from the planet.
+\begin{eqnarray}
+\frac{\rho v^2}{2} & \sim & \frac{B_0^2}{8\pi} \left( \frac{d}{d_0} \right)^{-6} \\
+\frac{\dot{M}_* v}{8\pi a^2} & = & \frac{B_0^2}{8\pi} \left( \frac{d}{d_0} \right)^{-6} \\
+\frac{\dot{M}_* v}{r^2} & = & B_0^2 \left( \frac{d}{d_0} \right)^{-6} \\
+d^6 & = & \frac{d_0^6 B_0^2 r^2}{\dot{M}_* v} \\
+d_A & = & d_0 \left( \frac{B_0^2 r^2}{\dot{M}_* v} \right)^{1/6} \\
+  & \sim & 4 R_J \left( \frac{d_0}{R_J}\right) \left\{ \frac{\left( \frac{B}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^2}{\left( \frac{\dot{M}_*}{10^{-6} M_\odot/\rm yr} \right) \left( \frac{v}{20 \rm~km/s} \right)} \right\}^{1/6}
+\label{eq:Chapman-Ferraro}
+\end{eqnarray}
+In the above, $d_A$ is the distance from the planet to the Alfven
+point, where the magnetic energy density $u_B = B^2 / 8\pi$ equals the
+kinetic energy density in the stellar wind $u_w = \rho v^2/2$, and
+$B_0$ is the magnetic field strength at distance $d_0$.
+
+The escape speed is
+\begin{equation}
+v_{\rm esc}^* = \sqrt{\frac{2 G M_*}{R_*}} \, ,
+\end{equation}
+so if the stellar wind speed is a factor $C$ times the escape speed, then ...
+
+The power incident on the planet within $d_A$ is
+\begin{eqnarray}
+P_{\rm inc} & = & \frac{\rho v^3}{2} \times \pi d_A^2 \\
+\frac{\rho v^2}{2} & \sim & \frac{B_0^2}{8\pi} \left( \frac{d}{d_0} \right)^{-6} \\
+d_A^6 & = & d_0^6 \frac{B_0^2}{4\pi \rho v^2} \\
+d_A^2 & = & d_0^2 \left( \frac{B_0^2}{4\pi \rho v^2}\right)^{1/3} \\
+\pi d_A^2 \frac{\rho v^3}{2} & = & \frac{d_0^2}{2} \left( \frac{\pi^2 \rho^2 v^7 B_0^2}{4} \right)^{1/3} \\
+P_{\rm inc} & = & d_0^2 \left( \frac{\pi^2 \rho^2 v^7 B_0^2}{32} \right)^{1/3} 
+%\frac{\dot{M}_* v}{8\pi a^2} & = & \frac{B_0^2}{8\pi} \left( \frac{d}{d_0} \right)^{-6} \\
+%\frac{\dot{M}_* v}{r^2} & = & B_0^2 \left( \frac{d}{d_0} \right)^{-6} \\
+%d^6 & = & \frac{d_0^6 B_0^2 r^2}{\dot{M}_* v} \\
+%d_A & = & d_0 \left( \frac{B_0^2 r^2}{\dot{M}_* v} \right)^{1/6} \\
+%  & \sim & 4 d_0 \left\{ \frac{\left( \frac{B}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^2}{\left( \frac{\dot{M}_*}{10^{-6} M_\odot/\rm yr} \right) \left( \frac{v}{20 \rm~km/s} \right)} \right\}^{1/6}
+\end{eqnarray}
+Note that $\rho v = \dot{M}_*/4\pi r^2$.  Therefore,
+\begin{eqnarray}
+P_{\rm inc} & = & d_0^2 \left( \frac{\pi^2 \rho^2 v^7 B_0^2}{32} \right)^{1/3} \\
+ & = & d_0^2 \left( \frac{\dot{M}_*^2 v^5 B_0^2}{512 r^4} \right)^{1/3} \\
+ & = & \frac{d_0^2}{8} \left( \frac{\dot{M}_*^2 v^5 B_0^2}{r^4} \right)^{1/3} \\
+\nonumber  & \sim & 2 \times 10^{18} {\rm~W} \left( \frac{d_0}{R_J} \right)^2 \left( \frac{\dot{M}_*}{10^{-5} M_\odot / {\rm yr}} \right)^2 \\
+ & & \times \left( \frac{v}{20 \rm~km/s} \right)^5 \left( \frac{B_0}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^{-4}
+\end{eqnarray}
+
+
+The power incident on the planet is
+
+%\citep{lunine_et_al1989} -- error?
+
+% http://kiss.caltech.edu/workshops/magnetic2013/presentations/winterhalter.pdf
+
+%ftp://ftp.iwf.oeaw.ac.at/pub/Scherf/PRE-CD%20V2/pre6/nigl.pdf
+
+%%%%%%%%%%%%%%%%%%
+他のやること
+\begin{itemize}
+\item Are red giants illuminating in radio? (Jason)
+\item Will the electron spiraling and offset the magnetic field? (Mehrdad Mirababayi)
+\end{itemize}
+%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions}
+\label{sec:conc}
+
+\vspace{0.5in}
+
+%\acknowledgements
+
+{\sc Acknowledgments}
+
+We thank many people for useful discussions, in particular Tony
+Mroczkowzki.  DSS gratefully acknowledges support from a fellowship
+from the AMIAS group.  NM acknowledges support from [???].
+
+\newpage
+
+mehrdad
+\newpage
+\bibliography{biblio.bib}
+
+
+\clearpage
+
+\end{document}
