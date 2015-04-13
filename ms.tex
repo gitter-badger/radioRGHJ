@@ -158,7 +158,7 @@ increase by orders of magnitude.
 
 
 
-Not only luminous, red giants lose their masses at high rate, typically $\sim  10^{-8} M_{\odot }$/yr \citep{judge1991} \memo{How these values are observationally obtained?} \memo{Dave mentioned $\sim  10^{-5} M_{\odot }$/yr, where does this come from?} through massive (but slow) stellar wind \citep{suzuki2008} \memo{cite more papers?}. 
+Not only luminous, red giants lose their masses at high rate, typically $\sim  10^{-8} M_{\odot }$/yr \citep{judge1991} for RGs \memo{How these values are observationally obtained?}. \memo{Dave mentioned $\sim  10^{-5} M_{\odot }$/yr, where does this come from?} through massive (but slow) stellar wind \citep{suzuki2008} \memo{cite more papers?}. 
 Jovian planets in orbit around such
 stars can be transiently heated to hot-Jupiter temperatures
 ($\sim$1000~K or more) at distances out to tens of AU, depending on
@@ -166,7 +166,10 @@ the star's mass. These planets' existence was predicted by
 \citet{spiegel+madhusudhan2012} and we will refer to them as
 ``red-giant hot Jupiters'' (RGHJs). 
 When massive stellar wind reach the planetary magnetosphere standoff points  \memo{??}, they presumably deposit part of their energy generating bright radio emission. 
-In this paper, we examine the radio brightness of RGHJs. 
+
+In this paper, we examine the radio brightness of RGHJs, taking account of the increased stellar wind. 
+
+
 
 
 %Red giants lose their masses at a high rate, typically $\sim  10^{-5} M_{\odot }/yr $ through massive stellar wind. These stellar wind particle can 
@@ -183,12 +186,12 @@ In this paper, we examine the radio brightness of RGHJs.
 
 \subsection{Properties for Stellar Wind of RGs}
 
-The mass loss rate of the stellar wind can be estimated from observation \memo{How?}. For the known red giants, the values are typically $\dot M \sim 10^{-8} M_{\odot}$/yr, significantly greater than the solar mass-loss rate $\sim 10^{-14} M_{\odot}$/yr. 
+The mass loss rate of the stellar wind can be estimated from observation \memo{How?}. For the known red giants, the values are typically $\dot M \sim 10^{-8} M_{\odot}$/yr, and can be as much as $\sim  10^{-5} M_{\odot }$/yr for AGB stars, significantly greater than the solar mass-loss rate: $\sim 10^{-14} M_{\odot}$/yr. 
 \begin{equation}
 \frac{\dot M}{\dot M_{\odot}} \sim 10^6
 \end{equation}
 
-The stellar wind velocity is smaller because of the small escape velocity (due to expanded stellar radius)\footnote{Escape velocity is $\sqrt{2GM/r}$.}. Assuming that the stellar wind scales as the escape velocity, RGs with radius $R=100R_{\odot}$ have 10 times as slow stellar wind as that at the main sequence.
+The stellar wind velocity becomes smaller because of the small escape velocity (due to expanded stellar radius)\footnote{Escape velocity is $\sqrt{2GM/r}$.}. Assuming that the stellar wind scales as the escape velocity, RGs with radius $R=100R_{\odot}$ have 10 times as slow stellar wind as that at the main sequence.
 \begin{equation}
 \frac{v}{v_{\odot}} \sim 10^{-1}
 \end{equation}
@@ -201,32 +204,50 @@ The temperature of stellar wind of RGs is expected to be 2 orders of magnitude l
 
 \subsection{Properties for Planetary Magnetic Field}
 
-Scaling of magnetic field is found at
-\citet{griebmeier2007}
-\citet{griebmeier2004}
+Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
+%%%%%%%%%% 
+\begin{equation}
+\mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
+\end{equation}
+%%%%%%%%%%
+where $\omega $ is the spin angular velocity, $\rho _c$, $r_c$ and $\sigma $ are the density, the radius, and the conductivity of the ``dynamo region'' where the density is high enough for hydrogen to be metallic, respectively. 
+The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memo{validity?}
 
-Unlike usual hot jupiters, RGHJs are not subject to tidal lock, because the gravitational effects of their host star does not change even if the star evolves into red giants. 
+Unlike usual hot jupiters, RGHJs are not subject to tidal lock, because the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin period, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
 
-For the moment, let us assume Jovian magnetic field strength. 
+In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. We simply use the same model as \citet{griebmeier2004}, where the density as a function of radius from the center is described as:
+%%%%%%%%%% 
+\begin{equation}
+\rho (r) = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left( \pi \frac{r}{R_p} \right)}{\left( \pi \frac{r}{R_p} \right)} \label{eq:rho_r}
+\end{equation}
+%%%%%%%%%%
+and assume that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core is obtained by averaging the density in the core. 
 
+We assume that the conductivity $\sigma $ is the same as Jupiter \memo{?}. 
 
 \section{Estimates of Radio Emission from RGHJ}
 
 \subsection{Estimates of frequency}
 
 The cyclotron frequency is
-\begin{equation}
-f_{\rm cyclotron} = \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, .
-\label{eq:cyc}
-\end{equation}
+\begin{eqnarray}
+f_{\rm cyclotron} &=& \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, ,
+\label{eq:cyc} \\
+B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
+&\sim & 9.1 \mbox{[G]} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
+\end{eqnarray}
+%where $\mathcal{M}_J = 1.56 \times 10^{27} \mbox{A m}^2$. 
 For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
 the cyclotron frequency will be in the range $\sim$75-150~MHz.
+
+Since the 
+Figure \ref{fig:f_cyclotron} shows 
 
 The emission is observable only when the maximum frequency is larger than the plasma frequency of the surrounding stellar wind. 
 The plasma frequency is 
 \begin{eqnarray}
 f_{\rm plasma} &=& \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
-&\approx & 4\mbox{MHz} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
+&\approx & 4\mbox{[MHz]} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
 \end{eqnarray}
 
 ...OK!\memo{double-check}
@@ -268,9 +289,9 @@ r_s &=& R_p \left( \frac{B^2}{\pi \dot M v (1/4\pi d^2)} \right)^{1/6} = R_p \le
 
 Therefore, the radio emission expected from kinetic energy model (equation (\ref{eq:Pinp_kin})) is 
 \begin{eqnarray}
-P_{\rm inp} &=& P_{\rm inp, J} \left(\frac{\dot M }{\dot M_{\odot }} \right) \left(\frac{v}{v_{\odot}} \right) ^2 \left(\frac{d}{5 \rm{AU}} \right) ^{-2}  \left(\frac{r_s}{r_{s, {\rm J}}} \right)^2 \\
-&=& P_{\rm inp, J} \left(\frac{\dot M }{\dot M_{\odot }} \right)^{\frac{2}{3}} \left(\frac{v}{v_{\odot}} \right) ^{\frac{5}{3}} \left(\frac{d}{5 \rm{AU}} \right) ^{-2} \left(\frac{B}{B_J} \right)^{\frac{2}{3}} \\
-&\approx& 200 P_{\rm inp, J} \left(\frac{\dot M }{10^6 \dot M_{\odot }} \right)^{\frac{2}{3}} \left(\frac{v}{10^{-1} v_{\odot}} \right) ^{\frac{5}{3}} \\
+P_{\rm radio} &=& P_{\rm radio, J} \left(\frac{\dot M }{\dot M_{\odot }} \right) \left(\frac{v}{v_{\odot}} \right) ^2 \left(\frac{d}{5 \rm{AU}} \right) ^{-2}  \left(\frac{r_s}{r_{s, {\rm J}}} \right)^2 \\
+&=& P_{\rm radio, J} \left(\frac{\dot M }{\dot M_{\odot }} \right)^{\frac{2}{3}} \left(\frac{v}{v_{\odot}} \right) ^{\frac{5}{3}} \left(\frac{d}{5 \rm{AU}} \right) ^{-2} \left(\frac{B}{B_J} \right)^{\frac{2}{3}} \\
+&\approx& 200 P_{\rm radio, J} \left(\frac{\dot M }{10^6 \dot M_{\odot }} \right)^{\frac{2}{3}} \left(\frac{v}{10^{-1} v_{\odot}} \right) ^{\frac{5}{3}} \\
 && \;\;\;\;\; \;\;\;\;\; \times \left(\frac{d}{5 \rm{[AU]}} \right) ^{-4/3} \left(\frac{B}{10 \mbox{[G]}} \right)^{\frac{2}{3}} \
 \end{eqnarray}
 
@@ -278,7 +299,7 @@ P_{\rm inp} &=& P_{\rm inp, J} \left(\frac{\dot M }{\dot M_{\odot }} \right) \le
 \memo{Following arguments are based on \citep{griebmeier2007}. }
 Assuming $P_{\rm inp, J} = 2.1\times 10^{11}$ W \citep{griebmeier2007}, observed RGHJ radio emission at distance $l$ is
 \begin{eqnarray}
-P_{\rm ons} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
+P_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
 &\approx & 5\times 10^{-6} \mbox{Jy} \left( \frac{P_{\rm radio}}{P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{[pc]}} \right)^{-2} \left( \frac{B}{10\mbox{[G]}} \right) ^{-1} \\
 &\approx & 10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{[pc]}} \right)^{-2} \left( \frac{B}{10\mbox{[G]}} \right) ^{-1}
 \end{eqnarray}
