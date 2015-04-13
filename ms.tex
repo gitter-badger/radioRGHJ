@@ -80,6 +80,8 @@
 
 \author{
 %
+Yuka Fujii\altaffilmark{0} \\
+%
 David S. Spiegel\altaffilmark{1, 2} \\
 %
 {\bf and some order:} \\
@@ -97,6 +99,9 @@ Tony Mroczkowski\altaffilmark{6} \\
 Neil Zimmerman\altaffilmark{7}
 }
 
+\affil{$^0$Earth-Life Science Institute, Tokyo Institute of Technology, 
+  Tokyo, JAPAN, 152-8550}
+  
 \affil{$^1$Astrophysics Department, Institute for Advanced Study,
   Princeton, NJ 08540}
 
@@ -138,9 +143,10 @@ dave@ias.edu
   stars: AGB and post-AGB}
 %]%%% End front material
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
 It has been known that Jupiter emits radio wave around 20 MHz due to the interaction with plasmas from the satellite Io \memoYF{?}, and 100-3000 MHz, which is cyclotron radiation from electrons that are accelerated in Jupiter's magnetic field \memoYF{?}. 
@@ -182,13 +188,40 @@ In this paper, we examine the radio brightness of RGHJs, taking account of the i
 %Roughly 20\% of the more than 700 \memoYF{check!} currently known exoplanets around main-sequence stars \footnote{See online catalogs such as http://www.openexoplanetcatalogue.com/ \citep{rein2012}, http://exoplanet.eu \citep{schneider_et_al2011}, or http://exoplanets.org \citep{wright_et_al2011} for up-to-date lists.} have masses greater than half of Jupiter's, orbital radii greater than 1~AU, and will become hot Jupiters (i.e., for the present purposes, this means they will receive at least as much irradiation as the currently known hot Jupiters/Neptunes \citep{spiegel+madhusudhan2012}. 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Assumptions}
+\label{s:assumptions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Assumpsions}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Mechanisms}
+\label{ss:mechanisms}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+According to \citet{griebmeier2007} \memoYF{The following equations are quoted from the paper. Needs to elaborate. }
+\begin{enumerate}
+\item kinetic energy model
+\begin{equation}
+P_{\rm inp} \propto n v^3 r_s ^2 \label{eq:Pinp_kin}
+\end{equation}
+\item magnetic energy model:
+\begin{equation}
+P_{\rm inp} \propto v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag}
+\end{equation}
+\item CME model\\
+Not sure about CME for red giants. We don't consider?
+\item the unipolar interaction model\\
+??
+\end{enumerate}
+where $n$ and $v$ are density and velocity of stellar wind, respectively,  $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_s$ is the radius of magnetic standoff point. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Properties for Stellar Wind of RGs}
+\label{ss:stellarwind}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The mass loss rate of the stellar wind can be estimated from observation \memoYF{How?}.
 For the known red giants, the values are typically $\dot M \sim 10^{-8} M_{\odot}$/yr, and can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases, significantly greater than the solar mass-loss rate $\sim 10^{-14} M_{\odot}$/yr. 
@@ -209,8 +242,10 @@ The temperature of stellar wind of RGs is expected to be 2 orders of magnitude l
 \frac{T}{T_{\odot}} \sim 10^{-2}
 \end{equation}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Properties for Planetary Magnetic Field}
+\label{ss:planetarymagnetic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
 %%%%%%%%%% 
@@ -229,13 +264,25 @@ In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure
 \rho (r) = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left( \pi \frac{r}{R_p} \right)}{\left( \pi \frac{r}{R_p} \right)} \label{eq:rho_r}
 \end{equation}
 %%%%%%%%%%
-and assume that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core is obtained by averaging the density in the core. 
-
+where
+%%%%%%%%%% 
+\begin{equation}
+R_p (M_p) = \frac{(\alpha M_p)^{1/3}}{1+\left( \frac{M_p}{M_{\rm max}} \right)} \label{eq:Rp}
+\end{equation}
+%%%%%%%%%%
+with $\alpha =6/1 \times 10^{-4}$ \citep{griebmeier2007}. 
+We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
 We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
 
-\section{Estimates of Radio Emission from RGHJ}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estimates of Radio Emission from RGHJ}
+\label{s:estimate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Estimates of frequency}
+\label{ss:frequency}
 
 The cyclotron frequency is
 \begin{eqnarray}
@@ -248,8 +295,18 @@ B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
 For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
 the cyclotron frequency will be in the range $\sim$75-150~MHz.
 
-Since the 
-Figure \ref{fig:f_cyclotron} shows 
+Figure \ref{fig:f_cyclotron} shows the cyclotron frequency of the planetary magnetic field. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                                                                                               
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.7\hsize]{test_fcycrotron.eps}
+\end{center}
+\caption{Cyclotron frequency. (May be deleted eventually.)}
+\label{fig:f_cyclotron}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
 
 The emission is observable only when the maximum frequency is larger than the plasma frequency of the surrounding stellar wind. 
 The plasma frequency is 
@@ -258,26 +315,20 @@ f_{\rm plasma} &=& \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
 &\approx & 4\mbox{[MHz]} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
 \end{eqnarray}
 
-...OK!\memoYF{double-check}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                                                                                               
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.9\hsize]{test_observability.eps}
+\end{center}
+\caption{Where condition $f_{cyclotron}>f_{plasma}$. (May be deleted eventually.)}
+\label{fig:f_cyclotron}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Estimates of intensity}
-
-According to \citet{griebmeier2007} \memoYF{The following equations are quoted from the paper. Needs to elaborate. }
-\begin{enumerate}
-\item kinetic energy model
-\begin{equation}
-P_{\rm inp} \propto n v^3 r_s ^2 \label{eq:Pinp_kin}
-\end{equation}
-\item magnetic energy model:
-\begin{equation}
-P_{\rm inp} \propto v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag}
-\end{equation}
-\item CME model\\
-Not sure about CME for red giants. We don't consider?
-\item the unipolar interaction model\\
-??
-\end{enumerate}
-where $n$ and $v$ are density and velocity of stellar wind, respectively,  $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_s$ is the radius of magnetic standoff point. 
+\label{ss:intensity}
 
 $r_s$ is determined by the balance between the magnetic pressure of planetary magnetosphere and kinetic pressure of stellar wind\footnote{Precisely, the magnetic standoff point is described by equation (9) of \citet{griebmeier2007}, which is. 
 \begin{equation}
@@ -314,28 +365,46 @@ P_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
 where $\Omega $ is the solid angle of emission, which is assumed $\Omega = 1.6$. 
 
 
+Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                                                                                               
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.9\hsize]{test_radio.eps}
+\end{center}
+\caption{Intensity of radio emission. }
+\label{fig:radio}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Will the electron spiraling and offset the magnetic field? (Mehrdad Mirababayi)}
+\label{ss:offset}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{Discussion on Observability}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion on Observability}
+\label{s:discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Radio emission from red giants stars}
+\label{ss:RGradio}
 
 (Jason)
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \citet{gorman2013}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Expected population of RGHJ in the observable volume}
+\label{ss:number}
 
-
+\newpage
 
 
 \section{Dave's sketch}
