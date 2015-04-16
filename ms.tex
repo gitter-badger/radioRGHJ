@@ -152,7 +152,7 @@ dave@ias.edu
 
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
 It has been known that Jupiter emits radio emission from the radiation belt and auroral region due to the acceleration of the plasmas. \memoYF{?}. Potentially, large exoplanets can also emit radio waves through the similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
-Radio emissions from exoplanets have been estimated taking account of several possible processes, based on the empirical scaling of the radio intensity with the solar wind flux \citep{zarka2001,griebmeier2007,noyola2013}. 
+Radio emissions from exoplanets have been estimated taking account of several possible processes, based on the empirical scaling of the radio intensity with the solar wind flux \citep{zarka2001,griebmeier2007,noyola2014}. 
 Although the search for these radio signatures are being conducted, there is no clear detection claimed so far, while some indications were obtained \memoYF{?} \citep{lecavelier_et_al2013}. 
 %In general, there are four proposed models for a planet to emit radio wave \citep{griebmeier2007}: 1) the magnetic energy model, 2) kinetic energy model, 3) CME model, and 4) the unipolar interaction model. 
 %The search for these radio emissions from extrasolar Jovian planets has been performed. 
@@ -183,57 +183,137 @@ In \S2, we discuss the assumption we make in this paper.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Assumptions}
+\section{Model}
 \label{s:assumptions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{Frequency of Radio Emission}
+
+%Radio emission intensity of Solar System giant planets are empirically shown to be proportional to the kinetic energy or the magnetic energy of the solar wind,  which interacts with planetary magnetic field at the magnetic standoff cross section\citep[``radio Bode's law''; ][]{desch+kaiser1984}. 
+%The detail of the mechanism of energy transport from the energy source into the radio emission. 
+
+%\subsection{}
+The peak of the auroral radio emission is around the cyclotron frequency, of the planetary magnetic field $f_{\rm cyc}$: 
+%In our assumption, the frequency band width is assumed to be scaled with the cyclotron frequency, $f_{\rm cyc}$: 
+%%%
+\begin{eqnarray}
+f_{\rm cyc} &=& \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, ,
+\label{eq:cyc} \\
+B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
+&\sim & 9.1{\rm~G} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
+\end{eqnarray}
+%%%
+%where $\mathcal{M}_J = 1.56 \times 10^{27} \mbox{A m}^2$. 
+For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
+the cyclotron frequency will be in the range $\sim$75-150~MHz.
+
+Note that the emission is observable from ground only when the maximum frequency is larger than the plasma frequency of the Earth's ionosphere, $f_{\rm c1}\sim 10$~MHz {\it and} the maximum plasma frequency along the line of sight, $f_{\rm c2}$. 
+At the favorable condition where the planet is in the near side of the spherical plane, the maximum plasma frequency corresponds to that in the vicinity of the planet, $f_{\rm plasma}$. Therefore, 
+%%%
+\begin{eqnarray}
+f_{\rm c2} &=& f_{\rm plasma} = \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
+&\approx & 4{\rm~MHz} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
+\end{eqnarray}
+%%%
+
+\subsection{Flux of Radio Emission}
+
+The auroral radio flux of exoplanets observed at the Earth, $F_{\rm obs}$ can be expressed by:
+%Assuming $P_{\rm inp, J} = 2.1\times 10^{11}$ W \citep{griebmeier2007}, observed RGHJ radio emission at distance $l$ is
+%%%
+\begin{equation}
+F_{\rm obs} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
+\end{equation}
+%%%
+where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency band width. 
+
+We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission, following the procedure of \citet{griebmeier2007}. 
+This is based on the empirical good correlation between the radio emission intensity of Solar System giant planets and the input kinetic energy or the magnetic energy of the solar wind \citep[``radio Bode's law''; ][]{desch+kaiser1984}. 
+The scaling factors depend on the properties of the stellar wind and the planetary magnetic field, which are examined in \S\ref{ss:mechanisms}, \S\ref{ss:stellarwind}, and \S\ref{ss:magneticfield}. 
+%The detailed mechanism of auroral radio emission is not fully understand, 
+
+We assume that the solid angle of the emission is same as the Jupiter's one for all of the exoplanets. In reality, the solid angles of auroral radio emission from  Jupiter, Saturn, and Earth are $\sim 1.6$, $\sim $6.3, and $\sim $3.5, respectively \citep{desch+kaiser1984}, which are on the same order and will not significantly affect our order-of-magnitude estimate of radio emission. 
+
+The band width, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griebmeier2007}. 
+
+%Therefore, assuming that the solid angle of emission is same for all of the planets \citep{??}, 
+%%%
+%\begin{equation}
+%F_{\rm obs} = 3.76 \cdot 10^{-14}F_{\rm J, \oplus} \left( \frac{P_{\rm radio}}{P_{\rm radio,\,J}} \right) \left( \frac{l}{100\mbox{[pc]}} \right)^{-2} \left( \frac{f_{\rm cycs}}{f_{\rm cyc,\,J}} \right)^{-1}
+%\end{equation}
+%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Mechanisms}
+\subsection{Assumptions for Radio Emission Scaling}
 \label{ss:mechanisms}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Although the detail of the mechanism to generate planetary radio emission is not fully understood so far \memoYF{cite something?}, 
+observations indicate that the total radio emission, $P_{\rm radio}$ is proportional to the input kinetic energy, $P_{\rm k,\,inp}$, or the input magnetic energy, $P_{\rm m,\,inp}$:
+%%%
+\begin{eqnarray}
+P_{\rm k,\,inp} &=& n v^3 r_s ^2 \label{eq:Pinp_kin}, \\
+P_{\rm m,\,inp} &=& v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag},
+\end{eqnarray}
+%%%
+where $n$ and $v$ are density and velocity of stellar wind, respectively, $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_s$ is the radius of the magnetic stand-off point. 
+In the case of the Solar wind, the kinetic energy is dominant input energy over the magnetic one (the former is $\sim 400$ times larger than the latter).  
+It is not clear from the observations of the Solar System planets which is the fundamental one, the correlation to the input kinetic energy, that to the magnetic energy, or both. 
+Because... \memoYF{I want to justify not to consider the magnetic case.}, we assume that the radio emission is scaled with the input kinetic energy, $P_{\rm k,\,inp}$. 
 
-Radio emission intensity of Solar System giant planets are known to be proportional to the kinetic energy or the magnetic energy of the solar wind,  which interacts with planetary magnetic field at the magnetic standoff cross section\memoYF{``radio Bode's law'': cite something}. 
-
-Unfortunately, the detail of the mechanism of energy transport from the energy source into the radio emission. 
-
-
-
-
-According to \citet{griebmeier2007} \memoYF{The following equations are quoted from the paper. Needs to elaborate. }
-\begin{enumerate}
-\item kinetic energy model
+The radius of the magnetic stand-off point, $r_s$, is determined by the balance between the stellar wind pressure and the planetary magnetic pressure: 
+%%%
+\begin{eqnarray}
+m_p n v ^2 &\sim& \frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6}  \\
+&=& \frac{1}{2\pi }\left( \frac{\mu _0}{2\pi } \frac{\mathcal{M}}{r_s^3} \right)^2 %\frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6} 
+\end{eqnarray}
+%%%
+or, 
+%%%
 \begin{equation}
-P_{\rm inp} \propto n v^3 r_s ^2 \label{eq:Pinp_kin}
+r_s \sim \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2}
+\right)^{1/6}   
 \end{equation}
-\item magnetic energy model:
-\begin{equation}
-P_{\rm inp} \propto v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag}
-\end{equation}
-\item CME model\\
-Not sure about CME for red giants. We don't consider?
-\item the unipolar interaction model\\
-??
-\end{enumerate}
-where $n$ and $v$ are density and velocity of stellar wind, respectively,  $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_s$ is the radius of magnetic standoff point. 
+%\begin{eqnarray}
+%r_s &\sim& \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/6} \\
+%&=& 4.6 R_J \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{1/3} \left( \frac{\dot M}{\dot M_{\odot }} \right)^{-1/6} \left( \frac{v}{v_{\odot }} \right)^{-1/6}  
+%\end{eqnarray}
+%%%
+
+Thus, the radio emission, $P_{\rm radio}$, or equivalently the input kinetic energy, $P_{\rm k,\,inp}$, are estimated with $n$, $v$, and $\mathcal{M}$, which should be specified by assuming the properties of the stellar wind and the planetary magnetic field. 
+In the following, we describe our assumptions for these properties. 
+
+%Thus, 
+%r_s = \left[ \frac{\mu_0 f_0^2 \mathcal{M}}{8\pi^2 (m_p n(d) v(d)^2 + 2 n(d) k_B T)} \right]^{1/6}. 
+%\end{equation}
+%%%
+%where $\mathcal{M}$ is the planetary magnetic moment and $m_p$ is the proton mass.
+
+
+
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Properties for Stellar Wind of RGs}
+\subsection{Assumptions for Stellar Wind}
 \label{ss:stellarwind}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The mass loss rate of the stellar wind can be estimated from observation \memoYF{How?}.
-For the known red giants, the values are typically $\dot M \sim 10^{-8} M_{\odot}$/yr, and can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases, significantly greater than the solar mass-loss rate $\sim 10^{-14} M_{\odot}$/yr. 
-
-%\memoDS{Can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases.  I'm calling it ``red giant'' but we're really thinking of AGB stars for maximum mass-loss and brightness.}
-%>>>>>>> e6e562d36dff6e5bb10b57fdd066ee5edd32b496
+The stellar wind density, $n$ in equation \ref{eq:Pinp_kin} are estimated by
+%%%
 \begin{equation}
-\frac{\dot M}{\dot M_{\odot}} \sim 10^6
+n = \frac{\dot M}{4\pi d^2 m_p v}
+\end{equation}
+%%%
+where $\dot M$ is the mass loss rate, $d$ is the orbital distance from the star and $m_p$ is proton mass. 
+The mass loss rate of red giants are typically $\dot M \sim 10^{-8} M_{\odot}$/yr based on observation \memoYF{How?}. The rate can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases, significantly greater than the solar mass-loss rate $\dot M_{\odot } \sim 10^{-14} M_{\odot}$/yr. 
+Therefore, we have
+%\memoDS{Can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases.  I'm calling it ``red giant'' but we're really thinking of AGB stars for maximum mass-loss and brightness.}
+\begin{equation}
+\frac{\dot M}{\dot M_{\odot}} \sim 10^6 - 10^9
 \end{equation}
 
-The stellar wind velocity becomes smaller because of the small escape velocity (due to expanded stellar radius)\footnote{Escape velocity is $\sqrt{2GM/r}$.}. Assuming that the stellar wind scales as the escape velocity, RGs with radius $R=100R_{\odot}$ have 10 times as slow stellar wind as that at the main sequence.
+On the other hand, the stellar wind velocity becomes smaller because of the small escape velocity (due to expanded stellar radius)\footnote{Escape velocity is $\sqrt{2GM/r}$.}. Assuming that the stellar wind scales as the escape velocity, RGs with radius $R=100R_{\odot}$ have 10 times as slow stellar wind as that at the main sequence. \memoYF{Estimate in more detail?}
 \begin{equation}
 \frac{v}{v_{\odot}} \sim 10^{-1}
 \end{equation}
@@ -244,9 +324,11 @@ The temperature of stellar wind of RGs is expected to be 2 orders of magnitude l
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Properties for Planetary Magnetic Field}
-\label{ss:planetarymagnetic}
+\subsection{Assumptions for Planetary Magnetic Field}
+\label{ss:magneticfield}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\memoYF{It may be better to consider Cristensen's scaling, taking account of the age. But I have not followed the theory yet.}
 
 Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
 %%%%%%%%%% 
@@ -257,7 +339,7 @@ Theoretically, the magnetic moment of gaseous planets are expressed with the fol
 where $\omega $ is the spin angular velocity, $\rho _c$, $r_c$ and $\sigma $ are the density, the radius, and the conductivity of the ``dynamo region'' where the density is high enough for hydrogen to be metallic, respectively. 
 The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
 
-Unlike usual hot jupiters, RGHJs are not subject to tidal lock, because the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin period, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin period, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
 
 In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. We simply use the same model as \citet{griebmeier2004}, where the density as a function of radius from the center is described as:
 %%%%%%%%%% 
@@ -277,127 +359,92 @@ We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Estimates of Radio Emission from RGHJ}
-\label{s:estimate}
+%\subsection{Cut-off frequency}
+%\label{ss:cutoff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Estimates of frequency}
-\label{ss:frequency}
 
-The cyclotron frequency is
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+\label{s:result}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+On the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows: 
+%%%
 \begin{eqnarray}
-f_{\rm cyclotron} &=& \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, ,
-\label{eq:cyc} \\
-B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
-&\sim & 9.1 \mbox{[G]} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
+P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/3}  \\
+&=& P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3}
 \end{eqnarray}
-%where $\mathcal{M}_J = 1.56 \times 10^{27} \mbox{A m}^2$. 
-For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
-the cyclotron frequency will be in the range $\sim$75-150~MHz.
+%%%
 
-Figure \ref{fig:f_cyclotron} shows the cyclotron frequency of the planetary magnetic field. 
+Therefore, 
+%%%
+\begin{eqnarray}
+F_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
+&=& P_{\rm radio,\,J} \\
+&\approx & 5\times 10^{-8} \mbox{Jy} \left( \frac{l}{100\mbox{~pc}} \right)^{-2}  \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{R_p}{R_{p, J}} \right)^{3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \\
+&\approx & 10^{-5} \mbox{Jy} \left( \frac{l}{100\mbox{~pc}} \right)^{-2}  \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{R_p}{R_{p, J}} \right)^{3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} %\\
+%&\approx &  10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{~pc}} \right)^{-2} \\
+%&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
+\end{eqnarray}
+%%%
+Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                                                                                               
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.7\hsize]{test_fcycrotron.eps}
-\end{center}
-\caption{Cyclotron frequency. (May be deleted eventually.)}
-\label{fig:f_cyclotron}
-\end{figure}
+%If we consider an AGB star with mass loss rate $\dot M \sim 10^{-5} M_{\odot }\mbox{/yr}~ (=10^9 \dot M_{\odot})$, then the flux goes up to $\sim 1 \mbox{~mJy}$. 
+%As the current detection limit of radio wave at $\sim 30 \mbox{~MHz}$ with Long Wavelength Array (LWA), for instance, is $\sim 1\mbox{~mJy}$ \memoYF{cite something}, this indicates that as the Sun evolves to ARB stage our Jupiter will eventually become so brilliant in radio wave that it can be detected from 100 pc away!
+%\memoYF{only if $v \sim 10^{-1} v_{\odot}$. Is this validated???}
+% <---- No, in this case f_plasma > 30 MHz
+
+Using the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, radio emission of planetary companions with varying mass and orbital distance can be estimated. 
+Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 100 pc in the plane of companion mass and orbital distance, as well as their cyclotron frequency. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[bp]
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=\hsize]{radio_emission_Mdot1e-8.eps}
+  \end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=\hsize]{radio_emission_Mdot1e-5.eps}
+  \end{center} 
+ \end{minipage}
+   \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
+  \label{fig:two}
+\end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-
-The emission is observable only when the maximum frequency is larger than the plasma frequency of the surrounding stellar wind. 
-The plasma frequency is 
-\begin{eqnarray}
-f_{\rm plasma} &=& \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
-&\approx & 4\mbox{[MHz]} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
-\end{eqnarray}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                                                                                               
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.9\hsize]{test_observability.eps}
-\end{center}
-\caption{Where condition $f_{cyclotron}>f_{plasma}$. (May be deleted eventually.)}
-\label{fig:f_cyclotron}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Estimates of intensity}
-\label{ss:intensity}
-
-$r_s$ is determined by the balance between the magnetic pressure of planetary magnetosphere and kinetic pressure of stellar wind\footnote{Precisely, the magnetic standoff point is described by equation (9) of \citet{griebmeier2007}, which is. 
-\begin{equation}
-r_s = \left[ \frac{\mu_0 f_0^2 \mathcal{M}}{8\pi^2 (m_p n(d) v(d)^2 + 2 n(d) k_B T)} \right]^{1/6}
-\end{equation}
-where $\mathcal{M}$ is the planetary magnetic moment and $m_p$ is the proton mass. 
-In the following arguments based on Dave's sketch, the second term in the denominator is ignored. This is valid for Solar wind where the first term is larger than the second term by 2 orders of magnitude. \memoYF{check!}}. Thus, 
-\begin{equation}
-\frac{m_p n v ^2}{2} = \frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6} 
-\end{equation}
-Therefore,
-\begin{eqnarray}
-r_s &=& R_p \left( \frac{B^2}{\pi \dot M v (1/4\pi d^2)} \right)^{1/6} = R_p \left( \frac{4 B^2 d^2}{\dot M v } \right)^{1/6} \\
-&\approx & 5 R_J \left(\frac{B}{10 \mbox{[G]}}\right)^{1/3} \left(\frac{\dot M}{10^6 \dot M_{\odot}}\right)^{-1/6}\\
-&& \;\;\;\;\; \;\;\;\;\; \times \left(\frac{v}{10^{-1} v_{\odot}}\right)^{-1/6}  \left(\frac{d}{5 \mbox{[AU]}}\right)^{1/3} 
-\end{eqnarray}
-
-Therefore, the radio emission expected from kinetic energy model (equation (\ref{eq:Pinp_kin})) is 
-\begin{eqnarray}
-P_{\rm radio} &=& P_{\rm radio, J} \left(\frac{\dot M }{\dot M_{\odot }} \right) \left(\frac{v}{v_{\odot}} \right) ^2 \left(\frac{d}{5 \rm{AU}} \right) ^{-2}  \left(\frac{r_s}{r_{s, {\rm J}}} \right)^2 \\
-&=& P_{\rm radio, J} \left(\frac{\dot M }{\dot M_{\odot }} \right)^{\frac{2}{3}} \left(\frac{v}{v_{\odot}} \right) ^{\frac{5}{3}} \left(\frac{d}{5 \rm{AU}} \right) ^{-2} \left(\frac{B}{B_J} \right)^{\frac{2}{3}} \\
-&\approx& 200 P_{\rm radio, J} \left(\frac{\dot M }{10^6 \dot M_{\odot }} \right)^{\frac{2}{3}} \left(\frac{v}{10^{-1} v_{\odot}} \right) ^{\frac{5}{3}} \\
-&& \;\;\;\;\; \;\;\;\;\; \times \left(\frac{d}{5 \rm{[AU]}} \right) ^{-4/3} \left(\frac{B}{10 \mbox{[G]}} \right)^{\frac{2}{3}} \
-\end{eqnarray}
-
-
-\memoYF{Following arguments are based on \citep{griebmeier2007}. }
-Assuming $P_{\rm inp, J} = 2.1\times 10^{11}$ W \citep{griebmeier2007}, observed RGHJ radio emission at distance $l$ is
-\begin{eqnarray}
-P_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
-&\approx & 5\times 10^{-6} \mbox{Jy} \left( \frac{P_{\rm radio}}{P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{[pc]}} \right)^{-2} \left( \frac{B}{10\mbox{[G]}} \right) ^{-1} \\
-&\approx & 10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{[pc]}} \right)^{-2} \left( \frac{B}{10\mbox{[G]}} \right) ^{-1}
-\end{eqnarray}
-where $\Omega $ is the solid angle of emission, which is assumed $\Omega = 1.6$. 
-
-
-Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                                                                                               
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.9\hsize]{test_radio.eps}
-\end{center}
-\caption{Intensity of radio emission. }
-\label{fig:radio}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Will the electron spiraling and offset the magnetic field? (Mehrdad Mirababayi)}
-\label{ss:offset}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion on Observability}
+\section{Discussions}
 \label{s:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Radio emission from red giants stars}
+\subsection{Intrinsic radio emission of red giants stars}
 \label{ss:RGradio}
 
 (Jason)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Will the electron spiraling and offset the magnetic field? (Mehrdad Mirababayi)}
+\label{ss:offset}
+
 
 \citet{gorman2013}
 
