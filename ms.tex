@@ -377,9 +377,24 @@ On the assumption that the radio emission is proportional to the input kinetic e
 \begin{eqnarray}
 P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/3}  \\
 &=& P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3}
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
+In order to compare the canonical hot jupiters and red giant hot jupiters, equation (\ref{eq:Pkinp}) can be re-normalized as 
+%%%
+\begin{eqnarray}
+P_{\rm k,\,inp} 
+&\approx & 220 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&\approx & 2.2 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
+&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{d}{0.05~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+\end{eqnarray}
+%%%
+\memoYF{what is the typical wind velocity of AGB stars?}
+Therefore, the jupiters to the AGB stars are intrinsically 50 times as bright as typical hot Jupiters. In other words, we could search for radio signal from these stars in $50^3 = 125000$ times as large volume as the canonical hot jupiters.  
+
 
 Therefore, 
 %%%
@@ -397,6 +412,8 @@ F_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
 \end{eqnarray}
 %%%
 Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
+
+
 
 %If we consider an AGB star with mass loss rate $\dot M \sim 10^{-5} M_{\odot }\mbox{/yr}~ (=10^9 \dot M_{\odot})$, then the flux goes up to $\sim 1 \mbox{~mJy}$. 
 %As the current detection limit of radio wave at $\sim 30 \mbox{~MHz}$ with Long Wavelength Array (LWA), for instance, is $\sim 1\mbox{~mJy}$ \memoYF{cite something}, this indicates that as the Sun evolves to ARB stage our Jupiter will eventually become so brilliant in radio wave that it can be detected from 100 pc away!
@@ -419,7 +436,7 @@ Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 100 p
    \includegraphics[width=\hsize]{radio_emission_Mdot1e-5.eps}
   \end{center} 
  \end{minipage}
-s   \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
+   \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
   \label{fig:two}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
