@@ -302,10 +302,10 @@ In the following, we describe our assumptions for these properties.
 The stellar wind density, $n$ in equation \ref{eq:Pinp_kin} are estimated by
 %%%
 \begin{equation}
-n = \frac{\dot M}{4\pi d^2 m_p v}
+n = \frac{\dot M}{4\pi a^2 m_p v}
 \end{equation}
 %%%
-where $\dot M$ is the mass loss rate, $d$ is the orbital distance from the star and $m_p$ is proton mass. 
+where $\dot M$ is the mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass. 
 The mass loss rate of red giants are typically $\dot M \sim 10^{-8} M_{\odot}$/yr based on observation \memoYF{How?}. The rate can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases, significantly greater than the solar mass-loss rate $\dot M_{\odot } \sim 10^{-14} M_{\odot}$/yr. 
 Therefore, we have
 %\memoDS{Can be as high as $10^{-5} M_\odot~{\rm yr^{-1}}$ during AGB phases.  I'm calling it ``red giant'' but we're really thinking of AGB stars for maximum mass-loss and brightness.}
@@ -377,7 +377,7 @@ On the assumption that the radio emission is proportional to the input kinetic e
 \begin{eqnarray}
 P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/3}  \\
 &=& P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp}
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
 In order to compare the canonical hot jupiters and red giant hot jupiters, equation (\ref{eq:Pkinp}) can be re-normalized as 
@@ -385,11 +385,11 @@ In order to compare the canonical hot jupiters and red giant hot jupiters, equat
 \begin{eqnarray}
 P_{\rm k,\,inp} 
 &\approx & 220 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
 &\approx & 2.2 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
 &\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{d}{0.05~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
 \end{eqnarray}
 %%%
 \memoYF{what is the typical wind velocity of AGB stars?}
@@ -399,14 +399,14 @@ Therefore, the jupiters to the AGB stars are intrinsically 50 times as bright as
 Therefore, 
 %%%
 \begin{eqnarray}
-F_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega l^2 f_{\rm cyclotron}} \\
+F_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 &=& P_{\rm radio,\,J} \\
-&\approx & 5\times 10^{-8} \mbox{Jy} \left( \frac{l}{100\mbox{~pc}} \right)^{-2}  \\
+&\approx & 5\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \\
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{R_p}{R_{p, J}} \right)^{3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} \\
-&\approx & 10^{-5} \mbox{Jy} \left( \frac{l}{100\mbox{~pc}} \right)^{-2}  \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{R_p}{R_{p, J}} \right)^{3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \\
+&\approx & 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \\
 && \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{R_p}{R_{p, J}} \right)^{3} \left( \frac{d}{5.2~\mbox{AU}} \right)^{-4/3} %\\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{R_p}{R_{p, J}} \right)^{3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} %\\
 %&\approx &  10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{~pc}} \right)^{-2} \\
 %&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
 \end{eqnarray}
