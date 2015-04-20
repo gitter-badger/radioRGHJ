@@ -10,7 +10,8 @@
 \usepackage{array}
 \usepackage{appendix}
 \usepackage{comment}
-\usepackage{color}
+\usepackage[dvipdfmx]{color}
+%\usepackage[dvipdfmx]{graphicx}
 
 \bibliographystyle{apj}
 
@@ -393,7 +394,7 @@ P_{\rm k,\,inp}
 \end{eqnarray}
 %%%
 \memoYF{what is the typical wind velocity of AGB stars?}
-Therefore, the jupiters to the AGB stars are intrinsically 50 times as bright as typical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{50})^3 = 353$ times as large volume as the canonical hot jupiters.  
+Therefore, the jupiters to the AGB stars are intrinsically 50 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{50})^3 = 353$ times as large volume as the canonical hot jupiters.  
 
 
 Therefore, 
@@ -421,7 +422,7 @@ Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier20
 % <---- No, in this case f_plasma > 30 MHz
 
 Using the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, radio emission of planetary companions with varying mass and orbital distance can be estimated. 
-Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 100 pc in the plane of companion mass and orbital distance, as well as their cyclotron frequency. 
+Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 10~pc in the plane of companion mass and orbital distance, as well as their cyclotron frequency. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -437,7 +438,7 @@ Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 100 p
   \end{center} 
  \end{minipage}
    \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
-  \label{fig:two}
+  \label{fig:radio}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -455,7 +456,20 @@ Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 100 p
 \subsection{Intrinsic radio emission of red giants stars}
 \label{ss:RGradio}
 
-(Jason)
+(Jason?)
+
+In the radio range, the brightness source of the radio emission is Rayleigh-Jeans tail of the Planck function, i.e., $S_{\nu } = 2kT\nu^2/c^2$. Recent observations revealed that this dependence on $\nu$ ($f \propto \nu^{\alpha }$ where $\alpha $ is 2) can approximately be extended as low frequency as 1 GHz \citet{gorman2013}, presumably as a result of the wavelength dependence of the opacity (at longer wavelength we see the region further from the center of the stars) and the decreased temperature as the distance from the stars increases. 
+In this paper, we simply assume that the radio emission from the red giants themselves are approximated as a black body radiation. Therefore, the flux from the giants are:
+%%%
+\begin{eqnarray}
+f_{\star } (\nu ) &=& \frac{2R_{\star }^2 k_B T \nu^2}{c^2 d^2}  \\
+&\approx & 1.4 \times 10^{-9} ~\mbox{Jy} \left( \frac{d}{100 ~\mbox{pc}} \right)^{-2} \\
+&& \times \left( \frac{R_{\star }}{10 R_{\odot }} \right)^2 \left( \frac{T_{\star }}{10^{4}~\mbox{K}} \right) \left( \frac{\nu}{1 ~\mbox{GHz}} \right)^2 
+\end{eqnarray}
+%%%
+Therefore, for stars with $R_{\star } < 50 R_{\odot}$, companions around the stars are typically brighter than their hosts. 
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
