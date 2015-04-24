@@ -219,11 +219,11 @@ f_{\rm c2} &=& f_{\rm plasma} = \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e
 
 \subsection{Flux of Radio Emission}
 
-The auroral radio flux of exoplanets observed at the Earth, $F_{\rm obs}$ can be expressed by:
+The auroral radio spectral flux of exoplanets observed at the Earth, $F_{\nu}$ can be expressed by:
 %Assuming $P_{\rm inp, J} = 2.1\times 10^{11}$ W \citep{griebmeier2007}, observed RGHJ radio emission at distance $l$ is
 %%%
 \begin{equation}
-F_{\rm obs} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
+F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
 \end{equation}
 %%%
 where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency band width. 
@@ -253,14 +253,15 @@ Although the detail of the mechanism to generate planetary radio emission is not
 observations indicate that the total radio emission, $P_{\rm radio}$ is proportional to the input kinetic energy, $P_{\rm k,\,inp}$, or the input magnetic energy, $P_{\rm m,\,inp}$:
 %%%
 \begin{eqnarray}
-P_{\rm k,\,inp} &=& n v^3 r_s ^2 \label{eq:Pinp_kin}, \\
-P_{\rm m,\,inp} &=& v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag},
+P_{\rm radio} &\propto & P_{\rm inp} \\
+P_{\rm inp,\,k} &=& n v^3 r_s ^2 \label{eq:Pinp_kin}, \\
+P_{\rm inp,\,m} &=& v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag},
 \end{eqnarray}
 %%%
 where $n$ and $v$ are density and velocity of stellar wind, respectively, $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_s$ is the radius of the magnetic stand-off point. 
 In the case of the Solar wind, the kinetic energy is dominant input energy over the magnetic one (the former is $\sim 400$ times larger than the latter).  
 It is not clear from the observations of the Solar System planets which is the fundamental one, the correlation to the input kinetic energy, that to the magnetic energy, or both. 
-Because... \memoYF{I want to justify not to consider the magnetic case.}, we assume that the radio emission is scaled with the input kinetic energy, $P_{\rm k,\,inp}$. 
+Because... \memoYF{I want to justify not to consider the magnetic case.}, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$. 
 
 The radius of the magnetic stand-off point, $r_s$, is determined by the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
@@ -359,7 +360,8 @@ We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}.
 \caption{Canonical Parameters of 2 types of hot jupiters.}
 \begin{center}
 \begin{tabular}{c|ccc} \hline \hline
-& mass & orbital distance &  spin period \\ \hline
+& mass & orbital distance &  spin period \\ 
+& $M_p$ & $a$ & $\omega $ \\ \hline
 canonical HJ & $M_J$ & 0.05 AU & 4 days \\
 RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
 \end{tabular}
@@ -392,7 +394,7 @@ P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^
 \end{eqnarray}
 %%%
 
-It would be illustrative to compare radio emission power of canonical hot jupiters and that of red giant hot jupiters. We adopt canonical values for planetary mass, orbital distance, and orbital period of each type as shown in Table \ref{tab:comp_HJ}. Then, equation (\ref{eq:Pkinp}) can be re-normalized as 
+It is illustrative to compare radio emission power of canonical hot jupiters and that of red giant hot jupiters. We adopt canonical values for planetary mass, orbital distance, and orbital period of each type as shown in Table \ref{tab:comp_HJ}. Then, equation (\ref{eq:Pkinp}) can be re-normalized as 
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} 
@@ -405,12 +407,13 @@ P_{\rm k,\,inp}
 \end{eqnarray}
 %%%
 \memoYF{what is the typical wind velocity of AGB stars?}
-Thus, the jupiters to the AGB stars are intrinsically 50 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{50})^3 = 353$ times as large volume as the canonical hot jupiters.  
+Thus, the jupiters to the AGB stars are intrinsically 200 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{200})^3 \approx 3000$ times as large volume as the canonical hot jupiters.  
 
-Therefore, 
+
+We now turn to the energy distribution of 
 %%%
 \begin{eqnarray}
-F_{\rm obs} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
+F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 &=& P_{\rm radio,\,J} \\
 &\approx & 5\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \\
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
