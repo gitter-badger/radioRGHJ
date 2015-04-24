@@ -342,21 +342,31 @@ The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $
 
 Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin period, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
 
-In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. We simply use the same model as \citet{griebmeier2004}, where the density as a function of radius from the center is described as:
+In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. 
+First, we assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
+For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
-\rho (r) = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left( \pi \frac{r}{R_p} \right)}{\left( \pi \frac{r}{R_p} \right)} \label{eq:rho_r}
+\rho (r) = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left( \pi \frac{r}{R_p} \right)}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
 \end{equation}
 %%%%%%%%%%
-where
-%%%%%%%%%% 
-\begin{equation}
-R_p (M_p) = \frac{(\alpha M_p)^{1/3}}{1+\left( \frac{M_p}{M_{\rm max}} \right)} \label{eq:Rp}
-\end{equation}
-%%%%%%%%%%
-with $\alpha =6/1 \times 10^{-4}$ \citep{griebmeier2007}. 
 We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
 We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Canonical Parameters of 2 types of hot jupiters.}
+\begin{center}
+\begin{tabular}{c|ccc} \hline \hline
+& mass & orbital distance &  spin period \\ \hline
+canonical HJ & $M_J$ & 0.05 AU & 4 days \\
+RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
+\end{tabular}
+\end{center}
+\label{tab:comp_HJ}
+\end{table}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -381,20 +391,21 @@ P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
-In order to compare the canonical hot jupiters and red giant hot jupiters, equation (\ref{eq:Pkinp}) can be re-normalized as 
+
+It would be illustrative to compare radio emission power of canonical hot jupiters and that of red giant hot jupiters. We adopt canonical values for planetary mass, orbital distance, and orbital period of each type as shown in Table \ref{tab:comp_HJ}. Then, equation (\ref{eq:Pkinp}) can be re-normalized as 
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} 
 &\approx & 220 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \\
 &\approx & 2.2 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
-&\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp} \\
+&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \\
+&\approx & 100 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{2/3} \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \\
 \end{eqnarray}
 %%%
 \memoYF{what is the typical wind velocity of AGB stars?}
-Therefore, the jupiters to the AGB stars are intrinsically 50 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{50})^3 = 353$ times as large volume as the canonical hot jupiters.  
+Thus, the jupiters to the AGB stars are intrinsically 50 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{50})^3 = 353$ times as large volume as the canonical hot jupiters.  
 
 
 Therefore, 
