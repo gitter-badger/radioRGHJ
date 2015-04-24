@@ -198,7 +198,7 @@ The peak of the auroral radio emission is around the cyclotron frequency, of the
 %In our assumption, the frequency band width is assumed to be scaled with the cyclotron frequency, $f_{\rm cyc}$: 
 %%%
 \begin{eqnarray}
-f_{\rm cyc} &=& \frac{eB}{2\pi m_e} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, ,
+f_{\rm cyc} &=& \frac{eB}{2\pi m_e} \approx 25.4 {\rm~MHz} \left( \frac{B}{9.1 \rm~G} \right) \, ,
 \label{eq:cyc} \\
 B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
 &\sim & 9.1{\rm~G} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
@@ -363,21 +363,6 @@ We determine the core radius $r_c$ by assuming that the hydrogen becomes metalli
 We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[htdp]
-\caption{Canonical Parameters of 2 types of hot jupiters.}
-\begin{center}
-\begin{tabular}{c|ccc} \hline \hline
-& mass & orbital distance &  spin period \\ 
-& $M_p$ & $a$ &  \\ \hline
-canonical HJ & $M_J$ & 0.05 AU & 4 days \\
-RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:comp_HJ}
-\end{table}%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsection{Cut-off frequency}
@@ -390,8 +375,9 @@ RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
 \label{s:result}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Estimate of Radio emission of RGHJs in comparison with canonical HJs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 On the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows: 
 %%%
@@ -418,23 +404,22 @@ P_{\rm k,\,inp}
 Thus, the jupiters to the AGB stars are intrinsically 200 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{200})^3 \approx 3000$ times as large volume as the canonical hot jupiters.  
 
 
-We now turn to the spectral radio flux observed at the Earth. 
-%%%
-\begin{eqnarray}
-F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
-%&=& P_{\rm radio,\,J} \\
-&\approx & 5.4\times 10^{-6} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
-&\approx & 1.0 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} 
-%\\
-%&\approx &  10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{~pc}} \right)^{-2} \\
-%&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
-\end{eqnarray}
-%%%
-Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Canonical Parameters of 2 types of hot jupiters.}
+\begin{center}
+\begin{tabular}{c|ccc} \hline \hline
+& mass & orbital distance &  spin period \\ 
+& $M_p$ & $a$ &  \\ \hline
+canonical HJ & $M_J$ & 0.05 AU & 4 days \\
+RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
+\end{tabular}
+\end{center}
+\label{tab:comp_HJ}
+\end{table}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -443,11 +428,48 @@ Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier20
 %\memoYF{only if $v \sim 10^{-1} v_{\odot}$. Is this validated???}
 % <---- No, in this case f_plasma > 30 MHz
 
-Using the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, radio emission of planetary companions with varying mass and orbital distance can be estimated. 
-Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 10~pc in the plane of companion mass and orbital distance, as well as their cyclotron frequency. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Observable spectral radio emission of RGHJs with varying mass and orbital distance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+We now turn to the spectral radio flux observed at the Earth: 
+%%%
+\begin{eqnarray}
+F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
+%&=& P_{\rm radio,\,J} \\
+&\approx & 5.4\times 10^{-6} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+%%%
+&\approx & 1.0 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
+%%%
+&\approx & 1.0 \times 10^{-1} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
+%%%
+&\approx & 4.6 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs}
+%\\
+%&\approx &  10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{~pc}} \right)^{-2} \\
+%&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
+\end{eqnarray}
+%%%
+Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
+\memoYF{Spectral radio flux decreases as the magnetic moment increases. Is this true?}
 
+Combining equation (\ref{eq:F_nu}) with the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, we estimate the spectral radio flux of planetary companions with varying masses and orbital distances as shown in Figure \ref{fig:radio}. Here we assumed that the target system is located at a distance of 10~pc from the Earth. The flux can be scaled by the distance as explicitly written in equation (\ref{eq:F_nu}). 
+
+%The hashed regions are not observable due to the plasma cutoff at Earth's ionosphere (hashed region with vertical lines) and in the vicinity of companions (hashed region with horizontal lines). Given the stellar mass-loss rate $\dot M$ and planetary mass $M_p$, the minimum orbital distance $a$ to let radio emission escape from the target system is determined by $f_{\rm cyc} = f_{\rm plasma}$. Therefore, 
+%%%
+%\begin{eqnarray}
+%25.4 ~\mbox{MHz} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) &=& 12.6 ~\mbox{MHz} \left( \frac{a_{\rm min}}{5~\mbox{AU}} \right) \notag \\ 
+%&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{1/2} \left( \frac{v}{v_{\odot}} \right)^{-1/2} \\
+%\end{eqnarray}
+%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[bp]
