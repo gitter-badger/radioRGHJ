@@ -198,7 +198,7 @@ The peak of the auroral radio emission is around the cyclotron frequency, of the
 %In our assumption, the frequency band width is assumed to be scaled with the cyclotron frequency, $f_{\rm cyc}$: 
 %%%
 \begin{eqnarray}
-f_{\rm cyc} &=& \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, ,
+f_{\rm cyc} &=& \frac{eB}{2\pi m_e} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \, ,
 \label{eq:cyc} \\
 B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
 &\sim & 9.1{\rm~G} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
@@ -208,12 +208,19 @@ B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
 For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
 the cyclotron frequency will be in the range $\sim$75-150~MHz.
 
-Note that the emission is observable from ground only when the maximum frequency is larger than the plasma frequency of the Earth's ionosphere, $f_{\rm c1}\sim 10$~MHz {\it and} the maximum plasma frequency along the line of sight, $f_{\rm c2}$. 
+Note that the emission is observable from ground only when the maximum frequency is larger than the plasma frequency of the Earth's ionosphere,
+%%%
+\begin{equation}
+f_{\rm c1}\sim 10~\mbox{MHz}
+\end{equation}
+%%%
+{\it and} the maximum plasma frequency along the line of sight, $f_{\rm c2}$. 
 At the favorable condition where the planet is in the near side of the spherical plane, the maximum plasma frequency corresponds to that in the vicinity of the planet, $f_{\rm plasma}$. Therefore, 
 %%%
 \begin{eqnarray}
 f_{\rm c2} &=& f_{\rm plasma} = \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
-&\approx & 4{\rm~MHz} \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
+&\approx & 13{\rm~MHz} \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \notag \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
 \end{eqnarray}
 %%%
 
@@ -341,14 +348,15 @@ Theoretically, the magnetic moment of gaseous planets are expressed with the fol
 where $\omega $ is the spin angular velocity, $\rho _c$, $r_c$ and $\sigma $ are the density, the radius, and the conductivity of the ``dynamo region'' where the density is high enough for hydrogen to be metallic, respectively. 
 The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
 
-Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin period, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+\memoYF{Would their spin rate become higher or lower??}
 
 In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. 
 First, we assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
 For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
-\rho (r) = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left( \pi \frac{r}{R_p} \right)}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
+\rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
 \end{equation}
 %%%%%%%%%%
 We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
@@ -361,7 +369,7 @@ We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}.
 \begin{center}
 \begin{tabular}{c|ccc} \hline \hline
 & mass & orbital distance &  spin period \\ 
-& $M_p$ & $a$ & $\omega $ \\ \hline
+& $M_p$ & $a$ &  \\ \hline
 canonical HJ & $M_J$ & 0.05 AU & 4 days \\
 RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
 \end{tabular}
@@ -389,8 +397,8 @@ On the assumption that the radio emission is proportional to the input kinetic e
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/3}  \\
-&=& P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3} \label{eq:Pkinp}
+&=& P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
 
@@ -398,12 +406,12 @@ It is illustrative to compare radio emission power of canonical hot jupiters and
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} 
-&\approx & 230 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \\
-&\approx & 2.3 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \\
-&\approx & 100 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{2/3} \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \\
+&\approx & 230 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&\approx & 2.3 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&\approx & 100 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} 
 \end{eqnarray}
 %%%
 \memoYF{what is the typical wind velocity of AGB stars?}
@@ -415,12 +423,13 @@ We now turn to the spectral radio flux observed at the Earth.
 \begin{eqnarray}
 F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 %&=& P_{\rm radio,\,J} \\
-&\approx & 5.3\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \\
+&\approx & 5.4\times 10^{-6} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \\
-&\approx & 1.0 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \\
-&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} %\\
+&\approx & 1.0 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} 
+%\\
 %&\approx &  10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{~pc}} \right)^{-2} \\
 %&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
 \end{eqnarray}
@@ -438,16 +447,18 @@ Using the scaling relation of magnetic moment described in \S\ref{ss:magneticfie
 Figure \ref{fig:radio} shows the intensity of radio emission from RGHJs at 10~pc in the plane of companion mass and orbital distance, as well as their cyclotron frequency. 
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[bp]
  \begin{minipage}{0.5\hsize}
   \begin{center}
-   \includegraphics[width=\hsize]{radio_emission_Mdot1e-8.eps}
+   \includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.eps}
   \end{center}
  \end{minipage}
  \begin{minipage}{0.5\hsize}
   \begin{center}
-   \includegraphics[width=\hsize]{radio_emission_Mdot1e-5.eps}
+   \includegraphics[width=\hsize]{radio_emission_Mdot1e-5_constRp.eps}
   \end{center} 
  \end{minipage}
    \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
