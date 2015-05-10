@@ -10,7 +10,8 @@
 \usepackage{array}
 \usepackage{appendix}
 \usepackage{comment}
-\usepackage[dvipdfmx]{color}
+\usepackage{color}
+%\usepackage[dvipdfmx]{color}
 %\usepackage[dvipdfmx]{graphicx}
 
 \bibliographystyle{apj}
@@ -474,16 +475,18 @@ Combining equation (\ref{eq:F_nu}) with the scaling relation of magnetic moment 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[bp]
- \begin{minipage}{0.5\hsize}
-  \begin{center}
-   \includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.pdf}
-  \end{center}
- \end{minipage}
- \begin{minipage}{0.5\hsize}
-  \begin{center}
-   \includegraphics[width=\hsize]{radio_emission_Mdot1e-5_constRp.pdf}
-  \end{center} 
- \end{minipage}
+ %\begin{minipage}{0.5\hsize}
+  %\begin{center}
+   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.pdf}
+   \plotonesc{radio_emission_Mdot1e-8_constRp.pdf}
+  %\end{center}
+ %\end{minipage}
+ %\begin{minipage}{0.5\hsize}
+   %\begin{center}
+   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-5_constRp.pdf}
+   \plotonesc{radio_emission_Mdot1e-5_constRp.pdf}
+  %\end{center} 
+ %\end{minipage}
    \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
   \label{fig:radio}
 \end{figure*}
