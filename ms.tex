@@ -164,11 +164,11 @@ Although the search for these radio signatures are being conducted, there is no 
 When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
 they go through stages on the red-giant branch (RGB) and the
 asymptotic-giant branch (AGB) where their radii and luminosities increase by orders of magnitude. 
-Jovian planets in orbit around such stars can be transiently heated to hot-Jupiter temperatures ($\sim$1000~K or more) at distances out to tens of AU, depending on the star's mass \citet{spiegel+madhusudhan2012}. 
-At the same time, they are subject to massive stellar wind, because the mass-loss rate of such evolved stars are significantly higher than the main-sequence counterparts, typically $\sim  10^{-8} M_{\odot }$/yr \citep{judge1991}. \memoYF{How these values are observationally obtained?} \memoYF{Dave mentioned $\sim  10^{-5} M_{\odot }$/yr, where does this come from?} through massive (but slow) stellar wind \citep{suzuki2008} \memoYF{cite more papers?}. 
+Jovian planets in orbit around such stars can be transiently heated to hot-Jupiter temperatures ($\sim$1000~K or more) at distances out to tens of AU, depending on the star's mass \citep{spiegel+madhusudhan2012}. 
+At the same time, they are subject to massive stellar wind, as the mass-loss rate of such evolved stars are significantly higher than the main-sequence counterparts, typically $\sim  10^{-8} M_{\odot }$/yr \citep{judge1991}. The mass-loss rate can be as high as $\sim  10^{-5} M_{\odot }$/yr for AGB stars. \memoYF{How these values are observationally obtained?} \memoYF{Dave mentioned $\sim  10^{-5} M_{\odot }$/yr, where does this come from?} through massive (but slow) stellar wind \citep{suzuki2008} \memoYF{cite more papers?}. 
 On the assumption that the radio emission is correlated with the stellar wind, planetary companions around evolved stars could generate bright radio emission. 
 
-In this paper we propose the potential to detect planetary companions around evolved stars through the brightness of their radio emission. 
+In this paper we estimate the potential to detect planetary companions around evolved stars through the brightness of their radio emission. 
 The search for such emission could tell us the population of companions around evolved stars, including those were originally A or O stars. 
 
 In \S2, we discuss the assumption we make in this paper. 
@@ -308,7 +308,7 @@ In the following, we describe our assumptions for these properties.
 \label{ss:stellarwind}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The stellar wind density, $n$ in equation \ref{eq:Pinp_kin} are estimated by
+The stellar wind density, $n$ in equation (\ref{eq:Pinp_kin}) are estimated byt
 %%%
 \begin{equation}
 n = \frac{\dot M}{4\pi a^2 m_p v}
@@ -337,7 +337,30 @@ The temperature of stellar wind of RGs is expected to be 2 orders of magnitude l
 \label{ss:magneticfield}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\memoYF{It may be better to consider Cristensen's scaling, taking account of the age. But I have not followed the theory yet.}
+In order to estimate the planetary magnetic field of general planets, we adopt simple scaling relation between the magnetic field and planetary properties. 
+Several relationships have been proposed so far by \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006} \memoYF{check!} (see \citet{griebmeier2004} or \citet{christensen2010} for the summary). 
+
+They are compared with numerical simulations in \citep{christensen2010}. We employ the following relationship \citep{christensen2006}, which was found to be in a good agreement with the numerical experiments over a wide parameter space \memoYF{describe in more detail}:
+%%%%%%%%%% 
+\begin{equation}
+B^2 \propto \rho_c r_c^{4/3} q_c^{2/3},% \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
+\end{equation}
+%%%%%%%%%%
+where $\rho _c$ and $r_c$ are the density and the radius of the dynamo region, and $q_c$ is the internal convected energy flux. 
+
+In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of planets. 
+In this paper, we consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
+For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
+%%%%%%%%%% 
+\begin{equation}
+\rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
+\end{equation}
+%%%%%%%%%%
+We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$ \memoYF{cite something!}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
+In the case of Jupiter, $r_{c, J} = 0.85 R_{\rm J}$. 
+%We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
+
+The convected heat flux $q_c$ is estimated 
 
 Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
 %%%%%%%%%% 
@@ -394,14 +417,18 @@ It is illustrative to compare radio emission power of canonical hot jupiters and
 P_{\rm k,\,inp} 
 &\approx & 230 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 &\approx & 2.3 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 &\approx & 100 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} 
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
 %%%
 \memoYF{what is the typical wind velocity of AGB stars?}
-Thus, the jupiters to the AGB stars are intrinsically 200 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{200})^3 \approx 3000$ times as large volume as the canonical hot jupiters.  
+
+%Thus, the jupiters to the AGB stars are intrinsically 200 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{200})^3 \approx 3000$ times as large volume as the canonical hot jupiters.  
 
 
 
@@ -440,19 +467,23 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 %&=& P_{\rm radio,\,J} \\
 &\approx & 5.4\times 10^{-6} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for Jupier-twin)} \notag \\
 %%%
 &\approx & 1.0 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 %%%
 &\approx & 1.0 \times 10^{-1} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 %%%
 &\approx & 4.6 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs}
+&& \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 %\\
 %&\approx &  10^{-3} \mbox{Jy} \left( \frac{P_{\rm radio}}{200 P_{\rm radio, J}} \right) \left( \frac{l}{10\mbox{~pc}} \right)^{-2} \\
 %&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
@@ -461,7 +492,7 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
 \memoYF{Spectral radio flux decreases as the magnetic moment increases. Is this true?}
 
-Combining equation (\ref{eq:F_nu}) with the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, we estimate the spectral radio flux of planetary companions with varying masses and orbital distances as shown in Figure \ref{fig:radio}. Here we assumed that the target system is located at a distance of 10~pc from the Earth. The flux can be scaled by the distance as explicitly written in equation (\ref{eq:F_nu}). 
+Combining equation (\ref{eq:F_nu})-(\ref{eq:F_nu_RGHJs}) with the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, we estimate the spectral radio flux of planetary companions with varying masses and orbital distances as shown in Figure \ref{fig:radio}. Here we assumed that the target system is located at a distance of 10~pc from the Earth. The flux can be scaled by the distance as explicitly written in equation (\ref{eq:F_nu}). 
 
 %The hashed regions are not observable due to the plasma cutoff at Earth's ionosphere (hashed region with vertical lines) and in the vicinity of companions (hashed region with horizontal lines). Given the stellar mass-loss rate $\dot M$ and planetary mass $M_p$, the minimum orbital distance $a$ to let radio emission escape from the target system is determined by $f_{\rm cyc} = f_{\rm plasma}$. Therefore, 
 %%%
@@ -531,6 +562,37 @@ Therefore, for stars with $R_{\star } < 50 R_{\odot}$, companions around the sta
 
 \newpage
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sec:conc}
+
+\vspace{0.5in}
+
+%\acknowledgements
+
+{\sc Acknowledgments}
+
+We thank many people for useful discussions, in particular Tony
+Mroczkowzki.  DSS gratefully acknowledges support from a fellowship
+from the AMIAS group.  NM acknowledges support from [???].
+
+%\newpage
+
+%mehrdad
+
+%\newpage
+
+\bibliography{biblio.bib}
+
+
+\clearpage
+
+%\end{document}
 
 \section{Dave's sketch}
 
@@ -657,33 +719,38 @@ The power incident on the planet is
 
 %ftp://ftp.iwf.oeaw.ac.at/pub/Scherf/PRE-CD%20V2/pre6/nigl.pdf
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Assumptions for Planetary Magnetic Field}
+\label{ss:magneticfield}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{}
+\memoYF{It may be better to consider Cristensen's scaling, taking account of the age. But I have not followed the theory yet.}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions}
-\label{sec:conc}
+Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
+%%%%%%%%%% 
+\begin{equation}
+\mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
+\end{equation}
+%%%%%%%%%%
+where $\omega $ is the spin angular velocity, $\rho _c$, $r_c$ and $\sigma $ are the density, the radius, and the conductivity of the ``dynamo region'' where the density is high enough for hydrogen to be metallic, respectively. 
+The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
 
-\vspace{0.5in}
+Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+\memoYF{Would their spin rate become higher or lower??}
 
-%\acknowledgements
-
-{\sc Acknowledgments}
-
-We thank many people for useful discussions, in particular Tony
-Mroczkowzki.  DSS gratefully acknowledges support from a fellowship
-from the AMIAS group.  NM acknowledges support from [???].
-
-\newpage
-
-mehrdad
-
-\newpage
-
-\bibliography{biblio.bib}
+In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. 
+First, we assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
+For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
+%%%%%%%%%% 
+\begin{equation}
+\rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
+\end{equation}
+%%%%%%%%%%
+We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
+We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
 
 
-\clearpage
+
 
 \end{document}
+
