@@ -347,7 +347,7 @@ They are compared with numerical simulations in \citep{christensen2010}. We empl
 B^2 \propto \rho_c r_c^{4/3} q_c^{2/3},% \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
 \end{equation}
 %%%%%%%%%%
-where $\rho _c$ and $r_c$ are the density and the radius of the dynamo region, and $q_c$ is the internal convected energy flux. 
+where $\rho _c$ and $r_c$ are the density and the radius of the dynamo region, and $q_c$ is the internal convected energy flux in the core region. 
 
 In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of planets. 
 In this paper, we consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
@@ -358,47 +358,61 @@ For the density profile, we assume a polytrope gas sphere with index $n=1$, whic
 \end{equation}
 %%%%%%%%%%
 We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$ \memoYF{cite something!}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
-In the case of Jupiter, $r_{c, J} = 0.85 R_{\rm J}$. 
+In the case of Jupiter, $r_{c,\,J} = 0.85 R_{\rm J}$. 
 %We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
 
-The convected heat flux $q_c$ is estimated 
+The convected heat flux $q_c$ is estimated from the numerical simulation of \citep[e.g.][]{burrows_et_al2001,marley2007}. 
+According to \citet{burrows_et_al2001}, the luminosity scale with time as
+%%%%%%%%%%
+\begin{equation}
+L \sim {10^{-8} L_\odot} \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M}{1~M_J} \right)^{2.64} \, .
+\label{eq:burrowsLum}
+\end{equation}
+%%%%%%%%%%
+\memoYF{Burrows et al. 2001 implies $10^{-9} L_\odot $, but looks to me like it is actually $10^{-8} L_\odot $}. 
+We estimate the convected heat flux by dividing this energy flux by the surface area of the core region, i.e., $4 \pi r_c^2$. 
+The internal heat flux of Jupiter is  $q_{c,\,J} \sim 5.4\,{\rm [W/m^2]}$ \citep{hanel1981}, which is used for the scaling of planetary magnetic fields. 
 
-Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
+
+There also exist several other scaling relations proposed so far, which is compared in \citet{christensen2010}. 
+In particular, \citet{griebmeier2004} estimated radio emission of discovered exoplanets based on the following scaling relationship: 
 %%%%%%%%%% 
 \begin{equation}
 \mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
 \end{equation}
 %%%%%%%%%%
-where $\omega $ is the spin angular velocity, $\rho _c$, $r_c$ and $\sigma $ are the density, the radius, and the conductivity of the ``dynamo region'' where the density is high enough for hydrogen to be metallic, respectively. 
-The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
-
-Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+where $\omega $ is the spin angular velocity and $\sigma $ is the conductivity of the ``dynamo region'', which is assumed to be same as Jupiter. 
+The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. 
+%In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
+%
+Unlike usual hot jupiters, RGHJsEst are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
 \memoYF{Would their spin rate become higher or lower??}
 \memoDS{There's no reason to suspect either, although more massive planets might spin faster.}
-
-In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. 
-First, we assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
-For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
-%%%%%%%%%% 
-\begin{equation}
-\rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
-\end{equation}
-%%%%%%%%%%
-We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
-We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsection{Cut-off frequency}
 %\label{ss:cutoff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 \label{s:result}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Estimate of Planetary Magnetic Field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[bp]
+   \plotonesc{contour_B.pdf}
+   \caption{Planetary magnetic field as a function of age and planetary mass, based on \citet{christensen2010}. }
+  \label{fig:radio}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Estimate of Radio emission of RGHJs in comparison with canonical HJs}
@@ -574,6 +588,29 @@ Therefore, for stars with $R_{\star } < 50 R_{\odot}$, companions around the sta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 \label{sec:conc}
+
+In this paper, we propose that ``hot Jupiters'' around evolved stars (RGHJ) may be bright radio wave emitters, on the assumption of the simple empirical correlation between the radio emission and the kinetic input energy. 
+Due to the massive stellar wind, the input kinetic energy into magnetospheres of distant Jovian planets around red giants and AGB stars can be comparable to or by far greater than canonical hot Jupiters in close-in orbits, which could lead to the intrinsic bright radio emission. 
+
+The maximum radio emission we can expect to observe is limited by the plasma cut-off frequency of the stellar wind in the vicinity of the planets. 
+For a planet with the same magnetic moment as Jupiter, the maximum radio emission from the planets which can penetrate through the surrounding plasma is $\sim 10^{-3}$ Jy or $\sim 10^{-5}$ Jy at 10 pc and 100 pc, respectively. 
+This energy level would be detectable with LWA between 10~MHz abd 100~MHz or with SKA between 100~MHz and 1~GHz. 
+
+The planetary magnetic moment is computed based on the simple scaling relationship given by \citep{christensen2010}. 
+
+
+The radio emission due to the interaction between the planetary companion and the stellar wind would be brighter than the intrinsic radio emission from the host star. 
+
+The candidate radio detectors sensitive to the radio emission from 10~MHz to 1~GHz are LWA are SKA. For LWA, 
+
+This is above the detection limit of the 
+
+Non-detection 
+
+
+For planets around AGB stars, be
+, which provides us to 
+
 
 \vspace{0.5in}
 
