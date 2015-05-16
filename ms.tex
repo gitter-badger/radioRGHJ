@@ -344,7 +344,7 @@ Several relationships have been proposed so far by \citep[e.g.][]{russel1978,bus
 They are compared with numerical simulations in \citep{christensen2010}. We employ the following relationship \citep{christensen2006}, which was found to be in a good agreement with the numerical experiments over a wide parameter space \memoYF{describe in more detail}:
 %%%%%%%%%% 
 \begin{equation}
-B^2 \propto \rho_c r_c^{4/3} q_c^{2/3},% \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
+B^2 \propto \rho_c r_c^{4/3} q_c^{2/3}, \label{eq:Bscaling} % \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta } 
 \end{equation}
 %%%%%%%%%%
 where $\rho _c$ and $r_c$ are the density and the radius of the dynamo region, and $q_c$ is the internal convected energy flux in the core region. 
@@ -357,7 +357,7 @@ For the density profile, we assume a polytrope gas sphere with index $n=1$, whic
 \rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
 \end{equation}
 %%%%%%%%%%
-We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$ \memoYF{cite something!}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
+We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_{\rm crit}=700\,\mbox{kg/m}^3$ \memoYF{cite something!}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
 In the case of Jupiter, $r_{c,\,J} = 0.85 R_{\rm J}$. 
 %We assume that the conductivity $\sigma $ is the same as Jupiter \memoYF{?}. 
 
@@ -400,18 +400,25 @@ Unlike usual hot jupiters, RGHJsEst are not subject to tidal lock, as the gravit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Estimate of Planetary Magnetic Field}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Estimate of Planetary Magnetic Field and Maximum Frequency}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s
+
+First, we estimate the strength of planetary magnetic field based on the scaling relation of equation (\ref{eq:Bscaling}) and assumptions described in \S\ref{ss:magneticfield}. 
+Figure \ref{fig:planetaryB} shows the estimated core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_c$) as well as the predicted magnetic field strength at planetary surface ($B$) and the corresponding cyclotron frequency ($f_c$), as functions of planetary mass and the age. 
+Planetary magnetic field is expected to become stronger as planet becomes larger because all of $r_c$, $\rho _c$, and $q_c$ in equation (\ref{eq:Bscaling}) increase with planetary mass. 
+
+The cyclotron frequency Jovian planets older than 10~Gyr typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
+In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
 
 
-Planetary magnetic
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[bp]
-   \plotoneh{r_c.pdf}
-   \plotoneh{rho_c.pdf}
-   \plotoneh{contour_B.pdf}
+\begin{figure}[htbp]
+%   \plotoneh{r_c.pdf}
+%   \plotoneh{rho_c.pdf}
+   \plotoneh{model_planetaryB.pdf}
    \caption{Planetary magnetic field as a function of age and planetary mass, based on \citet{christensen2010}. }
-  \label{fig:radio}
+  \label{fig:planetaryB}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -419,7 +426,7 @@ Planetary magnetic
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Estimate of Radio emission of RGHJs in comparison with canonical HJs}
+\subsection{Estimate of Radio Intensity of RGHJs in comparison with canonical HJs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 On the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows: 
@@ -766,7 +773,7 @@ The power incident on the planet is
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Assumptions for Planetary Magnetic Field}
-\label{ss:magneticfield}
+%\label{ss:magneticfield}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \memoYF{It may be better to consider Cristensen's scaling, taking account of the age. But I have not followed the theory yet.}
