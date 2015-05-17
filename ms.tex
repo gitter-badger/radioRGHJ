@@ -198,16 +198,16 @@ In \S2, we discuss the assumption we make in this paper.
 The peak of the auroral radio emission is around the cyclotron frequency, of the planetary magnetic field $f_{\rm cyc}$: 
 %In our assumption, the frequency band width is assumed to be scaled with the cyclotron frequency, $f_{\rm cyc}$: 
 %%%
-\begin{eqnarray}
-f_{\rm cyc} &=& \frac{eB}{2\pi m_e} \approx 25.4 {\rm~MHz} \left( \frac{B}{9.1 \rm~G} \right) \, ,
-\label{eq:cyc} \\
-B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
-&\sim & 9.1{\rm~G} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
-\end{eqnarray}
+\begin{equation}
+f_{\rm cyc} = \frac{eB}{2\pi m_e} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:cyc} 
+%\\
+%B &=& \frac{\mu_0}{2\pi}\frac{\mathcal{M}}{R_p^3} \\
+%&\sim & 9.1{\rm~G} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) \left( \frac{R_p}{R_{p, J}} \right)^{-3}. 
+\end{equation}
 %%%
 %where $\mathcal{M}_J = 1.56 \times 10^{27} \mbox{A m}^2$. 
-For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
-the cyclotron frequency will be in the range $\sim$75-150~MHz.
+%For magnetic field strengths in the vicinity of $\sim$25-50~Gauss (G),
+%the cyclotron frequency will be in the range $\sim$75-150~MHz.
 
 Note that the emission is observable from ground only when the maximum frequency is larger than the plasma frequency of the Earth's ionosphere,
 %%%
@@ -273,17 +273,17 @@ Because... \memoYF{I want to justify not to consider the magnetic case.}, we ass
 
 The radius of the magnetic stand-off point, $r_s$, is determined by the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
-\begin{eqnarray}
-m_p n v ^2 &\sim& \frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6}  \\
-&=& \frac{1}{2\pi }\left( \frac{\mu _0}{2\pi } \frac{\mathcal{M}}{r_s^3} \right)^2 %\frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6} 
-\end{eqnarray}
+\begin{equation}
+m_p n v ^2 \sim \frac{B^2}{2\pi}\left( \frac{r_s}{R_p} \right)^{-6}  
+\end{equation}
 %%%
-or, 
+and therefore
 %%%
 \begin{equation}
-r_s \sim \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2}
+r_s \sim \left( \frac{B^2}{2\pi m_{\rm p}nv^2}
 \right)^{1/6}   
 \end{equation}
+%%%
 %\begin{eqnarray}
 %r_s &\sim& \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/6} \\
 %&=& 4.6 R_J \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{1/3} \left( \frac{\dot M}{\dot M_{\odot }} \right)^{-1/6} \left( \frac{v}{v_{\odot }} \right)^{-1/6}  
@@ -405,9 +405,16 @@ Unlike usual hot jupiters, RGHJsEst are not subject to tidal lock, as the gravit
 
 First, we estimate the strength of planetary magnetic field based on the scaling relation of equation (\ref{eq:Bscaling}) and assumptions described in \S\ref{ss:magneticfield}. 
 Figure \ref{fig:planetaryB} shows the estimated core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_c$) as well as the predicted magnetic field strength at planetary surface ($B$) and the corresponding cyclotron frequency ($f_c$), as functions of planetary mass and the age. 
-Planetary magnetic field is expected to become stronger as planet becomes larger because all of $r_c$, $\rho _c$, and $q_c$ in equation (\ref{eq:Bscaling}) increase with planetary mass. 
+Because $\rho _c \propto M_p$  at large $M_p$ and $q_c \propto t^{-1.3} M_p^{2.64}/r_c^2$, the magnetic field is roughly:
+%%%%%%%%%% 
+\begin{eqnarray}
+B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} \\
+f_c &\sim &  28~{\rm MHz} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} 
+\end{eqnarray}
+%%%%%%%%%%
+under this model. 
 
-The cyclotron frequency Jovian planets older than 10~Gyr typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
+Note that the cyclotron frequency Jovian planets older than 1~Gyr is typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
 
 
@@ -429,46 +436,46 @@ In this regime, there are a number of current and near-future radio wave detecto
 \subsection{Estimate of Radio Intensity of RGHJs in comparison with canonical HJs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-On the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows: 
+Based on the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows: 
 %%%
 \begin{eqnarray}
-P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{\mu_0^2 \mathcal{M}^2}{8\pi^3 m_{\rm p}nv^2} \right)^{1/3}  \\
-&=& P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
+P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{B^2}{2\pi m_{\rm p}nv^2} \right)^{1/3}  \\
+&=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
 
-It is illustrative to compare radio emission power of canonical hot jupiters and that of red giant hot jupiters. We adopt canonical values for planetary mass, orbital distance, and orbital period of each type as shown in Table \ref{tab:comp_HJ}. Then, equation (\ref{eq:Pkinp}) can be re-normalized as 
+Now, we compare radio emission power of canonical hot jupiters and that of red giant hot jupiters. 
+Canonical values we adopt for planetary mass, orbital distance, and orbital period of each type as shown in Table \ref{tab:comp_HJ}. 
+Then, equation (\ref{eq:Pkinp}) can be re-normalized as follows. 
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} 
-&\approx & 230 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&\approx & 220 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
-&\approx & 2.3 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&\approx & 2.2 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
-&\approx & 100 ~P_{\rm k,\,inp,\,J} \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
+&\approx & 460 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
 %%%
+Here, we normalized the strength of magnetic field of canonical hot jupiters with $B_J$, due to the uncertainty of the magnetic field of tidally-locked planets. 
+Depending on the modeling of magnetic field strength, there is also a speculation that the tidally-locked planets may have weaker magnetic field due to slow rotation \citep[e.g.][]{griesmeier2004}; in that case the radio emission will be even weaker. 
+\memoYF{This is based on theoretical prediction by \citet{griesmeier2004} that the tidally-locked planets have weaker magnetic field due to slow spin rotation. }
 \memoYF{what is the typical wind velocity of AGB stars?}
-
-%Thus, the jupiters to the AGB stars are intrinsically 200 times as bright as canonical hot Jupiters. In other words, we could search for radio signal from these stars in $(\sqrt{200})^3 \approx 3000$ times as large volume as the canonical hot jupiters.  
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[htdp]
 \caption{Canonical Parameters of 2 types of hot jupiters.}
 \begin{center}
-\begin{tabular}{c|ccc} \hline \hline
-& mass & orbital distance &  spin period \\ 
-& $M_p$ & $a$ &  \\ \hline
-canonical HJ & $M_J$ & 0.05 AU & 4 days \\
-RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
+\begin{tabular}{c|cccc} \hline \hline
+& mass & magnetic field & orbit &  spin period \\ 
+& $M_p$ & B & $a$ &  \\ \hline
+canonical HJ & $M_J$ & $B_J$ & 0.05 AU & 4 days \\
+RGHJ & $M_J$ & $B_J$ & 5 AU &  0.4 days \\ \hline
 \end{tabular}
 \end{center}
 \label{tab:comp_HJ}
@@ -483,32 +490,32 @@ RGHJ & $M_J$ & 5 AU &  0.4 days \\ \hline
 % <---- No, in this case f_plasma > 30 MHz
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Observable spectral radio emission of RGHJs with varying mass and orbital distance}
+%\subsection{Observable spectral radio emission of RGHJs with varying mass and orbital distance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-We now turn to the spectral radio flux observed at the Earth: 
+Then, spectral radio flux observed at the Earth is:
 %%%
 \begin{eqnarray}
 F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 %&=& P_{\rm radio,\,J} \\
 &\approx & 5.4\times 10^{-6} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&&\times \left( \frac{B}{B_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for Jupier-twin)} \notag \\
 %%%
-&\approx & 1.0 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&\approx & 1.2 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 %%%
-&\approx & 1.0 \times 10^{-1} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&\approx & 1.2 \times 10^{-1} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 %%%
-&\approx & 4.6 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{\mathcal{M}}{0.1\mathcal{M}_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&\approx & 2.5 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
+&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 %\\
@@ -517,17 +524,52 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 \end{eqnarray}
 %%%
 Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
-\memoYF{Spectral radio flux decreases as the magnetic moment increases. Is this true?}
+Therefore, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
 
-Combining equation (\ref{eq:F_nu})-(\ref{eq:F_nu_RGHJs}) with the scaling relation of magnetic moment described in \S\ref{ss:magneticfield}, we estimate the spectral radio flux of planetary companions with varying masses and orbital distances as shown in Figure \ref{fig:radio}. Here we assumed that the target system is located at a distance of 10~pc from the Earth. The flux can be scaled by the distance as explicitly written in equation (\ref{eq:F_nu}). 
+%Note that the spectral radio flux increases as the magnetic moment decreases. 
 
-%The hashed regions are not observable due to the plasma cutoff at Earth's ionosphere (hashed region with vertical lines) and in the vicinity of companions (hashed region with horizontal lines). Given the stellar mass-loss rate $\dot M$ and planetary mass $M_p$, the minimum orbital distance $a$ to let radio emission escape from the target system is determined by $f_{\rm cyc} = f_{\rm plasma}$. Therefore, 
+However, observed energy flux is limited by the plasma cut-off frequency in the vicinity of the planets. 
+This condition is:
 %%%
-%\begin{eqnarray}
-%25.4 ~\mbox{MHz} \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right) &=& 12.6 ~\mbox{MHz} \left( \frac{a_{\rm min}}{5~\mbox{AU}} \right) \notag \\ 
-%&& \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{1/2} \left( \frac{v}{v_{\odot}} \right)^{-1/2} \\
+\begin{equation}
+ f_{cyc} > f_{c2}
+\end{equation} 
+%%%
+or, 
+%%%
+\begin{eqnarray}
+ \left( \frac{B}{10~\mbox{G}} \right) &>& 2.2 \left( \frac{a}{5~\mbox{AU}} \right)^{-1} \\
+ && \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{1/2}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-1/2} \label{eq:Ba_limit}
+\end{eqnarray}
+%%%
+or, 
+%%%
+\begin{eqnarray}
+ \left( \frac{M_p}{M_{p,J}} \right) &> & 1.8 \left( \frac{a}{5~\mbox{AU}} \right)^{-0.72} \left( \frac{t}{4.5~\mbox{Gyr}} \right)^{0.31} \\
+ && \times \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{0.36}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-0.36} \label{eq:Ma_limit}
+\end{eqnarray}
+%%%
+% 
+% \left( \frac{a}{5~\mbox{[AU]}} \right)  \\
+%&&> 2.2 \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{1/2}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-1/2} \label{eq:Ba_limit}
 %\end{eqnarray}
 %%%
+Therefore, given any orbital distance, there is a lower mass limit for a planet to be able to release the  radio wave out of the system. 
+
+Substituting equation (\ref{eq:Ba_limit}) into equation (\ref{eq:F_nu_RGHJ}) leads to the maximum spectral radio flux at given orbital period:
+%%%
+\begin{eqnarray}
+F_{\nu} &<& 8 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right) \\
+&& \times \left( \frac{a}{5~\mbox{AU}} \right)^{-1}  \left( \frac{\dot M}{10^6 \dot M_{\odot}} \right)^{1/6} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{13/6}
+\end{eqnarray}
+%%%
+Since the dependence of the mass-loss rate is weak, even for evolved stars with significant mass loss rate (e.g. AGB stars), the upper limit of the stellar flux would not be changed by orders of magnitude. 
+Thus, we may consider that the radio-brightest planetary systems at 10 pc would emit $\sim 10^{-2}$ Jy. 
+
+Figure \ref{fig:radio} shows the contours of spectral radio flux of planetary companions at 4.5~Gyr with varying masses and orbital distances. Here we assumed that the target system is located at a distance of 10~pc from the Earth. The flux can be scaled by the distance as a quadratic function. 
+The hashed regions indicate the parameter spaces where the radio emission from the planet cannot be observed due to the plasma cut-off frequency of the Earth's ionosphere as well as that of the target planetary system. 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[bp]
@@ -561,6 +603,7 @@ Combining equation (\ref{eq:F_nu})-(\ref{eq:F_nu_RGHJs}) with the scaling relati
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Intrinsic radio emission of red giants stars}
 \label{ss:RGradio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (Jason?)
 
@@ -569,7 +612,7 @@ In this paper, we simply assume that the radio emission from the red giants them
 %%%
 \begin{eqnarray}
 f_{\star } (\nu ) &=& \frac{2R_{\star }^2 k_B T \nu^2}{c^2 d^2}  \\
-&\approx & 1.4 \times 10^{-9} ~\mbox{Jy} \left( \frac{d}{100 ~\mbox{pc}} \right)^{-2} \\
+&\approx & 1.4 \times 10^{-7} ~\mbox{Jy} \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2} \\
 && \times \left( \frac{R_{\star }}{10 R_{\odot }} \right)^2 \left( \frac{T_{\star }}{10^{4}~\mbox{K}} \right) \left( \frac{\nu}{1 ~\mbox{GHz}} \right)^2 
 \end{eqnarray}
 %%%
@@ -630,7 +673,8 @@ For planets around AGB stars, be
 {\sc Acknowledgments}
 
 We thank many people for useful discussions, in particular Tony
-Mroczkowzki.  DSS gratefully acknowledges support from a fellowship
+Mroczkowzki.  YF is supported from the Grant-in-Aid No. 25887024 by the Japan Society for the Promotion of Science. 
+DSS gratefully acknowledges support from a fellowship
 from the AMIAS group.  NM acknowledges support from [???].
 
 %\newpage
