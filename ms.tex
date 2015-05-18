@@ -309,7 +309,7 @@ In the following, we describe our assumptions for these properties.
 \label{ss:stellarwind}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The stellar wind density, $n$ in equation (\ref{eq:Pinp_kin}) are estimated byt
+The stellar wind density, $n$ in equation (\ref{eq:Pinp_kin}) is estimated by
 %%%
 \begin{equation}
 n = \frac{\dot M}{4\pi a^2 m_p v}
@@ -424,7 +424,7 @@ In this regime, there are a number of current and near-future radio wave detecto
 %   \plotoneh{r_c.pdf}
 %   \plotoneh{rho_c.pdf}
    \plotoneh{model_planetaryB.pdf}
-   \caption{Planetary magnetic field as a function of age and planetary mass, based on \citet{christensen2010}. }
+   \caption{Planetary magnetic field as a function of age and planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of internal heat of \citet{burrows_et_al2001}. }
   \label{fig:planetaryB}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -576,6 +576,27 @@ The hashed regions indicate the parameter spaces where the radio emission from t
  %\begin{minipage}{0.5\hsize}
   %\begin{center}
    %\includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.pdf}
+   \plotonesc{radio_emission_Mdot1e-8_constRp_christensen.pdf}
+  %\end{center}
+ %\end{minipage}
+ %\begin{minipage}{0.5\hsize}
+   %\begin{center}
+   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-5_constRp.pdf}
+   \plotonesc{radio_emission_Mdot1e-5_constRp_christensen.pdf}
+  %\end{center} 
+ %\end{minipage}
+   \caption{[{\bf New version: based on scaling relationship of Christensen 2010}] Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
+  \label{fig:radio}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[bp]
+ %\begin{minipage}{0.5\hsize}
+  %\begin{center}
+   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.pdf}
    \plotonesc{radio_emission_Mdot1e-8_constRp.pdf}
   %\end{center}
  %\end{minipage}
@@ -585,10 +606,10 @@ The hashed regions indicate the parameter spaces where the radio emission from t
    \plotonesc{radio_emission_Mdot1e-5_constRp.pdf}
   %\end{center} 
  %\end{minipage}
-   \caption{Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
+   \caption{[{\bf Old version: based on scaling relationship of Sano 1993}] Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
   \label{fig:radio}
 \end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -607,17 +628,30 @@ The hashed regions indicate the parameter spaces where the radio emission from t
 
 (Jason?)
 
-In the radio range, the brightness source of the radio emission is Rayleigh-Jeans tail of the Planck function, i.e., $S_{\nu } = 2kT\nu^2/c^2$. Recent observations revealed that this dependence on $\nu$ ($f \propto \nu^{\alpha }$ where $\alpha $ is 2) can approximately be extended as low frequency as 1 GHz \citet{gorman2013}, presumably as a result of the wavelength dependence of the opacity (at longer wavelength we see the region further from the center of the stars) and the decreased temperature as the distance from the stars increases. 
-In this paper, we simply assume that the radio emission from the red giants themselves are approximated as a black body radiation. Therefore, the flux from the giants are:
+In the radio range, the brightness source of the radio emission is Rayleigh-Jeans tail of the Planck function, i.e., $S_{\nu } = 2kT\nu^2/c^2$. Recent observations revealed that this dependence on $\nu$ ($f \propto \nu^{\alpha }$ where $\alpha $ is 2) can approximately be extended as low frequency as 1 GHz \citep{gorman2013}, presumably as a result of the wavelength dependence of the opacity (at longer wavelength we see the region further from the center of the stars) and the decreased temperature as the distance from the stars increases. 
+In this paper, we simply assume that the radio emission from the red giants themselves is approximated as a black body radiation at 1000~GHz and proportional to $\nu ^2$. 
+Thus, the flux from the giants is:
 %%%
 \begin{eqnarray}
 f_{\star } (\nu ) &=& \frac{2R_{\star }^2 k_B T \nu^2}{c^2 d^2}  \\
-&\approx & 1.4 \times 10^{-7} ~\mbox{Jy} \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2} \\
+&\approx & 1.4 \times 10^{-5} ~\mbox{Jy} \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2} \\
 && \times \left( \frac{R_{\star }}{10 R_{\odot }} \right)^2 \left( \frac{T_{\star }}{10^{4}~\mbox{K}} \right) \left( \frac{\nu}{1 ~\mbox{GHz}} \right)^2 
 \end{eqnarray}
 %%%
-Therefore, for stars with $R_{\star } < 50 R_{\odot}$, companions around the stars are typically brighter than their hosts. 
+The brightest emission due to interaction with planetary companion would overwhelm radio emission from their host (evolved) star in the 10-100~MHz range (in the 100-1000~MHz range) if the stellar radius $R_{\star }$ is smaller than $\sim 1000R_{\odot }$ ($\sim 100R_{\odot }$). 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detectability} 
+\label{ss:detectability}
+
+Figure \ref{fig:} displays the detection limit of current and near-future radio wave detectors. Between 10~MHz and 100~MHz the detection limit is $\sim 10^{-3}$~Jy. Therefore, Jovian planets around the nearest evolved stars would be within reach. 
+On the other hand, between 100~MHz and 1~GHz where the cyclotron frequency of massive Jovian planets resides, SKA potentially achieve $10^{-5}$ Jy. In this range, massive planetary companion as far as 100 pc away would be marginally within the scope. 
+
+We estimate the population of RGHJs within 100 pc to be order of 1000, based on the photometric dataset of Hipparcos. Thus, 
+
+
+\newpage
 
 
 
@@ -628,11 +662,6 @@ Therefore, for stars with $R_{\star } < 50 R_{\odot}$, companions around the sta
 
 \citet{gorman2013}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Expected population of RGHJ in the observable volume}
-\label{ss:number}
-
-\newpage
 
 
 
