@@ -646,7 +646,7 @@ For this purpose, we obtained the list of M-type red giants from Table 4 of \cit
 For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
 %%%
 \begin{equation}
-\dot M_{\star } \sim \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_{\star }}{M_{\odot }} \right)^{-1}
+\dot M_{\star } [M_{\odot }{\rm /yr}] \sim 4 \times 10^{-13} \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_{\star }}{M_{\odot }} \right)^{-1}
 \end{equation}
 %%%
 where $R_{\star }$, $L_{\star } (=4\pi R_{\star }^2 T_{\star }^4)$, and $M_{\star}$ are radius, luminosity, and mass of the star. 
@@ -657,13 +657,14 @@ v \propto \sqrt{\frac{2GM_{\star }}{R_{\star }}}
 \end{equation}
 %%%
 Using these values for equations (\ref{eq:stand-off}) and (\ref{eq:stand-off-radius}) as well as the distance to the target, we can estimate the frequency and intensity by specifying the magnetic field and orbital distance of a hypothetical planetary companion. 
-Here, we consider two cases: (a) a Jupiter-twin at 5.2~AU whose cyclotron frequency is $\sim 30$~MHz, and (b) a larger Jovian planet with $M_p\sim 5M_p$ of 4.5 Gyrs old at 5.2~AU whose cyclotron frequency is $\sim 300$~MHz (equation (\ref{eq:scalingfc})). 
+Here, we consider two cases: (a) a Jupiter-twin at 5~AU whose cyclotron frequency is $\sim 30$~MHz, and (b) a larger Jovian planet with $M_p\sim 5M_p$ of 4.5 Gyrs old at 5~AU whose cyclotron frequency is $\sim 300$~MHz (equation (\ref{eq:scalingfc})). 
 
 Figure \ref{fig:observability} displays the estimated radio intensity and the maximum frequency (i.e., cyclotron frequency) of red giants within 100~pc.  
 The difference of the symbols indicates whether the radio emission can escape from the system (circle) or not (cross). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
+   \plotoneh{model_planetaryB.pdf}
    \plotoneh{model_planetaryB.pdf}
    \caption{.}
   \label{fig:observability}
