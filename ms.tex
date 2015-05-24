@@ -503,6 +503,26 @@ RGHJ & $M_J$ & $B_J$ & 5 AU &  0.4 days \\ \hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[bp]
+ %\begin{minipage}{0.5\hsize}
+  %\begin{center}
+   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.pdf}
+   \plotonesc{radio_emission_Mdot1e-8_constRp_christensen.pdf}
+  %\end{center}
+ %\end{minipage}
+ %\begin{minipage}{0.5\hsize}
+   %\begin{center}
+   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-5_constRp.pdf}
+   \plotonesc{radio_emission_Mdot1e-5_constRp_christensen.pdf}
+  %\end{center} 
+ %\end{minipage}
+   \caption{[{\bf New version: based on scaling relationship of Christensen 2010}] Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
+  \label{fig:radio}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
 
 %If we consider an AGB star with mass loss rate $\dot M \sim 10^{-5} M_{\odot }\mbox{/yr}~ (=10^9 \dot M_{\odot})$, then the flux goes up to $\sim 1 \mbox{~mJy}$. 
 %As the current detection limit of radio wave at $\sim 30 \mbox{~MHz}$ with Long Wavelength Array (LWA), for instance, is $\sim 1\mbox{~mJy}$ \memoYF{cite something}, this indicates that as the Sun evolves to ARB stage our Jupiter will eventually become so brilliant in radio wave that it can be detected from 100 pc away!
@@ -591,26 +611,6 @@ The hashed regions indicate the parameter spaces where the radio emission from t
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure*}[bp]
- %\begin{minipage}{0.5\hsize}
-  %\begin{center}
-   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-8_constRp.pdf}
-   \plotonesc{radio_emission_Mdot1e-8_constRp_christensen.pdf}
-  %\end{center}
- %\end{minipage}
- %\begin{minipage}{0.5\hsize}
-   %\begin{center}
-   %\includegraphics[width=\hsize]{radio_emission_Mdot1e-5_constRp.pdf}
-   \plotonesc{radio_emission_Mdot1e-5_constRp_christensen.pdf}
-  %\end{center} 
- %\end{minipage}
-   \caption{[{\bf New version: based on scaling relationship of Christensen 2010}] Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 1 pc. The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. The hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion. Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
-  \label{fig:radio}
-\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{figure*}[bp]
@@ -631,13 +631,20 @@ The hashed regions indicate the parameter spaces where the radio emission from t
 %\end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Observability}
 \label{s:observability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tbhp]
+   \plotoneh{radio_1Mp_5AU.pdf}
+   \plotoneh{radio_5Mp_5AU.pdf}
+   \caption{.}
+  \label{fig:observability}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 In order to examine the potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from actual red giants in the case that they have planetary companions around them. 
 
@@ -662,14 +669,6 @@ Here, we consider two cases: (a) a Jupiter-twin at 5~AU whose cyclotron frequenc
 Figure \ref{fig:observability} displays the estimated radio intensity and the maximum frequency (i.e., cyclotron frequency) of red giants within 100~pc.  
 The difference of the symbols indicates whether the radio emission can escape from the system (circle) or not (cross). 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
-   \plotoneh{radio_1Mp_5AU.pdf}
-   \plotoneh{radio_5Mp_5AU.pdf}
-   \caption{.}
-  \label{fig:observability}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \memoYF{discussion about detectability}
 
