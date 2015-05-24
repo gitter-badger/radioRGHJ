@@ -640,8 +640,7 @@ The hashed regions indicate the parameter spaces where the radio emission from t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In order to examine the potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from actual red giants in the case that they have planetary companions around them. 
-
-For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the values of mass, radius, and effective temperature, and also obtained the values of parallax from the original Hipparcos datasets \memoYF{cite something} to compute the distance. 
+For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the values of mass, radius, and effective temperature, and also obtained the values of parallax from the original Hipparcos datasets \memoYF{cite something} to compute the distance. \memods{Dumm1988 is not in the biblio.bib file.}
 
 For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
 %%%
@@ -715,8 +714,8 @@ The brightest emission due to interaction with planetary companion to the RGB st
 \label{ss:offset}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-One might expect that the plasma flowing into a magnetic field could generate the magnetic field that partially cancel the intrinsic planetary magnetic field. 
-To estimate this possibility, consider a uniform flow of particles of charge $e$, mass $m$, and velocity $v$ into a region of magnetic field $B$, spiraling along the initial magnetic field. 
+One might expect that plasma flowing into a region permeated by a magnetic field would, by spiraling around the field lines, generate an opposing magnetic field that partially cancels the intrinsic planetary magnetic field. 
+To estimate the strength of this effect, consider a uniform flow of particles of charge $e$, mass $m$, and velocity $v$ into a region of magnetic field $B$, spiraling along the initial magnetic field. 
 %The particles make a spiral motion inside the magnetic field and partially cancel the initial field. 
 %The canceling field $B_c$ can be estimated as follows. 
 A single charged particle moving perpendicular to the magnetic field moves in a circular orbit of radius 
@@ -856,7 +855,7 @@ $\tau_{\rm conv} \sim (M R^2 / L)^{1/3}$.  According to
 as $R \sim R_J$, where $R_J$ is the radius of Jupiter, and
 \begin{equation}
 \frac{L}{10^{-9} L_\odot} \sim \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M}{1~M_J} \right)^{2.64} \, .
-\label{eq:burrowsLum}
+\label{eq:burrowsLum_2}
 \end{equation}
 So,
 %\begin{eqnarray}
@@ -880,8 +879,8 @@ Ro & = & \frac{\tau_c}{P_{\rm rot}} \\
 Noting that
 \begin{equation}
 \dot{M}_* = 4\pi r^2 \rho[r] v \, ,
-\label{eq:mdot
-}\end{equation}
+\label{eq:mdot}
+\end{equation}
 so $\rho[r] = \dot{M}_*/(4\pi r^2 v)$,
 \begin{eqnarray}
 \frac{\rho v^2}{2} = \frac{B^2}{8\pi} \sim \frac{B_0^2}{8\pi} \left( \frac{d}{d_0} \right)^{-3} \, ,
@@ -963,7 +962,7 @@ First, we assume that the planetary radius is constant at $R_p = R_{p,J}$, as th
 For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
-\rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
+\rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r_2}
 \end{equation}
 %%%%%%%%%%
 We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_c=700\,\mbox{kg/m}^3$. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
