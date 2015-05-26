@@ -153,7 +153,7 @@ dave@ias.edu
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
 It has been known that Jupiter emits radio emission from the radiation belt and auroral region due to the acceleration of the plasmas. \memoYF{?}.
 Potentially, large exoplanets can also emit radio waves through the similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
-Radio emissions from exoplanets have been estimated taking account of several possible processes, based on the empirical scaling of the radio intensity with the solar wind flux \citep{zarka2001, griebmeier2007, hallinan_et_al2013, noyola2014}.
+Radio emissions from exoplanets have been estimated taking account of several possible processes, based on the empirical scaling of the radio intensity with the solar wind flux \citep{zarka2001, griesmeier2007a, griesmeier2007b, hallinan_et_al2013, noyola2014}.
 Although the search for these radio signatures are being conducted, there is no clear detection claimed so far, while some indications were obtained \memoYF{?} \citep{lecavelier_et_al2013}. 
 %In general, there are four proposed models for a planet to emit radio wave \citep{griebmeier2007}: 1) the magnetic energy model, 2) kinetic energy model, 3) CME model, and 4) the unipolar interaction model. 
 %The search for these radio emissions from extrasolar Jovian planets has been performed. 
@@ -226,7 +226,7 @@ Assuming that the stellar wind scales as the escape velocity, i.e., $\propto \sq
 \begin{equation}
 \frac{v}{v_{\odot}} \sim 10^{-1}
 \end{equation}
-where $v_{\odot} \sim 4.0 \times 10^5 $ km/sec. 
+where $v_{\odot} \sim 4.0 \times 10^2 $ km/sec. 
 
 %The temperature of stellar wind of RGs is expected to be 2 orders of magnitude lower than their main sequence counterparts, mainly because the sound speed of hot corona exceeds the escape speed, i.e., hot corona cannot be confined in the stellar atmosphere \citep{suzuki2008}. 
 %\begin{equation}
@@ -241,7 +241,7 @@ where $v_{\odot} \sim 4.0 \times 10^5 $ km/sec.
 
 In order to estimate the planetary magnetic field of general planets, we adopt a simple scaling relation between the magnetic field and macroscopic planetary properties. 
 
-Several relationships have been proposed so far \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006} \memoYF{check!} (see \citet{griebmeier2004} or \citet{christensen2010} for the summary). 
+Several relationships have been proposed so far \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006} \memoYF{check!} (see \citet{griesmeier2004} or \citet{christensen2010} for the summary). 
 %
 They are compared with numerical simulations in \citet{christensen2010}. We employ the following relationship from \citet{christensen2006}, which was found to be in a good agreement with the numerical experiments over a wide parameter space \memoYF{describe in more detail}:
 %%%%%%%%%% 
@@ -279,7 +279,7 @@ is used for the scaling of planetary magnetic fields.
 
 \memoYF{I am not sure if the following paragraph is needed.}
 There also exist several other scaling relations proposed so far, which is compared in \citet{christensen2010}. 
-In particular, \citet{griebmeier2004} estimated radio emission of discovered exoplanets based on the following scaling relationship: 
+In particular, \citet{griesmeier2004} estimated radio emission of discovered exoplanets based on the following scaling relationship: 
 %%%%%%%%%% 
 \begin{equation}
 \mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
@@ -289,7 +289,7 @@ where $\omega $ is the spin angular velocity and $\sigma $ is the conductivity o
 The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. 
 %In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
 %
-Unlike usual hot jupiters, RGHJsEst are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+Unlike canonical hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we could assume that of Jupiter: $\omega = 9.925$ [hr]. 
 %\memoYF{Would their spin rate become higher or lower??}
 %\memoDS{There's no reason to suspect either, although more massive planets might spin faster.}
 
@@ -362,7 +362,7 @@ F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
 %%%
 where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency band width. 
 
-We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission with the input energy from stellar wind, in the same manner as \citet{griebmeier2007}. 
+We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission with the input energy from stellar wind, in the same manner as \citet{griesmeier2007b}. 
 %, following the procedure of \citet{griebmeier2007}. 
 This is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy or the magnetic energy of the solar wind \citep[``radio Bode's law''; ][]{desch+kaiser1984}, i.e.,
 %Namely, although the detail of the mechanism to generate planetary radio emission is not fully understood so far \memoYF{cite something?}, 
@@ -411,7 +411,7 @@ In the following, we describe our assumptions for these properties.
 
 We assume that the solid angle of the emission is same as the Jupiter's one for all of the exoplanets. In reality, the solid angles of auroral radio emission from  Jupiter, Saturn, and Earth are $\sim 1.6$, $\sim $6.3, and $\sim $3.5, respectively \citep{desch+kaiser1984}, which are on the same order and will not significantly affect our order-of-magnitude estimate of radio emission. 
 
-The band width, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griebmeier2007}. 
+The band width, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}. 
 
 
 
@@ -485,8 +485,6 @@ P_{\rm k,\,inp}
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
 %%%
-\memoDS{Why scale canonical HJs distances to 5 AU?}
-\memoYF{??}
 Here, we normalized the strength of magnetic field of canonical hot jupiters with $B_J$, due to the uncertainty of the magnetic field of tidally-locked planets. 
 Depending on the modeling of magnetic field strength, there is also a speculation that the tidally-locked planets may have weaker magnetic field due to slow rotation \citep[e.g.][]{griesmeier2004}; in that case the radio emission will be even weaker. 
 \memoYF{This is based on theoretical prediction by \citet{griesmeier2004} that the tidally-locked planets have weaker magnetic field due to slow spin rotation. }
@@ -582,7 +580,7 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 %&&\times \left( \frac{\mathcal{M}}{\mathcal{M}_J} \right)^{-1} \left( \frac{R_p}{R_{p, J}} \right)^{3}
 \end{eqnarray}
 %%%
-Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griebmeier2007} \memoYF{cite original paper!}. 
+Here, we used $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ \citep{griesmeier2007b} \memoYF{cite original paper!}. 
 Therefore, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
 
 %Note that the spectral radio flux increases as the magnetic moment decreases. 
@@ -688,7 +686,8 @@ Figure \ref{fig:observability} displays the estimated radio intensity and the ma
 The difference of the symbols indicates whether the radio emission can escape from the system (circle) or not (cross). 
 
 
-\memoYF{discussion about detectability}
+\memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA). }
+
 
 %Figure \ref{fig:} displays the detection limit of current and near-future radio wave detectors. Between 10~MHz and 100~MHz the detection limit is $\sim 10^{-3}$~Jy. Therefore, Jovian planets around the nearest evolved stars would be within reach. 
 %On the other hand, between 100~MHz and 1~GHz where the cyclotron frequency of massive Jovian planets resides, SKA potentially achieve $10^{-5}$ Jy. In this range, massive planetary companion as far as 100 pc away would be marginally within the scope. 
@@ -962,7 +961,7 @@ The power incident on the planet is
 
 \memoYF{It may be better to consider Cristensen's scaling, taking account of the age. But I have not followed the theory yet.}
 
-Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griebmeier2004}:
+Theoretically, the magnetic moment of gaseous planets are expressed with the following scaling relationship \citep{griesmeier2004}:
 %%%%%%%%%% 
 \begin{equation}
 \mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
