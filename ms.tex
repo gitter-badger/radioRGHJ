@@ -326,9 +326,10 @@ The auroral radio spectral flux of exoplanets observed at the Earth, $F_{\nu}$ c
 %%%
 \begin{equation}
 F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
+\label{eq:Fnu}
 \end{equation}
 %%%
-where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency band width. 
+where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency bandwidth. 
 
 We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission with the input energy from stellar wind, in the same manner as \citet{griesmeier2007b}. 
 This is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy or the magnetic energy of the solar wind \citep[``radio Bode's law''; ][]{desch+kaiser1984}, i.e.,
@@ -373,7 +374,7 @@ In the following, we describe our assumptions for these properties.
 
 We assume that the solid angle of the emission is same as the Jupiter's one for all of the exoplanets. In reality, the solid angles of auroral radio emission from  Jupiter, Saturn, and Earth are $\sim 1.6$, $\sim $6.3, and $\sim $3.5, respectively \citep{desch+kaiser1984}, which are on the same order and will not significantly affect our order-of-magnitude estimate of radio emission. 
 
-The band width, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}. 
+The bandwidth, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
 
 
 
@@ -388,7 +389,7 @@ The band width, $\Delta f$, is assumed to be proportional to the representative 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s
 
 First, we estimate the strength of planetary magnetic field based on the scaling relation of equation (\ref{eq:Bscaling}) and assumptions described in \S\ref{ss:magneticfield}. 
-Figure \ref{fig:planetaryB} shows the estimated core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_c$) as well as the predicted magnetic field strength at planetary surface ($B$) and the corresponding cyclotron frequency ($f_c$), as functions of planetary mass and the age. 
+Figure \ref{fig:planetaryB} shows the estimated core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_c$) as well as the predicted magnetic field strength at planetary surface ($B$) and the corresponding cyclotron frequency ($f_c$), as functions of planetary mass and the age. \memoDS{previously, we referred to $f_{\rm cyc}$.  We should be consistent.}
 Because $\rho _c \propto M_p$  at large $M_p$ and $q_c \propto t^{-1.3} M_p^{2.64}/r_c^2$, the magnetic field is roughly:
 %%%%%%%%%% 
 \begin{eqnarray}
@@ -406,7 +407,7 @@ In this regime, there are a number of current and near-future radio wave detecto
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{model_planetaryB.pdf}
-   \caption{Planetary magnetic field as a function of age and planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of internal heat of \citet{burrows_et_al2001}. }
+   \caption{Planetary magnetic field as a function of age and planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of internal heat of \citet{burrows_et_al2001}.} \memoDS{Can we change density to cgs in this figure?}
   \label{fig:planetaryB}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -481,11 +482,18 @@ Greater $B$ Produces Lower $F_\nu$}
 \label{ss:counterintuitive}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\memoDS{Is this section needed anymore, since this is already in the Griesmeier paper?
+Does the Griesmeier paper make the point explicit enough, or is this still somewhat valuable?
+Also, are we 100\% sure that this section is right?
+A planet with larger surface field achieves an equivalent field to a planet with a smaller surface field at a larger radius, and captures a larger wind flux.
+Should we think more about the spectrum?}
+
 According to Eq.~(\ref{eq:Pkinp}), the total emitted power scales with $B^{2/3}$.
 In detail, it is not obvious how the power spectral density scales with a planet's surface magnetic field, because the emission process involves electrons passing through a wide range of magnetic field conditions (dipolar field strength drops off as $r^{-3}$, and only in an idealized model is a planet a perfect magnetic dipole).
 Nevertheless, a reasonable ansatz is that the radio emission is spread over a range of wavelengths in an approximately scale-independent way.
-In other words, the power spectral density is likely to scale as the total power divided by the cyclotron frequency corresponding to a characteristic field strength where the emission peaks.
-Since $f_{\rm cyclotron}$ scales as $B$ (a higher power of $B$ than the scaling of total power), this implies that the power spectral density in the radio scales as $B^{-1/3}$.
+In other words, the frequency bandwidth $\Delta f$ of Eq.~(\ref{eq:Fnu}) is proportional to $f_{\rm cyc}$, as described in Section~\ref{ss:model_intensity} and in \citet{griesmeier2007b}.
+This means that the power spectral density is likely to scale as the total power divided by the cyclotron frequency corresponding to a characteristic field strength where the emission peaks.
+Since $f_{\rm cyc}$ scales as $B$ (a higher power of $B$ than the scaling of total power), this implies that the power spectral density in the radio scales as $B^{-1/3}$.
 Planets that are intrinsically brighter, owing to a greater magnetic field strength, probably have their emission spread out over a broader set of frequencies, and therefore have a lower flux density as measured in Janskys!
 \memoDS{Is this pointed out elsewhere in the literature?}
 
