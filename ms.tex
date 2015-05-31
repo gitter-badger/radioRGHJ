@@ -151,7 +151,7 @@ yuka.fujii@elsi.jp
 
 
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
-It has been known that Jupiter emits radio emission from the radiation belt and auroral region due to the acceleration of the plasmas. \memoYF{?}.
+It has been known that Jupiter emits radio emission from the radiation belt and auroral region due to cyclotron-maser instability \citep{zarka1998}.  % due to the acceleration of the plasmas. \memoYF{?}.
 Potentially, large exoplanets can also emit radio waves through the similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
 Radio emissions from exoplanets have been estimated taking account of several possible processes, based on the empirical scaling of the radio intensity with the solar wind flux \citep{zarka2001, griesmeier2007a, griesmeier2007b, hallinan_et_al2013, noyola2014}.
 Although the search for these radio signatures are being conducted, there is no clear detection claimed so far, while some indications were obtained \memoYF{?} \citep{lecavelier_et_al2013}. 
@@ -231,9 +231,11 @@ where $v_{\odot} \sim 4.0 \times 10^2 $ km/sec.
 
 In order to estimate the planetary magnetic field of general planets, we adopt a simple scaling relation between the magnetic field and macroscopic planetary properties. 
 
-Several relationships have been proposed so far \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006} \memoYF{check!} (see \citet{griesmeier2004} or \citet{christensen2010} for the summary). 
+Several relationships have been proposed so far \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006} %\memoYF{check!}
+(see \citet{griesmeier2004} or \citet{christensen2010} for the summary). 
 %
-They are compared with numerical simulations in \citet{christensen2010}. We employ the following relationship from \citet{christensen2006}, which was found to be in a good agreement with the numerical experiments over a wide parameter space \memoYF{describe in more detail}:
+They are compared with numerical simulations in \citet{christensen2010}. We employ the following relationship from \citet{christensen2006}, which was found to be in a good agreement with the numerical experiments over a wide parameter space 
+%\memoYF{describe in more detail}:
 %%%%%%%%%% 
 \begin{equation}
 B^2 \propto \rho_c r_c^{4/3} q_c^{2/3}, \label{eq:Bscaling} 
@@ -250,33 +252,31 @@ For the density profile, we assume a polytrope gas sphere with index $n=1$, whic
 \rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
 \end{equation}
 %%%%%%%%%%
-We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_{\rm crit}=700\,\mbox{kg/m}^3$ \memoYF{cite something!}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
-In the case of Jupiter, $r_{c,\,J} = 0.85 R_{\rm J}$.  
+We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_{\rm crit}=0.7\,\mbox{g/cm}^3$ \citep{exoplanets2006}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
+%In the case of Jupiter, $r_{c,\,J} = 0.85 R_{\rm J}$.  
 
 The convected heat flux, $q_c$, is estimated by dividing the time-dependent net planetary luminosity by the surface area of the core region ($4\pi r_c^2$). 
 The model of luminosity evolution is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}, which resulted in:
 %%%%%%%%%%
 \begin{equation}
-L \sim {10^{-8} L_\odot} \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{1~M_J} \right)^{2.64} \, .
+L \sim 10^{-8} L_\odot \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{1~M_J} \right)^{2.64} \, .
 \label{eq:burrowsLum}
 \end{equation}
 %%%%%%%%%%
-\memoYF{Burrows et al. 2001 says $10^{-9} L_\odot $, but it looks to me like it is actually $10^{-8} L_\odot $}. 
-We estimate the convected heat flux by dividing this energy flux by the surface area of the core region, i.e., $4 \pi r_c^2$. 
+We estimate the convected heat flux by dividing this luminosity by the surface area of the core region, i.e., $4 \pi r_c^2$. 
 
-\memoYF{I am not sure if the following paragraph is needed.}
-There also exist several other scaling relations proposed so far, which is compared in \citet{christensen2010}. 
-In particular, \citet{griesmeier2004} estimated radio emission of discovered exoplanets based on the following scaling relationship: 
+%\memoYF{I am not sure if the following paragraph is needed.}
+%There also exist several other scaling relations proposed so far, which is compared in \citet{christensen2010}. 
+%In particular, \citet{griesmeier2004} estimated radio emission of discovered exoplanets based on the following scaling relationship: 
 %%%%%%%%%% 
-\begin{equation}
-\mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
-\end{equation}
+%\begin{equation}
+%\mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
+%\end{equation}
 %%%%%%%%%%
-where $\omega $ is the spin angular velocity and $\sigma $ is the conductivity of the ``dynamo region'', which is assumed to be same as Jupiter. 
-The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. 
-
+%where $\omega $ is the spin angular velocity and $\sigma $ is the conductivity of the ``dynamo region'', which is assumed to be same as Jupiter. 
+%The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. 
 %
-Unlike canonical hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we could assume that of Jupiter: $\omega = 9.925$ [hr]. 
+%Unlike canonical hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we could assume that of Jupiter: $\omega = 9.925$ [hr]. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsection{Cut-off frequency}
@@ -349,7 +349,11 @@ where $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stell
 %
 In the case of the Solar wind, the kinetic energy is dominant input energy over the magnetic one (the former is $\sim 400$ times larger than the latter).  
 It is not clear from the observations of the Solar System planets which is the fundamental one, the correlation to the input kinetic energy, that to the magnetic energy, or both. 
-Because... \memoYF{I want to justify not to consider the magnetic case.}, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$. 
+
+In this paper, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$. 
+
+Magnetic field of evolved stars are not well constrained \citep{konstantinova2010}. 
+If the correlation with input magnetic energy is the case, the radio emission would be rather weaker than the Jupiter, because the magnetic field of evolved stars 
 
 The radius of the magnetic stand-off point, $r_s$, is determined by the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
@@ -718,7 +722,7 @@ Massive stellar wind of red giants and AGB stars would put the kinetic energy in
 
 The maximum radio emission we can expect to observe is limited by the plasma cut-off frequency of the stellar wind in the vicinity of the planets. 
 For a planet with the same magnetic moment as Jupiter, the maximum radio emission from the planets which can penetrate through the surrounding plasma is $\sim 10^{-3}$ Jy or $\sim 10^{-5}$ Jy at 10 pc and 100 pc, respectively. 
-\memoYF{comment on observability!!}
+\memoYF{comment on observability...}
 
 Admittedly, uncertainties exist both in the scaling of planetary magnetic field  and the scaling of radio emission of Jovian planets in relation to the input energy. 
 Alternatively, once we detect both the gravitational perturbation and radio emission of Jovian planets, these models will be contested. The viability of these scaling relations will be examined in the future. 
