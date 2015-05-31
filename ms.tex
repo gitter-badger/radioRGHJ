@@ -160,7 +160,7 @@ When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
 they go through stages on the red-giant branch (RGB) and the
 asymptotic-giant branch (AGB) where their radii and luminosities increase by orders of magnitude. 
 Jovian planets in orbit around such stars can be transiently heated to hot-Jupiter temperatures ($\sim$1000~K or more) at distances out to tens of AU, depending on the star's mass \citep{spiegel+madhusudhan2012}. 
-At the same time, they are subject to massive (but slow) stellar wind, as the mass-loss rate of such evolved stars are significantly higher than the main-sequence counterparts, ranging from $\sim  10^{-8} M_{\odot }$/yr to $\sim  10^{-5} M_{\odot }$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}, significantly larger than solar mass-loss rate $\sim 10^{-14}M_{\odot }$/yr. 
+At the same time, they are subject to massive (but slow) stellar wind, as the mass-loss rate of such evolved stars are significantly higher than the main-sequence counterparts, ranging from $\sim  10^{-8} M_\odot$/yr to $\sim  10^{-5} M_\odot$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}, significantly larger than solar mass-loss rate $\sim 10^{-14}M_\odot$/yr. 
 On the assumption that the radio emission is correlated with the stellar wind, planetary companions around evolved stars could generate bright radio emission.
 
 In this paper we estimate the potential to detect planetary companions around evolved stars through the brightness of their radio emission. 
@@ -195,16 +195,17 @@ One important factor in modeling the radio emission due to the interaction with 
 The number density of stellar wind, $n$, can be expressed as
 %%%%%%%%%% 
 \begin{equation}
-n = \frac{\dot M_{\star }}{4\pi a^2 m_p v}
+n = \frac{\dot M_\star}{4\pi a^2 m_p v}
+\label{eq:n}
 \end{equation}
 %%%%%%%%%% 
-where $\dot M_{\star }$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v$ is the velocity of the stellar wind. 
+where $\dot M_\star$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v$ is the velocity of the stellar wind. 
 
-While the solar mass loss rate, $\dot M_{\odot }$, is $\dot M_{\odot } \sim 2\times 10^{-14} M_{\odot}$/yr \memoYF{reference needed?}, the mass loss rate of red giants is typically $\dot M_{\star } \sim 10^{-8}-10^{-7} M_{\odot}$/yr, ant the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase. 
+While the solar mass loss rate, $\dot M_\odot$, is $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr \memoYF{reference needed?}, the mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr, ant the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase. 
 Therefore, we have
 %%%%%%%%%% 
 \begin{equation}
-\frac{\dot M_{\star }}{\dot M_{\odot}} \sim 10^6 - 10^9
+\frac{\dot M_\star}{\dot M_{\odot}} \sim 10^6 - 10^9
 \end{equation}
 %%%%%%%%%% 
 
@@ -295,31 +296,26 @@ The peak of the auroral radio emission is around the cyclotron frequency of the 
 f_{\rm cyc} = \frac{eB}{2\pi m_e} \approx 27.9 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:cyc} 
 \end{equation}
 %%%%%%%%%%
-where $e$ is the elementary charge ($=1.60\times10^{-19}$ C) and $m_e$ is the electron mass ($=9.10\times 10^{-31}$ kg). 
+where $e$ and $m_e$ are the charge and mass of the electron, respectively.
 
-Radio emission from the planet is observable from ground only when the maximum frequency is larger than the plasma frequency of Earth's ionosphere,
-%%%%%%%%%%
-\begin{equation}
-f_{\rm c1}\sim 10~\mbox{MHz}
-\end{equation}
-%%%%%%%%%%
-{\it and} the maximum plasma frequency along the line of sight, $f_{\rm c2}$. 
-At the favorable condition where the planet is in the near side of the spherical plane, the maximum plasma frequency corresponds to that in the vicinity of the planet. Therefore, 
+Radio emission from the planet is observable from ground only when the maximum frequency is larger than the plasma frequency of Earth's ionosphere $f_{\rm plasma}^\oplus$ and the maximum plasma frequency along the line of sight $f_{\rm plasma}^{\rm los}$.
+The plasma frequency may be expressed as
+\begin{eqnarray}
+f_{\rm plasma} & = & \sqrt{\frac{n_e e^2}{\pi m_e}} \\
+ & = & 8979 {\rm~Hz} \times \left( \frac{n_e}{\rm cm^{-3}} \right)^{1/2} \, .
+\label{eq:fplasma}
+\end{eqnarray}
+In the Earth's ionosphere, the electron number density is less than $10^6$~cm$^{-3}$, which implies that $f_{\rm plasma}^\oplus \lsim 10$~MHz.
+At the favorable viewing condition, when the planet is on the near side of its star to the Earth, the maximum plasma frequency along the line of sight corresponds to that in the vicinity of the planet.
+Therefore, combining Eq.~(\ref{eq:n}) and Eq.~(\ref{eq:fplasma}), we have
 %%%
 \begin{eqnarray}
-f_{\rm c2} &=& \frac{1}{2\pi} \sqrt{\frac{ne^2}{\epsilon _0 m_e}} \\
-&=& \frac{1}{2\pi} \sqrt{\frac{\dot M_{\star } }{4\pi a^2 m_p v}\frac{e^2}{\epsilon _0 m_e}} 
+\label{eq:fplasmalos} f_{\rm plasma}^{\rm los} & \sim & 8.98 {\rm~kHz} \times \left( \frac{\dot M_\star}{4 \pi a^2 m_p v} \cdot \frac{1}{\rm cm^{-3}} \right)^{1/2} \\
+\label{eq:fplasmalos_scaled} & = & 14.7{\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{0.1 v_{\odot}}  \right)^{-1/2} \notag \\
+ & & \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}}\right)^{1/2} \, ,
 \end{eqnarray}
 %%%
-where $\epsilon _0$ is the permittivity of vacuum ($=8.85$~F/m). 
-%
-Using solar mass $M_{\odot } = 1.99\times 10^{30}$~kg, solar mass-loss rate $\dot M_{\odot } = 2.0 \times 10^{-14}~M_{\odot }$/yr, and the typical velocity  of solar wind $v_{\odot }=400 $~km/sec, we scale this frequency as
-%%%
-\begin{eqnarray}
-f_{\rm c2} &\approx & 14.7{\rm~MHz} \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \notag \\
-&& \times \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot}}\right)^{1/2} \left(\frac{v}{10^{-1} v_{\odot}}  \right)^{-1/2}
-\end{eqnarray}
-%%%
+where in Eq.~(\ref{eq:fplasmalos_scaled}) we have taken the solar mass-loss rate $\dot M_\odot$ to be $2.0 \times 10^{-14}~M_\odot$/yr and the typical solar wind velocity $v_{\odot }$ to be 400~km/sec.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Flux of Radio Emission}
@@ -366,8 +362,8 @@ and therefore
 \begin{eqnarray}
 r_s &\sim & R_p \left( \frac{B^2}{8\pi m_{\rm p}nv^2}
 \right)^{1/6}  \\
-&=& 42.0 R_p \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot M_{\star }}{\dot M_{\odot }} \right)^{-1/6}  \left( \frac{\dot v}{v_{\odot }} \right)^{-1/6} \\
-&=& 6.16 R_p \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot }} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6} 
+&=& 42.0 R_p \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot M_\star}{\dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{v_{\odot }} \right)^{-1/6} \\
+&=& 6.16 R_p \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot M_\star}{10^6 \dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6} 
  \label{eq:stand-off-radius}
 \end{eqnarray}
 %%%
@@ -428,7 +424,7 @@ Based on the assumption that the radio emission is proportional to the input kin
 \begin{eqnarray}
 P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{B^2}{2\pi m_{\rm p}nv^2} \right)^{1/3}  \\
 &=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5.20~\mbox{AU}} \right)^{-4/3}  \notag \\
-&& \times \left( \frac{\dot M_{\star }}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
+&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
 
@@ -439,13 +435,13 @@ Then, equation (\ref{eq:Pkinp}) can be re-normalized as follows.
 \begin{eqnarray}
 P_{\rm k,\,inp} 
 &\approx & 227 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
+&& \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 &\approx & 2.27 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_{\star }}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 &\approx & 489 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_{\star }}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
 %%%
@@ -499,22 +495,22 @@ Combining the expressions above for the dependence of radio emission on planetar
 F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 &\approx & 5.22\times 10^{-6} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_{\star }}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
+&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for Jupier-twin)} \notag \\
 %%%
 &\approx & 1.12 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
+&& \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 %%%
 &\approx & 1.12 \times 10^{-1} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M_{\star }}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
+&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 %%%
 &\approx & 2.42 \times 10^{-3} \mbox{Jy} \left( \frac{d}{10\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M_{\star }}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
+&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
 %%%
@@ -532,14 +528,14 @@ or,
 %%%
 \begin{eqnarray}
  \left( \frac{B}{10~\mbox{G}} \right) &>& 2.2 \left( \frac{a}{5~\mbox{AU}} \right)^{-1} \\
- && \times \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot}} \right)^{1/2}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-1/2} \label{eq:Ba_limit}
+ && \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{1/2}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-1/2} \label{eq:Ba_limit}
 \end{eqnarray}
 %%%
 or, 
 %%%
 \begin{eqnarray}
  \left( \frac{M_p}{M_{p,J}} \right) &> & 1.8 \left( \frac{a}{5~\mbox{AU}} \right)^{-0.72} \left( \frac{t}{4.5~\mbox{Gyr}} \right)^{0.31} \\
- && \times \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot}} \right)^{0.36}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-0.36} \label{eq:Ma_limit}
+ && \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{0.36}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-0.36} \label{eq:Ma_limit}
 \end{eqnarray}
 %%%
 Therefore, given any orbital distance, there is a lower mass limit for a planet to be able to release the  radio wave out of the system. 
@@ -548,7 +544,7 @@ Substituting equation (\ref{eq:Ba_limit}) into equation (\ref{eq:F_nu_RGHJ}) lea
 %%%
 \begin{eqnarray}
 F_{\nu} &<& 8 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right) \\
-&& \times \left( \frac{a}{5~\mbox{AU}} \right)^{-1}  \left( \frac{\dot M_{\star }}{10^6 \dot M_{\odot}} \right)^{1/6} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{13/6}
+&& \times \left( \frac{a}{5~\mbox{AU}} \right)^{-1}  \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{1/6} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{13/6}
 \end{eqnarray}
 %%%
 
@@ -598,14 +594,14 @@ For this purpose, we obtained the list of M-type red giants from Table 4 of \cit
 For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
 %%%
 \begin{equation}
-\dot M_{\star } [M_{\odot }{\rm /yr}] \sim 4 \times 10^{-13} \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_{\star }}{M_{\odot }} \right)^{-1}
+\dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
 \end{equation}
 %%%
 where $R_{\star }$, $L_{\star } (=4\pi R_{\star }^2 T_{\star }^4)$, and $M_{\star}$ are radius, luminosity, and mass of the star. 
 The velocity of stellar wind is assumed to scale with the escape velocity, hence
 %%%
 \begin{equation}
-v \propto \sqrt{\frac{2GM_{\star }}{R_{\star }}}
+v \propto \sqrt{\frac{2GM_\star}{R_{\star }}}
 \end{equation}
 %%%
 Using these values for equations (\ref{eq:stand-off}) and (\ref{eq:stand-off-radius}) as well as the distance to the target, we can estimate the frequency and intensity of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
@@ -739,6 +735,7 @@ Alternatively, once we detect both the gravitational perturbation and radio emis
 
 YF is supported from the Grant-in-Aid No. 25887024 by the Japan Society for the Promotion of Science.
 DSS gratefully acknowledges support from a fellowship from the AMIAS group.
+We thank David Hogg for encouraging us to pursue calculations of explanetary radio emission.
 NM acknowledges support from [???].
 
 
