@@ -201,7 +201,7 @@ n = \frac{\dot M_\star}{4\pi a^2 m_p v}
 %%%%%%%%%% 
 where $\dot M_\star$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v$ is the velocity of the stellar wind. 
 
-While the solar mass loss rate, $\dot M_\odot$, is $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr \memoYF{reference needed?}, the mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr, ant the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase. 
+While the solar mass loss rate, $\dot M_\odot$, is $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr \citep[e.g.,][]{hundhausen1997}, the mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr, ant the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase. 
 Therefore, we have
 %%%%%%%%%% 
 \begin{equation}
@@ -233,9 +233,8 @@ where $v_{\odot} \sim 4.0 \times 10^2 $ km/sec.
 In order to estimate the planetary magnetic field of general planets, we adopt a simple scaling relation between the magnetic field and macroscopic planetary properties. 
 
 Several relationships have been proposed so far \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006} %\memoYF{check!}
-(see \citet{griesmeier2004} or \citet{christensen2010} for the summary). 
-%
-They are compared with numerical simulations in \citet{christensen2010}. We employ the following relationship from \citet{christensen2006}, which was found to be in a good agreement with the numerical experiments over a wide parameter space 
+(see \citet{griesmeier2004} or \citet{christensen2010} for the summary), which are compared with numerical simulations in \citet{christensen2010}. 
+We employ the following relationship from \citet{christensen2006}, which is based on the assumption that the ohmic dissipation energy is a fraction of available convected energy and was found to be in a good agreement with the numerical experiments over a wide parameter space: 
 %\memoYF{describe in more detail}:
 %%%%%%%%%% 
 \begin{equation}
@@ -253,18 +252,25 @@ For the density profile, we assume a polytrope gas sphere with index $n=1$, whic
 \rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
 \end{equation}
 %%%%%%%%%%
-We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_{\rm crit}=0.7\,\mbox{g/cm}^3$ \citep{exoplanets2006}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
-%In the case of Jupiter, $r_{c,\,J} = 0.85 R_{\rm J}$.  
+We determine the core radius $r_c$ by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_{\rm crit}=0.7\,\mbox{g/cm}^3$ \citep{exoplanets2006, griesmeier2007b}. The density of the metallic core, $\rho _c$ is obtained by averaging the density in the core. 
+In the case of Jupiter, $r_{c,\,J} = 0.85 R_{\rm J}$.  
 
-The convected heat flux, $q_c$, is estimated by dividing the time-dependent net planetary luminosity by the surface area of the core region ($4\pi r_c^2$). 
+The scaling of convected heat flux, $q_c$, is obtained by dividing the time-dependent net planetary luminosity by the surface area of the core region i.e., $4\pi r_c^2$. 
 The model of luminosity evolution is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}, which resulted in:
 %%%%%%%%%%
 \begin{equation}
-L \sim 10^{-8} L_\odot \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{1~M_J} \right)^{2.64} \, .
+L \sim 1.4^{-9} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 	
 \label{eq:burrowsLum}
 \end{equation}
 %%%%%%%%%%
-We estimate the convected heat flux by dividing this luminosity by the surface area of the core region, i.e., $4 \pi r_c^2$. 
+Therefore, we have
+%%%%%%%%%%
+\begin{equation}
+q_c \sim q_{c, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \left( \frac{r_c}{r_{c,\,J}} \right)^{-2}\, .
+\label{eq:burrowsLum}
+\end{equation}
+%%%%%%%%%%
+%We estimate the convected heat flux by dividing this luminosity by the surface area of the core region, i.e., $4 \pi r_c^2$. 
 
 %\memoYF{I am not sure if the following paragraph is needed.}
 %There also exist several other scaling relations proposed so far, which is compared in \citet{christensen2010}. 
@@ -389,7 +395,7 @@ The bandwidth, $\Delta f$, is assumed to be proportional to the representative f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s
 
 First, we estimate the strength of planetary magnetic field based on the scaling relation of equation (\ref{eq:Bscaling}) and assumptions described in \S\ref{ss:magneticfield}. 
-Figure \ref{fig:planetaryB} shows the estimated core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_c$) as well as the predicted magnetic field strength at planetary surface ($B$) and the corresponding cyclotron frequency ($f_c$), as functions of planetary mass and the age. \memoDS{previously, we referred to $f_{\rm cyc}$.  We should be consistent.}
+Figure \ref{fig:planetaryB} shows the estimated core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_c$) as well as the predicted magnetic field strength at planetary surface ($B$) and the corresponding cyclotron frequency ($f_{\rm cyc}$), as functions of planetary mass and the age. 
 Because $\rho _c \propto M_p$  at large $M_p$ and $q_c \propto t^{-1.3} M_p^{2.64}/r_c^2$, the magnetic field is roughly:
 %%%%%%%%%% 
 \begin{eqnarray}
@@ -407,7 +413,7 @@ In this regime, there are a number of current and near-future radio wave detecto
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{model_planetaryB.pdf}
-   \caption{Planetary magnetic field as a function of age and planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of internal heat of \citet{burrows_et_al2001}.} \memoDS{Can we change density to cgs in this figure?}
+   \caption{Planetary magnetic field as a function of age and planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of internal heat of \citet{burrows_et_al2001}.} %\memoDS{Can we change density to cgs in this figure?}
   \label{fig:planetaryB}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -488,6 +494,10 @@ Also, are we 100\% sure that this section is right?
 A planet with larger surface field achieves an equivalent field to a planet with a smaller surface field at a larger radius, and captures a larger wind flux.
 Should we think more about the spectrum?}
 
+
+
+
+
 According to Eq.~(\ref{eq:Pkinp}), the total emitted power scales with $B^{2/3}$.
 In detail, it is not obvious how the power spectral density scales with a planet's surface magnetic field, because the emission process involves electrons passing through a wide range of magnetic field conditions (dipolar field strength drops off as $r^{-3}$, and only in an idealized model is a planet a perfect magnetic dipole).
 Nevertheless, a reasonable ansatz is that the radio emission is spread over a range of wavelengths in an approximately scale-independent way.
@@ -496,6 +506,11 @@ This means that the power spectral density is likely to scale as the total power
 Since $f_{\rm cyc}$ scales as $B$ (a higher power of $B$ than the scaling of total power), this implies that the power spectral density in the radio scales as $B^{-1/3}$.
 Planets that are intrinsically brighter, owing to a greater magnetic field strength, probably have their emission spread out over a broader set of frequencies, and therefore have a lower flux density as measured in Janskys!
 \memoDS{Is this pointed out elsewhere in the literature?}
+
+
+
+
+\newpage
 
 Combining the expressions above for the dependence of radio emission on planetary magnetic field strength, we find that the radio spectral flux density observed at the Earth is:
 %%%
