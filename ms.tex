@@ -358,25 +358,27 @@ In this paper, we assume that the radio emission is scaled with the input kineti
 Magnetic field of evolved stars are not well constrained \citep{konstantinova2010}. 
 If the correlation with input magnetic energy is the case, the radio emission would be rather weaker than the Jupiter, because the magnetic field of evolved stars 
 
-The radius of the magnetic stand-off point, $r_s$, is determined by the balance between the stellar wind pressure and the planetary magnetic pressure: 
+The radius of the magnetic stand-off point, $r_s$, is obtained based on the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
 \begin{equation}
 m_p n v ^2 \sim \frac{B^2}{8\pi}\left( \frac{r_s}{R_p} \right)^{-6}  \label{eq:stand-off}
 \end{equation}
 %%%
-and therefore
+The radius obtained for Jupiter from this equality is about a half of actual radius of Magnetosphere \citep[][]{griesmeier2005}. We estimate $r_s$ simply by scaling Jovian magnetosphere \citep[$r_{s,\,J} \sim 84 R_J$][]{joy2002} according to equation (\ref{eq:stand-off}), i.e., 
 %%%
 \begin{eqnarray}
-r_s &\sim & R_p \left( \frac{B^2}{8\pi m_{\rm p}nv^2}
-\right)^{1/6}  \\
-&=& 42.0 R_p \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot M_\star}{\dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{v_{\odot }} \right)^{-1/6} \\
-&=& 6.16 R_p \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot M_\star}{10^6 \dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6} 
+r_s 
+%&\sim & R_p \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/6}  \\
+&=& r_{s,\,J} \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{\dot a}{5.2\mbox{AU}} \right)^{-1/3}  \\
+&& \times \left( \frac{\dot M_\star}{\dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{v_{\odot }} \right)^{-1/6} \\
+&=& 11.3 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{\dot a}{5\mbox{AU}} \right)^{-1/3} \\
+&& \times \left( \frac{\dot M_\star}{10^6 \dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6}
  \label{eq:stand-off-radius}
 \end{eqnarray}
 %%%
 
-Thus, the radio emission, $P_{\rm radio}$, or equivalently the input kinetic energy, $P_{\rm k,\,inp}$, are estimated with $n$, $v$, and $\mathcal{M}$, which should be specified by assuming the properties of the stellar wind and the planetary magnetic field. 
-In the following, we describe our assumptions for these properties. 
+%Thus, the radio emission, $P_{\rm radio}$, or equivalently the input kinetic energy, $P_{\rm k,\,inp}$, are estimated with $n$, $v$, and $\mathcal{M}$, which should be specified by assuming the properties of the stellar wind and the planetary magnetic field. 
+%In the following, we describe our assumptions for these properties. 
 
 We assume that the solid angle of the emission is same as the Jupiter's one for all of the exoplanets. In reality, the solid angles of auroral radio emission from  Jupiter, Saturn, and Earth are $\sim 1.6$, $\sim $6.3, and $\sim $3.5, respectively \citep{desch+kaiser1984}, which are on the same order and will not significantly affect our order-of-magnitude estimate of radio emission. 
 
@@ -407,7 +409,6 @@ under this model.
 
 Note that the cyclotron frequency Jovian planets older than 1~Gyr is typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -487,6 +488,28 @@ RGHJ & $M_J$ & $B_J$ & 5 AU &  0.4 days \\ \hline
 Greater $B$ Produces Lower $F_\nu$}
 \label{ss:counterintuitive}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Number of particle which is trapped by planetary magnetosphere is
+\begin{equation}
+n \propto \pi r_s^2
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
 
 \memoDS{Is this section needed anymore, since this is already in the Griesmeier paper?
 Does the Griesmeier paper make the point explicit enough, or is this still somewhat valuable?
