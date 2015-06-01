@@ -489,16 +489,105 @@ Greater $B$ Produces Lower $F_\nu$}
 \label{ss:counterintuitive}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Number of particles which are trapped by planetary magnetosphere is proportional to the magnetic stand-off point
+
+The cyclotron frequency at radius $r$ is:
+%%%
 \begin{equation}
-n \propto \pi r_s^2
+f_{\rm cyc} = \frac{e B(r)}{2\pi m_e} \propto \frac{B_p}{r^3}
 \end{equation}
+%%
+Therefore, 
+%%%
+\begin{equation}
+\frac{dP}{df_{\rm cyc}} = \frac{dP}{d\nu } \propto -\frac{r^4}{B_p} \frac{dP}{dr}
+\end{equation}
+%%%
+Employing Larmor formula, power emitted from a thin shell at $r\sim r+dr$, $dP/dr$ is 
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto 4\pi r^2 N_{\rm plasma}(r) v_{\bot }^2(r) B^2(r) \label{eq:larmor}
+\end{equation}
+%%%
+where $N_{\rm plasma}(r) $ represents the number density of plasma in the planetary magnetosphere at radius $r$. 
+
+We assume that $N_{\rm plasma}(r_s) $  is proportional to the squared radius of the magnetic stand-off point:
+%%%
+\begin{equation}
+N_{\rm plasma}(r_s) \propto \pi r_s^2 \;\;(\propto B_p^{2/3}) \label{eq:N0_plasma}
+\end{equation}
+%%%
+Due the the mass flux conservation,
+%%%
+\begin{equation}
+4 \pi r^2 N_{\rm plasma}(r) v_{\|} = const.
+\end{equation}
+%%%
+Combining with equation (\ref{eq:N0_plasma}),
+%%%
+\begin{equation}
+N_{\rm plasma}(r) \propto  r_s^2 \frac{v_{\|}(r)}{r^2} \propto  B_p^{2/3} \cdot \frac{v_{\|}(r)}{r^2}
+\end{equation}
+%%%
+
+Because the magnetic dipole moment
+%%%
+\begin{equation}
+\mu = \frac{mv_{\bot}(r)}{eB(r)}
+\end{equation}
+%%%
+is approximately to be constant while the plasma falls down along the magnetic field, 
+%%%
+\begin{eqnarray}
+v_{\bot }(r) \propto \frac{1}{r^3} \label{eq:v_bot} \\
+B(r) \propto \frac{B_p}{r^3} 
+\end{eqnarray}
+%%%
+On the other hand, conservation of energy ensures that
+%%%
+\begin{equation}
+\mathcal{E} = -\frac{GM_p}{r} + \frac{v_{\bot }^2}{2} + \frac{v_{\|}^2}{2}=const.
+\end{equation}
+%%%
+Assuming that the initial energy (at $r=r_s$) is negligible compared to those near the surface, $\mathcal{E}=0$, 
+%%%
+\begin{equation}
+v_{\|}^2 \sim \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \label{eq:v_||}
+\end{equation}
+%%%
+
+Substituting equations (\ref{eq:N0_plasma}),  (\ref{eq:v_bot}) and (\ref{eq:v_||}) into equation (\ref{eq:larmor}) leads to
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{12}} \left( \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \right)^{1/2}  
+\end{equation}
+%%%
+The right-hand side has the maximum value $\sqrt{5GM_p/6\tilde r} $ at radius $\tilde r=(6v_{\bot ,0}^2/GM_p)^{1/5}$. 
+At $r>>\tilde r$, 
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{25/2}}
+\end{equation}
+%%%
+and
+%%%
+\begin{equation}
+\frac{dP}{d\nu } \propto \frac{B_p^{5/3}}{r^{17/2}} \propto \frac{\nu^{17/6}}{B_p^{7/6}}
+\end{equation}
+%%%
 
 
-
-
-
-
+At $r<<\tilde r$, 
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{15}}
+\end{equation}
+%%%
+and
+%%%
+\begin{equation}
+\frac{dP}{d\nu } \propto \frac{B_p^{5/3}}{r^{11}} \propto \frac{\nu^{11}}{B_p^{28/3}}
+\end{equation}
+%%%
 
 
 
