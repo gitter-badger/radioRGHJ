@@ -149,12 +149,15 @@ yuka.fujii@elsi.jp
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
 It has been known that Jupiter emits radio emission from the radiation belt and auroral region due to cyclotron-maser instability \citep{zarka1998}.  % due to the acceleration of the plasmas. \memoYF{?}.
-Potentially, large exoplanets can also emit radio waves through the similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
-Radio emissions from exoplanets have been estimated taking account of several possible processes, based on the empirical scaling of the radio intensity with the solar wind flux \citep{zarka2001, griesmeier2007a, griesmeier2007b, hallinan_et_al2013, noyola2014}.
-Although the search for these radio signatures are being conducted, there is no clear detection claimed so far, while some indications were obtained \memoYF{?} \citep{lecavelier_et_al2013}. 
+Potentially, exoplanets can also emit radio waves through the similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
+In particular, those in close orbit to the host stars have attracted attention because they are subjected to strong stellar wind and/or strong magnetic interstellar magnetic field, and thus acquire larger input energy. 
+Radio emission from known exoplanets have been roughly estimated based on the the empirical scaling of the radio intensity with the solar wind flux known as ``radiometric Bode's law'' \citep{farrell1999,zarka2001,Lazio2004,griesmeier2004,griesmeier2005,griesmeier2007a,griesmeier2007b,reiners2010}. 
+Although the search for these radio signatures are being conducted, there is no clear detection claimed so far
+\citep{bastian2000,george2007,stroe2012,hallinan2013,murphy2015}, 
+while some indications were obtained \citep{lecavelier_et_al2013,sirothia2014}. 
+
 
 When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
 they go through stages on the red-giant branch (RGB) and the
@@ -337,8 +340,8 @@ F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
 %%%
 where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency bandwidth. 
 
-We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission with the input energy from stellar wind, in the same manner as \citet{griesmeier2007b}. 
-This is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy or the magnetic energy of the solar wind \citep[``radio Bode's law''; ][]{desch+kaiser1984}, i.e.,
+We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission, $P_{\rm radio,\,J}$, with the input energy from stellar wind, in the same manner as \citet{griesmeier2005,griesmeier2007a,griesmeier2007b}. 
+The scaling is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy or the magnetic energy of the solar wind \citep[``radio Bode's law''; ][]{desch+kaiser1984}, i.e.,
 %Namely, although the detail of the mechanism to generate planetary radio emission is not fully understood so far \memoYF{cite something?}, 
 %observations indicate that the total radio emission, $P_{\rm radio}$ is proportional to the input kinetic energy, $P_{\rm k,\,inp}$, or the input magnetic energy, $P_{\rm m,\,inp}$ \citep[``radio Bode's law''; ][]{desch+kaiser1984}:
 %%%
@@ -355,15 +358,12 @@ It is not clear from the observations of the Solar System planets which is the f
 
 
 In this paper, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$, because as indicated earlier, the kinetic energy of the stellar wind of evolved stars are much larger than the main-sequence stars and thus may lead to brighter radio emission. 
-On the other hand, if the correlation with input magnetic energy is more fundamental, it is difficult to estimate the planetary radio emission at this point because magnetic field of evolved stars have not be well constrained for most of the highly evolved stars \memoYF{Some observations: \citet[e.g.,][]{konstantinova2010,petit2013,tsvetkova2013,konstantinova2013,auriere2015}}. 
-Recently there are some observations for M giants, which measured surface magnetic field $\sim 0.1-10 $G for a M-type star EK Boo  \citep{konstantinova2010}. In this particular case, given the large stellar radius $R_\star \sim 210 R_{\odot }$ the magnetic moment may be about $10^3$ times larger than the Sun and thus also may also increase the planetary radio emission. However, because of the lack of universal understanding of the stellar magnetic field, we leave the magnetic model of radio emission for evolved stars for future work. 
 
 
-the radio emission could be rather weaker than the Jupiter, 
-We note that, if the correlation with input magnetic energy is the case, the radio emission could be rather weaker than the Jupiter, because the magnetic field of evolved stars 
+On the other hand, if the correlation with input magnetic energy is more fundamental, it is difficult to estimate the planetary radio emission at this point because magnetic field of evolved stars are not well known for highly evolved stars; many of observations only set an upper limit \citep[e.g.,][]{konstantinova2010,petit2013,tsvetkova2013,konstantinova2013,auriere2015}. 
+In the case of M-type giant EK boo, surface magnetic field $\sim 0.1-10 $G has been measured; In this particular case, given the large stellar radius $R_\star \sim 210 R_{\odot }$ the magnetic moment may be about $10^3$ times larger than the Sun and thus also may also increase the planetary radio emission. However, because of the lack of universal understanding of the stellar magnetic field, we leave the magnetic model of radio emission for evolved stars for future work. 
 
- 
-
+In reality, the total power of Jovian auroral emission highly varies in time: $1.3\times 10^{10}$ W for the average, $3.2\times 10^{10}$ W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}.
 
 The radius of the magnetic stand-off point, $r_s$, is obtained based on the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
@@ -391,6 +391,7 @@ We assume that the solid angle of the emission is same as the Jupiter's one for 
 
 The bandwidth, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
 
+We estimate the radio brightness of RGHJs by simply scaling 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -489,148 +490,6 @@ RGHJ & $M_J$ & $B_J$ & 5 AU &  0.4 days \\ \hline
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Brighter Implies Harder to See:\\
-Greater $B$ Produces Lower $F_\nu$}
-\label{ss:counterintuitive}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-The cyclotron frequency at radius $r$ is:
-%%%
-\begin{equation}
-f_{\rm cyc} = \frac{e B(r)}{2\pi m_e} \propto \frac{B_p}{r^3}
-\end{equation}
-%%
-Therefore, 
-%%%
-\begin{equation}
-\frac{dP}{df_{\rm cyc}} = \frac{dP}{d\nu } \propto -\frac{r^4}{B_p} \frac{dP}{dr}
-\end{equation}
-%%%
-Employing Larmor formula, power emitted from a thin shell at $r\sim r+dr$, $dP/dr$ is 
-%%%
-\begin{equation}
-\frac{dP}{dr} \propto 4\pi r^2 N_{\rm plasma}(r) v_{\bot }^2(r) B^2(r) \label{eq:larmor}
-\end{equation}
-%%%
-where $N_{\rm plasma}(r) $ represents the number density of plasma in the planetary magnetosphere at radius $r$. 
-
-We assume that $N_{\rm plasma}(r_s) $  is proportional to the squared radius of the magnetic stand-off point:
-%%%
-\begin{equation}
-N_{\rm plasma}(r_s) \propto \pi r_s^2 \;\;(\propto B_p^{2/3}) \label{eq:N0_plasma}
-\end{equation}
-%%%
-Due the the mass flux conservation,
-%%%
-\begin{equation}
-4 \pi r^2 N_{\rm plasma}(r) v_{\|} = const.
-\end{equation}
-%%%
-Combining with equation (\ref{eq:N0_plasma}),
-%%%
-\begin{equation}
-N_{\rm plasma}(r) \propto  r_s^2 \frac{v_{\|}(r)}{r^2} \propto  B_p^{2/3} \cdot \frac{v_{\|}(r)}{r^2}
-\end{equation}
-%%%
-
-Because the magnetic dipole moment
-%%%
-\begin{equation}
-\mu = \frac{mv_{\bot}(r)}{eB(r)}
-\end{equation}
-%%%
-is approximately to be constant while the plasma falls down along the magnetic field, 
-%%%
-\begin{eqnarray}
-v_{\bot }(r) \propto \frac{1}{r^3} \label{eq:v_bot} \\
-B(r) \propto \frac{B_p}{r^3} 
-\end{eqnarray}
-%%%
-On the other hand, conservation of energy ensures that
-%%%
-\begin{equation}
-\mathcal{E} = -\frac{GM_p}{r} + \frac{v_{\bot }^2}{2} + \frac{v_{\|}^2}{2}=const.
-\end{equation}
-%%%
-Assuming that the initial energy (at $r=r_s$) is negligible compared to those near the surface, $\mathcal{E}=0$, 
-%%%
-\begin{equation}
-v_{\|}^2 \sim \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \label{eq:v_||}
-\end{equation}
-%%%
-
-Substituting equations (\ref{eq:N0_plasma}),  (\ref{eq:v_bot}) and (\ref{eq:v_||}) into equation (\ref{eq:larmor}) leads to
-%%%
-\begin{equation}
-\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{12}} \left( \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \right)^{1/2}  
-\end{equation}
-%%%
-The right-hand side has the maximum value $\sqrt{5GM_p/6\tilde r} $ at radius $\tilde r=(6v_{\bot ,0}^2/GM_p)^{1/5}$. 
-At $r>>\tilde r$, 
-%%%
-\begin{equation}
-\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{25/2}}
-\end{equation}
-%%%
-and
-%%%
-\begin{equation}
-\frac{dP}{d\nu } \propto \frac{B_p^{5/3}}{r^{17/2}} \propto \frac{\nu^{17/6}}{B_p^{7/6}}
-\end{equation}
-%%%
-
-
-At $r<<\tilde r$, 
-%%%
-\begin{equation}
-\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{15}}
-\end{equation}
-%%%
-and
-%%%
-\begin{equation}
-\frac{dP}{d\nu } \propto \frac{B_p^{5/3}}{r^{11}} \propto \frac{\nu^{11}}{B_p^{28/3}}
-\end{equation}
-%%%
-
-
-
-
-\newpage
-
-
-
-
-
-
-
-\memoDS{Is this section needed anymore, since this is already in the Griesmeier paper?
-Does the Griesmeier paper make the point explicit enough, or is this still somewhat valuable?
-Also, are we 100\% sure that this section is right?
-A planet with larger surface field achieves an equivalent field to a planet with a smaller surface field at a larger radius, and captures a larger wind flux.
-Should we think more about the spectrum?}
-
-
-
-
-
-According to Eq.~(\ref{eq:Pkinp}), the total emitted power scales with $B^{2/3}$.
-In detail, it is not obvious how the power spectral density scales with a planet's surface magnetic field, because the emission process involves electrons passing through a wide range of magnetic field conditions (dipolar field strength drops off as $r^{-3}$, and only in an idealized model is a planet a perfect magnetic dipole).
-Nevertheless, a reasonable ansatz is that the radio emission is spread over a range of wavelengths in an approximately scale-independent way.
-In other words, the frequency bandwidth $\Delta f$ of Eq.~(\ref{eq:Fnu}) is proportional to $f_{\rm cyc}$, as described in Section~\ref{ss:model_intensity} and in \citet{griesmeier2007b}.
-This means that the power spectral density is likely to scale as the total power divided by the cyclotron frequency corresponding to a characteristic field strength where the emission peaks.
-Since $f_{\rm cyc}$ scales as $B$ (a higher power of $B$ than the scaling of total power), this implies that the power spectral density in the radio scales as $B^{-1/3}$.
-Planets that are intrinsically brighter, owing to a greater magnetic field strength, probably have their emission spread out over a broader set of frequencies, and therefore have a lower flux density as measured in Janskys!
-\memoDS{Is this pointed out elsewhere in the literature?}
-
-
-
-
-\newpage
-
 Combining the expressions above for the dependence of radio emission on planetary magnetic field strength, we find that the radio spectral flux density observed at the Earth is:
 %%%
 \begin{eqnarray}
@@ -655,10 +514,9 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyclotron}} \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
-%%%
-The total power of Jovian auroral emission highly varies in time: $1.3\times 10^{10}$ W for the average, $3.2\times 10^{10}$ W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}. 
+%%% 
 %\memoYF{cite original paper!}. 
-Therefore, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
+Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
 
 However, observed energy flux is limited by the plasma cut-off frequency in the vicinity of the planets. 
 This condition is:
@@ -887,7 +745,147 @@ NM acknowledges support from [???].
 
 \clearpage
 
-\end{document}
+%\end{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Brighter Implies Harder to See:\\
+Greater $B$ Produces Lower $F_\nu$}
+\label{ss:counterintuitive}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+The cyclotron frequency at radius $r$ is:
+%%%
+\begin{equation}
+f_{\rm cyc} = \frac{e B(r)}{2\pi m_e} \propto \frac{B_p}{r^3}
+\end{equation}
+%%
+Therefore, 
+%%%
+\begin{equation}
+\frac{dP}{df_{\rm cyc}} = \frac{dP}{d\nu } \propto -\frac{r^4}{B_p} \frac{dP}{dr}
+\end{equation}
+%%%
+Employing Larmor formula, power emitted from a thin shell at $r\sim r+dr$, $dP/dr$ is 
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto 4\pi r^2 N_{\rm plasma}(r) v_{\bot }^2(r) B^2(r) \label{eq:larmor}
+\end{equation}
+%%%
+where $N_{\rm plasma}(r) $ represents the number density of plasma in the planetary magnetosphere at radius $r$. 
+
+We assume that $N_{\rm plasma}(r_s) $  is proportional to the squared radius of the magnetic stand-off point:
+%%%
+\begin{equation}
+N_{\rm plasma}(r_s) \propto \pi r_s^2 \;\;(\propto B_p^{2/3}) \label{eq:N0_plasma}
+\end{equation}
+%%%
+Due the the mass flux conservation,
+%%%
+\begin{equation}
+4 \pi r^2 N_{\rm plasma}(r) v_{\|} = const.
+\end{equation}
+%%%
+Combining with equation (\ref{eq:N0_plasma}),
+%%%
+\begin{equation}
+N_{\rm plasma}(r) \propto  r_s^2 \frac{v_{\|}(r)}{r^2} \propto  B_p^{2/3} \cdot \frac{v_{\|}(r)}{r^2}
+\end{equation}
+%%%
+
+Because the magnetic dipole moment
+%%%
+\begin{equation}
+\mu = \frac{mv_{\bot}(r)}{eB(r)}
+\end{equation}
+%%%
+is approximately to be constant while the plasma falls down along the magnetic field, 
+%%%
+\begin{eqnarray}
+v_{\bot }(r) \propto \frac{1}{r^3} \label{eq:v_bot} \\
+B(r) \propto \frac{B_p}{r^3} 
+\end{eqnarray}
+%%%
+On the other hand, conservation of energy ensures that
+%%%
+\begin{equation}
+\mathcal{E} = -\frac{GM_p}{r} + \frac{v_{\bot }^2}{2} + \frac{v_{\|}^2}{2}=const.
+\end{equation}
+%%%
+Assuming that the initial energy (at $r=r_s$) is negligible compared to those near the surface, $\mathcal{E}=0$, 
+%%%
+\begin{equation}
+v_{\|}^2 \sim \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \label{eq:v_||}
+\end{equation}
+%%%
+
+Substituting equations (\ref{eq:N0_plasma}),  (\ref{eq:v_bot}) and (\ref{eq:v_||}) into equation (\ref{eq:larmor}) leads to
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{12}} \left( \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \right)^{1/2}  
+\end{equation}
+%%%
+The right-hand side has the maximum value $\sqrt{5GM_p/6\tilde r} $ at radius $\tilde r=(6v_{\bot ,0}^2/GM_p)^{1/5}$. 
+At $r>>\tilde r$, 
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{25/2}}
+\end{equation}
+%%%
+and
+%%%
+\begin{equation}
+\frac{dP}{d\nu } \propto \frac{B_p^{5/3}}{r^{17/2}} \propto \frac{\nu^{17/6}}{B_p^{7/6}}
+\end{equation}
+%%%
+
+
+At $r<<\tilde r$, 
+%%%
+\begin{equation}
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{15}}
+\end{equation}
+%%%
+and
+%%%
+\begin{equation}
+\frac{dP}{d\nu } \propto \frac{B_p^{5/3}}{r^{11}} \propto \frac{\nu^{11}}{B_p^{28/3}}
+\end{equation}
+%%%
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+\memoDS{Is this section needed anymore, since this is already in the Griesmeier paper?
+Does the Griesmeier paper make the point explicit enough, or is this still somewhat valuable?
+Also, are we 100\% sure that this section is right?
+A planet with larger surface field achieves an equivalent field to a planet with a smaller surface field at a larger radius, and captures a larger wind flux.
+Should we think more about the spectrum?}
+
+
+
+
+
+According to Eq.~(\ref{eq:Pkinp}), the total emitted power scales with $B^{2/3}$.
+In detail, it is not obvious how the power spectral density scales with a planet's surface magnetic field, because the emission process involves electrons passing through a wide range of magnetic field conditions (dipolar field strength drops off as $r^{-3}$, and only in an idealized model is a planet a perfect magnetic dipole).
+Nevertheless, a reasonable ansatz is that the radio emission is spread over a range of wavelengths in an approximately scale-independent way.
+In other words, the frequency bandwidth $\Delta f$ of Eq.~(\ref{eq:Fnu}) is proportional to $f_{\rm cyc}$, as described in Section~\ref{ss:model_intensity} and in \citet{griesmeier2007b}.
+This means that the power spectral density is likely to scale as the total power divided by the cyclotron frequency corresponding to a characteristic field strength where the emission peaks.
+Since $f_{\rm cyc}$ scales as $B$ (a higher power of $B$ than the scaling of total power), this implies that the power spectral density in the radio scales as $B^{-1/3}$.
+Planets that are intrinsically brighter, owing to a greater magnetic field strength, probably have their emission spread out over a broader set of frequencies, and therefore have a lower flux density as measured in Janskys!
+\memoDS{Is this pointed out elsewhere in the literature?}
+
+
 
 \section{Dave's sketch}
 
