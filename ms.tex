@@ -394,7 +394,7 @@ We assume that the solid angle of the emission is same as the Jupiter's one for 
 
 The bandwidth, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
 
-We estimate the radio brightness of RGHJs by simply scaling 
+We estimate the radio brightness of RGHJs by simply scaling \memoDS{stray sentence fragment?}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -418,7 +418,7 @@ f_{\rm cyc} &\sim &  28~{\rm MHz} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} 
 %%%%%%%%%%
 under this model. 
 
-Note that the cyclotron frequency Jovian planets older than 1~Gyr is typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
+Note that the cyclotron frequency of Jovian planets older than 1~Gyr is typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
 
 
@@ -522,14 +522,14 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyc}} \\
 Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
 Note that, within this framework, the {\it spectral} radio flux has  necessarily negative correlation with the planetary magnetic field, as pointed out by \citet{griesmeier2005}. 
 
-However, observed energy flux is limited by the plasma cut-off frequency in the vicinity of the planets. 
+However, observed energy flux is limited by the plasma cut-off frequency in the vicinity of the planets, given by Eq.~(\ref{eq:fplasmalos}).
 This condition is:
 %%%
 \begin{equation}
- f_{cyc} > f_{c2}
+\label{eq:fcyc>fplasma} f_{\rm cyc} > f_{\rm plasma}^{\rm los}
 \end{equation} 
 %%%
-or, 
+or,
 %%%
 \begin{eqnarray}
  \left( \frac{B}{10~\mbox{G}} \right) &>& 2.2 \left( \frac{a}{5~\mbox{AU}} \right)^{-1} \\
