@@ -93,9 +93,9 @@ Nikku Madhusudhan\altaffilmark{4} \\
 %
 Mehrdad Mirbabayi\altaffilmark{1} \\
 %
-Aaron Parsons\altaffilmark{5} \\
+Aaron Parsons\altaffilmark{4} \\
 %
-Tony Mroczkowski\altaffilmark{6} \\
+Tony Mroczkowski\altaffilmark{5,6} \\
 %
 Neil Zimmerman\altaffilmark{7}
 }
@@ -113,11 +113,13 @@ Neil Zimmerman\altaffilmark{7}
 
 \affil{$^3$Astronomy Department, University of Cambridge, UK}
 
-\affil{$^4$Astronomy Department, UC Berkeley}
+\affil{$^4$Astronomy Department, University of California Berkeley}
 
-\affil{$^5$Naval Research Laboratory}
+\affil{$^5$National Research Council Fellow}
 
-\affil{$^6$Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ 08544}
+\affil{$^6$Naval Research Laboratory, 4555 Overlook Ave SW, Washington, DC 20375}
+
+\affil{$^7$Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ 08544}
 
 
 \vspace{0.5\baselineskip}
@@ -271,7 +273,7 @@ Therefore, we have
 %%%%%%%%%%
 \begin{equation}
 q_c \sim q_{c, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \left( \frac{r_c}{r_{c,\,J}} \right)^{-2}\, .
-\label{eq:burrowsLum}
+\label{eq:burrowsHeatFlux}
 \end{equation}
 %%%%%%%%%%
 %We estimate the convected heat flux by dividing this luminosity by the surface area of the core region, i.e., $4 \pi r_c^2$. 
@@ -303,7 +305,7 @@ q_c \sim q_{c, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{
 The peak of the auroral radio emission is around the cyclotron frequency of the planetary magnetic field, $f_{\rm cyc}$: 
 %%%%%%%%%% 
 \begin{equation}
-f_{\rm cyc} = \frac{eB}{2\pi m_e} \approx 27.9 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:cyc} 
+f_{\rm cyc} = \frac{eB}{2\pi m_e} \approx 27.9 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:fcyc}
 \end{equation}
 %%%%%%%%%%
 where $e$ and $m_e$ are the charge and mass of the electron, respectively.
@@ -320,7 +322,7 @@ At the favorable viewing condition, when the planet is on the near side of its s
 Therefore, combining Eq.~(\ref{eq:n}) and Eq.~(\ref{eq:fplasma}), we have
 %%%
 \begin{eqnarray}
-\label{eq:fplasmalos} f_{\rm plasma}^{\rm los} & \sim & 8.98 {\rm~kHz} \times \left( \frac{\dot M_\star}{4 \pi a^2 m_p v} \cdot \frac{1}{\rm cm^{-3}} \right)^{1/2} \\
+\label{eq:fplasmalos} f_{\rm plasma}^{\rm los} & \sim & 8.98 {\rm~kHz} \times \left( \frac{\dot M_\star}{4 \pi a^2 m_p v} \times 1\rm~cm^3 \right)^{1/2} \\
 \label{eq:fplasmalos_scaled} & = & 14.7{\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{0.1 v_{\odot}}  \right)^{-1/2} \notag \\
  & & \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}}\right)^{1/2} \, ,
 \end{eqnarray}
@@ -392,7 +394,7 @@ We assume that the solid angle of the emission is same as the Jupiter's one for 
 
 The bandwidth, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
 
-We estimate the radio brightness of RGHJs by simply scaling 
+We estimate the radio brightness of RGHJs by simply scaling \memoDS{stray sentence fragment?}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -416,7 +418,7 @@ f_{\rm cyc} &\sim &  28~{\rm MHz} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} 
 %%%%%%%%%%
 under this model. 
 
-Note that the cyclotron frequency Jovian planets older than 1~Gyr is typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
+Note that the cyclotron frequency of Jovian planets older than 1~Gyr is typically larger than 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
 
 
@@ -520,14 +522,14 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyc}} \\
 Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
 Note that, within this framework, the {\it spectral} radio flux has  necessarily negative correlation with the planetary magnetic field, as pointed out by \citet{griesmeier2005}. 
 
-However, observed energy flux is limited by the plasma cut-off frequency in the vicinity of the planets. 
-This condition is:
+However, observed energy flux is limited by the plasma cut-off frequency in the vicinity of the planets, given by Eq.~(\ref{eq:fplasmalos_scaled}).
+We can see emission only from where the cyclotron frequency (Eq.~\ref{eq:fcyc}) exceeds the plasma frequency:
 %%%
 \begin{equation}
- f_{cyc} > f_{c2}
+\label{eq:fcyc>fplasma} f_{\rm cyc} > f_{\rm plasma}^{\rm los}
 \end{equation} 
 %%%
-or, 
+or, \memoDS{Is this arithmetic right?  Shouldn't the 2.2 actually be 0.5, based on the 14.7MHz in eq. 12 and the 27.9MHz in eq. 8?}
 %%%
 \begin{eqnarray}
  \left( \frac{B}{10~\mbox{G}} \right) &>& 2.2 \left( \frac{a}{5~\mbox{AU}} \right)^{-1} \\
