@@ -394,7 +394,7 @@ We assume that the solid angle of the emission is same as the Jupiter's one for 
 
 The bandwidth, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
 
-We estimate the radio brightness of RGHJs by simply scaling \memoDS{stray sentence fragment?}
+%We estimate the radio brightness of RGHJs by simply scaling \memoDS{stray sentence fragment?}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -529,17 +529,17 @@ We can see emission only from where the cyclotron frequency (Eq.~\ref{eq:fcyc}) 
 \label{eq:fcyc>fplasma} f_{\rm cyc} > f_{\rm plasma}^{\rm los}
 \end{equation} 
 %%%
-or, \memoDS{Is this arithmetic right?  Shouldn't the 2.2 actually be 0.5, based on the 14.7MHz in eq. 12 and the 27.9MHz in eq. 8?}
+or, \memoDS{Is this arithmetic right?  Shouldn't the 2.2 actually be 0.5, based on the 14.7MHz in eq. 12 and the 27.9MHz in eq. 8?}\memoYF{Corrected. }
 %%%
 \begin{eqnarray}
- \left( \frac{B}{10~\mbox{G}} \right) &>& 2.2 \left( \frac{a}{5~\mbox{AU}} \right)^{-1} \\
+ \left( \frac{B}{10~\mbox{G}} \right) &>& 0.526 \left( \frac{a}{5~\mbox{AU}} \right)^{-1} \\
  && \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{1/2}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-1/2} \label{eq:Ba_limit}
 \end{eqnarray}
 %%%
 or, 
 %%%
 \begin{eqnarray}
- \left( \frac{M_p}{M_{p,J}} \right) &> & 1.8 \left( \frac{a}{5~\mbox{AU}} \right)^{-0.72} \left( \frac{t}{4.5~\mbox{Gyr}} \right)^{0.31} \\
+ \left( \frac{M_p}{M_{p,J}} \right) &> & 0.627 \left( \frac{a}{5~\mbox{AU}} \right)^{-0.72} \left( \frac{t}{4.5~\mbox{Gyr}} \right)^{0.31} \\
  && \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{0.36}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-0.36} \label{eq:Ma_limit}
 \end{eqnarray}
 %%%
@@ -548,8 +548,8 @@ Therefore, given any orbital distance, there is a lower mass limit for a planet 
 Substituting equation (\ref{eq:Ba_limit}) into equation (\ref{eq:F_nu_RGHJ}) leads to the maximum spectral radio flux at given orbital period:
 %%%
 \begin{eqnarray}
-F_{\nu} &<& 8 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right) \\
-&& \times \left( \frac{a}{5~\mbox{AU}} \right)^{-1}  \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{1/6} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{13/6}
+F_{\nu} &<& 1.30 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}}^{-2} \right) \\
+&& \times \left( \frac{a}{5~\mbox{AU}} \right)^{1/3}  \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{1/2} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{13/6}
 \end{eqnarray}
 %%%
 
