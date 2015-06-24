@@ -444,6 +444,7 @@ The bandwidth, $\Delta f$, is assumed to be proportional to the representative f
 \label{ss:Bplanet}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s
 
+
 Figure \ref{fig:planetaryB} displays the estimates of the strength of planetary magnetic field $B$ based on the scaling relation in \S\ref{ss:magneticfield} and the corresponding cyclotron frequency ($f_{\rm cyc}$), as well as the core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_o$), as functions of planetary mass and the age. 
 Given that $\rho _c \propto M_p$  at large $M_p$ and $q_c \propto t^{-1.3} M_p^{2.64}/r_c^2$, the magnetic field is roughly:
 %%%%%%%%%% 
@@ -458,15 +459,22 @@ Note that the cyclotron frequency of Jovian planets typically falls between 10~M
 In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
-   \plotoneh{model_planetaryB_cgs.pdf}
+   \plotoneh{fig1_linear.pdf}
    \caption{Planetary magnetic field as a function of age and planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of internal heat of \citet{burrows_et_al2001}.} %\memoDS{Can we change density to cgs in this figure?}
-  \label{fig:planetaryB}
+  \label{fig:planetaryB_pre}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{fig2_Christensen.pdf}
+   \caption{Planetary magnetic field as a function of age for different planetary mass, based on the scaling of magnetic field of \citet{christensen2010} and the evolution of luminosity of \citet{burrows_et_al2001}.} %\memoDS{Can we change density to cgs in this figure?}
+  \label{fig:planetaryB}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -743,11 +751,11 @@ the magnetic pressures increases (by beaming?) by
 \frac{B^2}{8\pi } \propto \frac{1}{r^6}
 \end{equation}
 %%%
-On the other hand, the kinetic energy of the moment increases at most
+On the other hand, the kinetic energy of the moment increases
 %%%
 \begin{equation}
-%\frac{mv^2}{2} \propto \frac{1}{r}
-\rho _K \propto \frac{1}{r}
+\frac{mv^2}{2} \propto \frac{1}{r}
+%\rho _K \propto \frac{1}{r}
 \end{equation}
 %%%
 Therefore, unless the density increases more drastically than $1/r^5$, the ratio $B_c/B$ is significantly less than unity. 
