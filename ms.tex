@@ -169,7 +169,7 @@ We find that RGHJs might be as bright as canonical hot Jupiters as predicted so 
 
 Planets with strong magnetic fields may generate radio or X-ray emission when interacting with energetic charged particles. 
 It has been known that Jupiter emits radio wave from the auroral region due to cyclotron-maser instability \citep{zarka1998}.  % due to the acceleration of the plasmas. \memoYF{?}.
-Potentially, exoplanets can also generate radio emission through the similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
+Potentially, exoplanets can also generate radio emission through similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
 Observations of radio emission from Solar System planets imply an empirical relation that the radio intensity is proportional to the input solar wind flux going into each planetary magnetosphere, which is known as  ``radiometric Bode's law'' \citep{desch+kaiser1984}. 
 Based on this law, it has been proposed that exoplanets in close-in orbits may be bright radio wave emitters because they are subjected to strong stellar wind and/or strong interstellar magnetic field, and thus can gain larger energy input. Motivated by such speculations, spectral radio intensity from known exoplanets have been estimated  \citep{farrell1999,zarka2001,Lazio2004,griesmeier2004,griesmeier2007a,griesmeier2007b,reiners2010}. 
 In addition, young planetary systems where the stellar wind activity is stronger are also taken into consideration \citep{griesmeier2005}. 
@@ -181,7 +181,7 @@ When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
 they go through stages on the red-giant branch (RGB) and the
 asymptotic-giant branch (AGB) where their radii and luminosities increase by orders of magnitude. 
 Jovian planets in orbit around such stars can be transiently heated to hot-Jupiter temperatures ($\sim$1000~K or more) at distances out to tens of AU, depending on the star's mass; such planets are termed ``Red Giant Hot Jupiters'' (RGHJs) \citep{spiegel+madhusudhan2012}. 
-They are also subject to massive (but slow) stellar wind, as the mass-loss rate of such evolved stars are significant, ranging from $\sim  10^{-8} M_\odot$/yr to $\sim  10^{-5} M_\odot$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}, much higher than that of the Sun, $\sim 10^{-14}M_\odot$/yr . 
+They are also subject to a massive (but slow) stellar wind, as the mass-loss rate of such evolved stars are significant, ranging from $\sim  10^{-8} M_\odot$/yr to $\sim  10^{-5} M_\odot$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}, much higher than that of the Sun, $\sim 10^{-14}M_\odot$/yr . 
 On the assumption that the radio emission is correlated with the stellar wind, planetary companions around evolved stars could also generate bright radio emission. 
 
 In this paper, we estimate the radio emission from RGHJs and examine the potential to detect planetary them. 
@@ -235,7 +235,7 @@ Therefore, we have
 
 On the other hand, the stellar wind velocity becomes smaller because of the small escape velocity (due to the expanded stellar radius).
 %\footnote{Escape velocity is $\sqrt{2GM/r}$.}
-Assuming that the stellar wind scales as the escape velocity, i.e., $\propto \sqrt{2GM_{\star}/R_{\star}}$ ($G$ is the gravitational constant, $M_{\star}$ is the stellar mass, and $R_{\star}$ is the stellar radius), a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ has 10 times as slow stellar wind as that at the Sun, $v_{\odot}$. Thus, 
+Assuming that the stellar wind scales as the escape velocity, i.e., $\propto \sqrt{2GM_{\star}/R_{\star}}$ ($G$ is the gravitational constant, $M_{\star}$ is the stellar mass, and $R_{\star}$ is the stellar radius), a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ encounters 10 times as slow stellar wind as that at the Sun, $v_{\odot}$. Thus, 
 \begin{equation}
 \frac{v}{v_{\odot}} \sim 10^{-1} . 
 \end{equation}
@@ -731,6 +731,10 @@ being confusion limited.}
 
 (Jason?)
 
+---
+
+\memoYF{Before}
+
 In the radio range, the brightness source of the radio emission is Rayleigh-Jeans tail of the Planck function, i.e., $S_{\nu } = 2kT\nu^2/c^2$. Recent observations revealed that this dependence on $\nu$ ($f \propto \nu^{\alpha }$ where $\alpha $ is 2) can approximately be extended as low frequency as 1 GHz \citep{gorman2013}, presumably as a result of the wavelength dependence of the opacity (at longer wavelength we see the region further from the center of the stars) and the decreased temperature as the distance from the stars increases. 
 In this paper, we simply assume that the radio emission from the red giants themselves is approximated as a black body radiation at 1000~GHz and proportional to $\nu ^{5/3}$. 
 Thus, the flux from the giants is:
@@ -744,6 +748,22 @@ f_{\star } (\nu ) &=& \frac{2R_{\star }^2 k_B T \nu^2}{c^2 d^2}  \\
 The brightest emission due to interaction with planetary companion to the RGB stars would therefore overwhelm the radio emission from their host stars in the 10-100~MHz range (in the 100-1000~MHz range) unless the stellar radius $R_{\star }$ is larger than $\sim 2000R_{\odot }$ ($\sim 300R_{\odot }$). 
 
 
+---
+
+\memoYF{After}
+
+The radio intensity of evolved stars in the range of 10~MHz and 1~GHz is not constrained through observation\memoYF{?}. 
+Above 1~GHz, there are several observations. For example, \citet{gorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3,910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
+
+We estimate the thermal radio flux from the host star to be consistent with these observed data and by extrapolating to the lower frequency range with a simple power law:
+%%%
+\begin{eqnarray}
+f_{\star }(\nu ) &\sim & (0.4-1.375) \times 10^{-3} ~\mbox{Jy} \\
+&& \times \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
+\end{eqnarray}
+%%%
+If we assume $\alpha = 0.6$ based on constant property wind model, radio flux at 10~pc at 10~MHz-1~GHz is $\sim$ 25 $\mu$Jy-1 mJy, which is below the estimated radio flux of RGHJs. 
+Note that it has also been suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}, in which case the radio flux from the host star would be even lower. 
 
 \newpage
 
@@ -842,10 +862,10 @@ NM acknowledges support from [???].
 \bibliography{biblio.bib}
 
 
+
+\end{document}
+
 \clearpage
-
-%\end{document}
-
 
 
 \section{Memo}
