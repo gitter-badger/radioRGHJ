@@ -184,7 +184,15 @@ Jovian planets in orbit around such stars can be transiently heated to hot-Jupit
 They are also subject to a massive (but slow) stellar wind, as the mass-loss rate of such evolved stars are significant, ranging from $\sim  10^{-8} M_\odot$/yr to $\sim  10^{-5} M_\odot$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}, much higher than that of the Sun, $\sim 10^{-14}M_\odot$/yr . 
 On the assumption that the radio emission is correlated with the stellar wind, planetary companions around evolved stars could also generate bright radio emission. 
 
-In this paper, we estimate radio emission from RGHJs and examine the potential to detect planetary them. 
+Based on this speculation, \citet{ignace2010} examined radio emission from known substellar-mass companions around cool evolved stars. They found that the low ionization fraction of the stellar wind of evolved stars suppresses their radio emission and leads to weak radio emission, probably below the detection limit. 
+
+\color{red}
+In this paper, we argue that the accretion of massive stellar wind onto the planets would emit strong X-ray, which can ionize the hydrogen atoms around the planets. The ionized stellar wind could then interact with the planetary magnetic field in the same way as Solar System planets do. 
+We therefore provide optimistic estimates for highly evolved stars, simply extrapolating the radiometric Bode's law. 
+We do not constrain ourselves to the systems known to have sub-stellar companions, given that the survey of exoplanets around highly evolved stars is not complete; rather, we investigate the parameter space where we can search for radio emission and examine the possibility to detect them with current and future instruments. 
+\color{black}
+
+
 In \S2, we describe our assumptions for stellar wind, planetary magnetosphere, frequency of radio emission, and the scaling of planetary radio emission.
 \S3 presents an estimate of the spectral radio intensity of RGHJs and compares them with what might be expected from canonical hot Jupiters.
 %\S3 also describes the surprising result that, although the planetary magnetic field is crucial to the generation of radio emission at all, there might be an important region in parameter space in which planets with stronger magnetic fields are less easily observable. 
@@ -202,56 +210,10 @@ Finally, \S5 concludes the paper with a brief summary.
 
 \memoYF{In the end the number of significant decimal digits is set to 1 or 2.}
 
-Before estimating the frequency of planetary radio emission and the spectral radio intensity, we specify the property of the stellar wind of the evolved stars in \S\ref{ss:stellarwind}, and that of planetary magnetic field in \S\ref{ss:magneticfield}.  
+Before estimating the frequency of planetary radio emission and the spectral radio intensity, we specify the property of the planetary magnetic field in \S\ref{ss:magneticfield}, and that of the stellar wind of the evolved stars in \S\ref{ss:stellarwind}.  
 Then, we discuss the framework to estimate the frequency and intensity of planetary radio emission in \S\ref{ss:model_frequency} and \S\ref{ss:model_intensity}, respectively. 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Assumptions for Stellar Wind}
-\label{ss:stellarwind}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-One important factor in modeling the radio emission due to the interaction between stellar wind and the planetary magnetic field is the density and velocity of stellar wind. 
-The number density of \memoTM{electrons in the (?)} stellar wind, $n$, can be expressed as
-%%%%%%%%%% 
-\begin{equation}
-n = \frac{\dot M_\star}{4\pi a^2 m_p v}
-\label{eq:n}
-\end{equation}
-%%%%%%%%%% 
-where $\dot M_\star$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v$ is the velocity of the stellar wind. 
-
-While the solar mass loss rate, $\dot M_\odot$, is $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr \citep[e.g.,][]{hundhausen1997}, the mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr 
-\citep{reimers1975}
-, and the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase
-\citep{schild1989, vassiliadis1993, schoier2001, vanloon2005}.
-Therefore, we have
-%%%%%%%%%% 
-\begin{equation}
-\frac{\dot M_\star}{\dot M_{\odot}} \sim 10^6 - 10^9 . 
-\end{equation}
-%%%%%%%%%% 
-
-On the other hand, the stellar wind velocity becomes smaller because of the small escape velocity (due to the expanded stellar radius).
-%\footnote{Escape velocity is $\sqrt{2GM/r}$.}
-Assuming that the stellar wind scales as the escape velocity, i.e., $\propto \sqrt{2GM_{\star}/R_{\star}}$ ($G$ is the gravitational constant, $M_{\star}$ is the stellar mass, and $R_{\star}$ is the stellar radius), a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ encounters 10 times as slow stellar wind as that at the Sun, $v_{\odot}$. Thus, 
-\begin{equation}
-\frac{v}{v_{\odot}} \sim 10^{-1} . 
-\end{equation}
-%where $v_{\odot} \sim 4.0 \times 10^2 $ km/sec. 
-
-\memoYF{comments on ionized fraction??}
-
-\citet{drake1983}
-%\citet{}
-
-
-%The temperature of stellar wind of RGs is expected to be 2 orders of magnitude lower than their main sequence counterparts, mainly because the sound speed of hot corona exceeds the escape speed, i.e., hot corona cannot be confined in the stellar atmosphere \citep{suzuki2008}. 
-%\begin{equation}
-%\frac{T}{T_{\odot}} \sim 10^{-2}
-%\end{equation}
-%where $T_{\odot } \sim 10^6$ K. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Assumptions for Planetary Magnetic Field}
@@ -266,7 +228,7 @@ So far, several scaling relations for the planetary magnetic field strength
 have been proposed \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006,christensen_et_al2009} %\memoYF{check!}
 %(see \citet{griesmeier2004} or \citet{christensen2010} for the summary), 
 which are summarized and compared with numerical simulations in \citet{christensen2010}. 
-We employ the scaling law proposed in \citet{christensen_et_al2009}, which is based on the assumption that the ohmic dissipation energy is a fraction of available convected energy and was found to be in a good agreement with the numerical experiments over a wide parameter space and with known objects from the Earth to stars: 
+We employ the scaling law proposed in \citet{christensen_et_al2009}, which has already been used in \citet{reiners2010} to explore the evolution of planetary magnetic fields. This scaling law is based on the assumption that the ohmic dissipation energy is a fraction of available convected energy and was found to be in a good agreement with the numerical experiments over a wide parameter space and with known objects from the Earth to stars: 
 %\memoYF{describe in more detail}:
 %%%%%%%%%% 
 %\begin{equation}
@@ -302,14 +264,15 @@ We determine the radius of outer boundary of the dynamo region, $r_{\rm dynamo}$
 In the case of Jupiter, $r_{\rm dynamo, J} = 0.85 R_{\rm J}$ and $\rho_{\rm dynamo, J} = 1.899~{\rm g/cm}^3$  .  
 
 The scaling of convected heat flux at the outer boundary, $q_o$, is obtained by dividing the age-dependent net planetary luminosity by the surface area of the core region, i.e., $4\pi r_{\rm dynamo}^2$. 
-The model of luminosity evolution is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}, which resulted in:
+The model of luminosity evolution is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}. 
+Ignoring the relatively weak dependence on  average atmospheric Rosseland mean opacity, the result leads to:
 %%%%%%%%%%
 \begin{equation}
 L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 	
 \label{eq:burrowsLum}
 \end{equation}
 %%%%%%%%%%
-\memoYF{dependence on Rossland mean opacity} Therefore, we have
+Therefore, we have
 %%%%%%%%%%
 \begin{equation}
 q_o \sim q_{o, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \left( \frac{r_c}{r_{c,\,J}} \right)^{-2}\, .
@@ -317,30 +280,132 @@ q_o \sim q_{o, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{
 \end{equation}
 %%%%%%%%%%
 
-We note that the scaling relation based on \citet{christensen_et_al2009}, or equation (\ref{eq:Bscaling}), has also been adopted in \citet{reiners2010}. While the detailed treatment of $\rho _c$ and $q_o$ are different, two estimates of planetary magnetic field strength are fairly close, as shown in \S3 below. 
-
-
-
-%We estimate the convected heat flux by dividing this luminosity by the surface area of the core region, i.e., $4 \pi r_c^2$. 
-
-%\memoYF{I am not sure if the following paragraph is needed.}
-%There also exist several other scaling relations proposed so far, which is compared in \citet{christensen2010}. 
-%In particular, \citet{griesmeier2004} estimated radio emission of discovered exoplanets based on the following scaling relationship: 
+Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling2}) and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is roughly, we find that:
 %%%%%%%%%% 
-%\begin{equation}
-%\mathcal{M} \propto  \omega ^{\alpha } \rho_c ^{\beta } r_c^{\gamma } \sigma ^{\delta }
-%\end{equation}
+\begin{equation}
+%B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} \label{eq:scalingB} \\
+B   \sim   10~{\rm G} \left( \frac{M_p }{M_{p,J}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
+\end{equation}
 %%%%%%%%%%
-%where $\omega $ is the spin angular velocity and $\sigma $ is the conductivity of the ``dynamo region'', which is assumed to be same as Jupiter. 
-%The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. 
+under this model. 
+
+%We note that the scaling relation based on \citet{christensen_et_al2009}, or equation (\ref{eq:Bscaling}), has also been adopted in \citet{reiners2010}. While the detailed treatment of $\rho _c$ and $q_o$ are different, two estimates of planetary magnetic field strength are fairly close, as shown in \S3 below. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Assumptions for Stellar Wind}
+\label{ss:stellarwind}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Another ingredient needed for modeling the radio emission from the interaction between the planetary magnetic field and the stellar wind is the density and velocity of the stellar wind. 
+The number density of \memoTM{electrons in the (?)} stellar wind, $n$, can be expressed as
+%%%%%%%%%% 
+\begin{equation}
+n = \frac{\dot M_\star}{4\pi a^2 m_p v}
+\label{eq:n}
+\end{equation}
+%%%%%%%%%% 
+where $\dot M_\star$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v$ is the velocity of the stellar wind. 
+
+While the solar mass loss rate, $\dot M_\odot$, is $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr \citep[e.g.,][]{hundhausen1997}, the mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr 
+\citep{reimers1975}
+, and the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase
+\citep{schild1989, vassiliadis1993, schoier2001, vanloon2005}.
+Therefore, we have
+%%%%%%%%%% 
+\begin{equation}
+\frac{\dot M_\star}{\dot M_{\odot}} \sim 10^6 - 10^9 . \label{eq:scale_Mdot}
+\end{equation}
+%%%%%%%%%% 
+
+On the other hand, the stellar wind velocity becomes smaller because of the small escape velocity (due to the expanded stellar radius).
+%\footnote{Escape velocity is $\sqrt{2GM/r}$.}
+Assuming that the stellar wind scales as the escape velocity, i.e., $\propto \sqrt{2GM_{\star}/R_{\star}}$ ($G$ is the gravitational constant, $M_{\star}$ is the stellar mass, and $R_{\star}$ is the stellar radius), a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ encounters 10 times as slow stellar wind as that at the Sun, $v_{\odot}$. Thus, 
+%%%%%%%%%% 
+\begin{equation}
+\frac{v}{v_{\odot}} \sim 10^{-1} . \label{eq:scale_v}
+\end{equation}
+%%%%%%%%%% 
+%where $v_{\odot} \sim 4.0 \times 10^2 $ km/sec. 
+
+Based on equations (\ref{eq:scale_Mdot}) and (\ref{eq:scale_v}), the number density of the stellar wind (equation (\ref{eq:n})) are normalized as follows:
+%%%%%%%%%% 
+\begin{equation}
+n = 1.80 \times 10^6 \; {\rm cm^{-3}} \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30\; {\rm km}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \label{eq:n_normalized}
+\end{equation}
+%%%%%%%%%% 
+
+
+\memoYF{check from here}
+As discussed in \citet{ignace2010}, one potential problem of the stellar wind of evolved stars which is unfavorable for radio emission is that their ionization fraction is usually as low as $10^{-3}$ \memoYF{cite something}, which would lead to inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
+However, at this stage the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
+Based on \citet{spiegel+madhusudhan2012}, the accretion luminosity $L_{\rm acc}$ and the temperature $T_{\rm acc}$ are: 
+%%%%%%%%%
+\begin{eqnarray}
+L_{\rm acc} \sim &&  10^{29} \; {\rm erg\;s}^{-1} \\
+&& \times \left( \frac{\dot M_*}{10^{-7} M_{\odot }\;{\rm yr}} \right) \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right) \\
 %
-%Unlike canonical hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we could assume that of Jupiter: $\omega = 9.925$ [hr]. 
+T_{\rm acc} \sim && 2 \times 10^6 \left( \frac{M_p}{10 M_J} \right)
+\end{eqnarray}
+%%%%%%%%%
+The accretion disks around planets therefore emit X-ray radiation. 
+We estimate the scale of the ionized region by computing Stromgren radius of the accretion disk: 
+%%%%%%%%%
+\begin{equation}
+R_{\rm stromgren} = \frac{3}{4\pi} \left( \frac{S}{n^2 \beta } \right)^{1/3}
+\end{equation}
+%%%%%%%%%
+where $S$ is the source rate of ionizing photons, $n$ is the density of hydrogen, and $\beta $ is the coefficient for recombination \memoYF{need to check}:
+% http://www.tapir.caltech.edu/~chirata/ay102/Photoionized.pdf
+% T \propto 4.3e-13 ( T /10^4 K )^-0.7
+%%%%%%%%%
+\begin{eqnarray}
+\beta &=& 4.3? \times 10^{-13} \; \left( \frac{T}{10^4 \;{\rm K}} \right) ^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} \\
+&\sim& 5.28 \times 10^{-14} \; \left( \frac{M_p}{M_J} \right)^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} 
+\end{eqnarray}
+%%%%%%%%%
+The source rate is obtained by counting the number of photons whose energy is higher than 13.6 eV, the energy needed to ionize hydrogen atoms. Thus\memoYF{need to check},  
+%%%%%%%%%
+\begin{eqnarray}
+S_* = 
+  \left\{
+    \begin{array}{ll}
+      1.18 \times 10^{42} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
+      2.66 \times 10^{44} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
+    \end{array}
+  \right.
+\end{eqnarray}
+%%%%%%%%%
+and the number density of hydrogen atoms are given by equation (\ref{eq:n_normalized}). 
+These values give \memoYF{need to check}
+%%%%%%%%%
+\begin{eqnarray}
+R_{\rm stromgren} = 
+  \left\{
+    \begin{array}{ll}
+      3 \;{\rm AU} & \;\;\;(M_p = M_J) \\
+      30 \;{\rm AU} & \;\;\;(M_p = 10 M_J)
+    \end{array}
+  \right.
+\end{eqnarray}
+%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{Cut-off frequency}
-%\label{ss:cutoff}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Thus, we expect that the X-ray emission from the accretion disk is enough to ionize the stellar wind. Therefore, we assume that the stellar wind particles represented by (equation (\ref{eq:n})) are fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets. 
+
+
+
+%\citet{drake1983}
+%\citet{}
+%\color{black}
+
+%The temperature of stellar wind of RGs is expected to be 2 orders of magnitude lower than their main sequence counterparts, mainly because the sound speed of hot corona exceeds the escape speed, i.e., hot corona cannot be confined in the stellar atmosphere \citep{suzuki2008}. 
+%\begin{equation}
+%\frac{T}{T_{\odot}} \sim 10^{-2}
+%\end{equation}
+%where $T_{\odot } \sim 10^6$ K. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Frequency of Radio Emission}
@@ -418,7 +483,7 @@ The radius of the magnetic stand-off point, $r_s$, is obtained based on the bala
 m_p n v ^2 \sim \frac{B^2}{8\pi}\left( \frac{r_s}{R_p} \right)^{-6}  \label{eq:stand-off}
 \end{equation}
 %%%
-The radius obtained for Jupiter from this equality is about a half of actual radius of Magnetosphere \citep[][]{griesmeier2005}. 
+The radius obtained for Jupiter from this equality is about a half of actual radius of magnetosphere \citep[][]{griesmeier2005}. 
 By scaling this radius with equations (\ref{eq:n}) and (\ref{eq:stand-off}), the radius of magnetosphere of planets would be estimated as:
 %If the radius of magnetosphere is estimated by scaling that of Jupiter according to equations (\ref{eq:n}) and (\ref{eq:stand-off}), 
 %We estimate $r_s$ simply by scaling Jovian magnetosphere \citep[$r_{s,\,J} \sim 84 R_J$;][]{joy2002} according to equation (\ref{eq:stand-off}), i.e., 
@@ -454,19 +519,19 @@ The bandwidth, $\Delta f$, is assumed to be proportional to the representative f
 \label{ss:Bplanet}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s
 
+Figure \ref{fig:planetaryB_pre} shows the computed radius ($r_c$) and average density ($\rho_c$) of the dynamo region, and Figure \ref{fig:planetaryB} displays the estimates of the strength of planetary magnetic field $B$ based on the scaling relation in \S\ref{ss:magneticfield} and the corresponding cyclotron frequency ($f_{\rm cyc}$), as functions of planetary mass and the age. 
+%Given that $\rho _c \propto M_p$  at large $M_p$ and $q_c \propto t^{-1.3} M_p^{2.64}/r_c^2$, the magnetic field is roughly:
+Reasonably, the resultant values are in a good agreement with \citet{reiners2010}, which adopted the same scaling law for planetary magnetic field; we show this figure just for self-completeness. 
 
-Figure \ref{fig:planetaryB} displays the estimates of the strength of planetary magnetic field $B$ based on the scaling relation in \S\ref{ss:magneticfield} and the corresponding cyclotron frequency ($f_{\rm cyc}$), as well as the core radius ($r_c$), core density ($\rho_c$), and convected heat flux ($q_o$), as functions of planetary mass and the age. 
-Given that $\rho _c \propto M_p$  at large $M_p$ and $q_c \propto t^{-1.3} M_p^{2.64}/r_c^2$, the magnetic field is roughly:
 %%%%%%%%%% 
-\begin{eqnarray}
+%\begin{eqnarray}
 %B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} \label{eq:scalingB} \\
-B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.04} \label{eq:scalingB} \\
+%B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.04} \label{eq:scalingB} \\
 %f_{\rm cyc} &\sim &  28~{\rm MHz} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} \label{eq:scalingfc} 
-f_{\rm cyc} &\sim &  28~{\rm MHz} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.04} \label{eq:scalingfc} 
-\end{eqnarray}
+%f_{\rm cyc} &\sim &  28~{\rm MHz} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.04} \label{eq:scalingfc} 
+%\end{eqnarray}
 %%%%%%%%%%
-under this model. 
-
+%under this model. 
 Note that the cyclotron frequency of Jovian planets typically falls between 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
 
@@ -494,7 +559,7 @@ In this regime, there are a number of current and near-future radio wave detecto
 \label{ss:brightness}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Based on the assumption that the radio emission is proportional to the input kinetic energy (equation \ref{eq:Pinp_kin}), the scaling of the radio emission is expanded as follows:
+Based on the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows:
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} &=& nv^3 r_s^2 = n v^3 \left( \frac{B^2}{2\pi m_{\rm p}nv^2} \right)^{1/3}  \\
@@ -752,8 +817,20 @@ f_{\star }(\nu ) &\sim & (0.4-1.375) \times 10^{-3} ~\mbox{Jy} \\
 && \times \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
 \end{eqnarray}
 %%%
-If we assume $\alpha = 0.6$ based on constant property wind model \citep{wright1975,panagia1975,olnon1975}, radio flux at 10~pc from 10~MHz to 1~GHz is $\sim$ 25 $\mu$Jy-1 mJy, which is below the estimated radio flux of RGHJs. 
-Note that it has also been suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}, in which case the radio flux from the host star would be even lower. 
+Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $\alpha = 0.6$, while observations suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}. 
+Figure \ref{fig:cartoon} show a cartoon for a radio spectrum of a Jovian-mass RGHJs and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away.  
+As this figure indicates, the radio emission from RGHJs. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{cartoon.pdf}
+   \caption{A cartoon of radio emission spectra of a Jovian-mass RGHJ and the host red giants with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[][e.g.]{zarka2004}, while that of the host red giant is obtained simply by extrapolating observed radio spectra above 1~GHz with power law. }
+  \label{fig:cartoon}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
