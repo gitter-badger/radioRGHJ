@@ -682,28 +682,34 @@ The difference of the symbols indicates whether the radio emission can escape fr
 \memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA). }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[htdp]
+\begin{table*}[htdp]
 \caption{Detectability of Hot Jupiters with Current and Future Radio Telescopes.}
 \begin{center}
-\begin{tabular}{c|ccc} \hline \hline\\[-0.5pc]
-Instrument & Band & Sensitivity & Time  \\[.25pc]
- &  & $\mu$Jy~hr$^{1/2}$ &  hr \\[0.25pc] 
+\begin{tabular}{c|ccccc} \hline \hline\\[-0.5pc]
+Instrument & Band & Sensitivity & Time  & Resolution & Confusion limit\\[.25pc]
+ &  & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy \\[0.25pc] 
 \hline\\[-0.5pc]
-ASKAP & 700-1700~MHz & 37 & 3.4 \\ % table 3 of http://www.atnf.csiro.au/projects/askap/config.html
-GMRT & 220~MHz &  \\
-HERA  & 70~MHz  &  &  \\
-LOFAR  & 120~MHz  &  &  \\
-LWA  & 70~MHz  &  &  \\
-SKA  & 200~MHz  &  &  \\
+%ASKAP & 700-1700~MHz & 37 & 342.3 \\ % table 3 of http://www.atnf.csiro.au/projects/askap/config.html
+GMRT  & 235~MHz &  165.6 & 6860 & 13 \\ % http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html
+HERA  & 70~MHz  &  &  \\ % http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
+% https://www.astron.nl/~heald/test/sens.php; 
+% 24 core stations, 16 remote, 8 international, 488 subbands
+LOFAR & ~45~MHz  &  833!! &  &  & \\
+LOFAR & ~60~MHz  &  648!! &  &  & \\
+LOFAR & 120~MHz  &  51.73 &  &  & \\  
+LOFAR & 150~MHz  &  40.97 &  &  & \\  
+LWA   & ~70~MHz  &  &  \\
+SKA   & 200~MHz  &  &  \\
 UTR-2 & & & \\
-VLA  & P-band (270-430~MHz)  \\ \hline
+VLA P-band & (270-470~MHz)  & 138  & 4760 & \\
+\hline
 \end{tabular}
 \end{center}
 \label{tab:sens}
-\tablecomments{Time estimates to reach 10~$\mu$Jy RMS.  We consider only
+\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.  We consider only
 telescopes that can reach this in less than XX hours without
 being confusion limited.}
-\end{table}
+\end{table*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{deluxetable}{l|lll}
