@@ -705,6 +705,40 @@ F_{\nu} &<& 1.30 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right)^
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Intrinsic radio emission of red giants stars}
+\label{ss:RGradio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The radio intensity of evolved stars in the range of 10~MHz and 1~GHz is not constrained through observation\memoYF{?}. 
+Above 1~GHz, there are several observations. For example, \citet{gorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3,910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
+
+We estimate the thermal radio flux from the host star to be consistent with these observed data and by extrapolating to the lower frequency range with a simple power law:
+%%%
+\begin{eqnarray}
+f_{\star }(\nu ) &\sim & (0.4-1.375) \times 10^{-3} ~\mbox{Jy} \\
+&& \times \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
+\end{eqnarray}
+%%%
+Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $\alpha = 0.6$, while observations suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}. 
+Figure \ref{fig:cartoon} show a cartoon for a radio spectrum of a Jovian-mass RGHJs and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away.  
+As this figure indicates, the radio emission from RGHJs. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{cartoon2.pdf}
+   \caption{A cartoon of radio emission spectra of a Jovian-mass RGHJ and the host red giants with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[][e.g.]{zarka2004}, while that of the host red giant is obtained simply by extrapolating observed radio spectra above 1~GHz with power law. }
+  \label{fig:cartoon}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Radio Flux from Nearby Evolved Stars}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tbhp]
    \plotoneh{radio_1Mp_5AU.pdf}
@@ -795,40 +829,25 @@ being confusion limited.}
 %\label{tab:sens}
 %\end{deluxetable}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Discriminating from Background:\\Time Variability}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(from short to long)
+\begin{itemize}
+\item Modulation due to planetary spin rotation (condition: misalignment of spin axis and magnetic axis) 
+\item modulation due to the presence of satellites??
+\item Modulation due to orbital motion of the planet (condition: near edge-on orbit)
+\item Variability of stellar wind due to stellar oscillation 
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussions}
 \label{s:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Intrinsic radio emission of red giants stars}
-\label{ss:RGradio}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-(Jason?)
-
-The radio intensity of evolved stars in the range of 10~MHz and 1~GHz is not constrained through observation\memoYF{?}. 
-Above 1~GHz, there are several observations. For example, \citet{gorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3,910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
-
-We estimate the thermal radio flux from the host star to be consistent with these observed data and by extrapolating to the lower frequency range with a simple power law:
-%%%
-\begin{eqnarray}
-f_{\star }(\nu ) &\sim & (0.4-1.375) \times 10^{-3} ~\mbox{Jy} \\
-&& \times \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
-\end{eqnarray}
-%%%
-Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $\alpha = 0.6$, while observations suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}. 
-Figure \ref{fig:cartoon} show a cartoon for a radio spectrum of a Jovian-mass RGHJs and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away.  
-As this figure indicates, the radio emission from RGHJs. 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[htbp]
-   \plotoneh{cartoon.pdf}
-   \caption{A cartoon of radio emission spectra of a Jovian-mass RGHJ and the host red giants with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[][e.g.]{zarka2004}, while that of the host red giant is obtained simply by extrapolating observed radio spectra above 1~GHz with power law. }
-  \label{fig:cartoon}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
 
