@@ -704,6 +704,10 @@ F_{\nu} &<& 1.30 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right)^
 \label{s:observability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+In this section, we discuss the observability of the estimated radio emission. 
+An obvious obstacle is the intrinsic radio emission from host red giant stars themselves; if they are larger than radio flux from the planets, there is no way to identify the latter. We will see in \S\ref{ss:RGradio} that radio flux from the planets will probably be larger in a certain parameter range. 
+Then, we estimate the radio emission of Jupiter-twin around known M giants in \S\ref{ss:actualMgiants}. 
+Finally, \S\ref{ss:timevariability} discusses the expected time variability of the radio emission as a mean to discern the signals from the background noise. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -722,14 +726,15 @@ f_{\star }(\nu ) &\sim & (0.4-1.375) \times 10^{-3} ~\mbox{Jy} \\
 \end{eqnarray}
 %%%
 Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $\alpha = 0.6$, while observations suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}. 
-Figure \ref{fig:cartoon} show a cartoon for a radio spectrum of a Jovian-mass RGHJs and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away.  
-As this figure indicates, the radio emission from RGHJs. 
 
+Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10M_J$ and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away. 
+As this figure indicates, even if the radio emission from the red giant itself has relatively low spectral index, the radio emission from RGHJs still dominate in the 10-200~MHz range. 
+Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{cartoon2.pdf}
-   \caption{A cartoon of radio emission spectra of a Jovian-mass RGHJ and the host red giants with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[][e.g.]{zarka2004}, while that of the host red giant is obtained simply by extrapolating observed radio spectra above 1~GHz with power law. }
+   \caption{A cartoon of radio emission spectra of a RGHJ with 10$M_J$ and the host red giants with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[e.g.][]{zarka_et_al2004}, while that of the host red giant is obtained simply by extrapolating observed radio spectra above 1~GHz with power law. }
   \label{fig:cartoon}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -737,6 +742,7 @@ As this figure indicates, the radio emission from RGHJs.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Radio Flux from Nearby Evolved Stars}
+\label{ss:actualMgiants}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -751,6 +757,7 @@ As this figure indicates, the radio emission from RGHJs.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 In order to examine the potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
+
 For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature.
 For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
 %%%
@@ -765,11 +772,17 @@ The velocity of stellar wind is assumed to scale with the escape velocity, hence
 v \propto \sqrt{\frac{2GM_\star}{R_{\star }}}
 \end{equation}
 %%%
-We also obtained the data of parallax from the original Hipparcos datasets\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS} to compute the distance.
+The age of the system is assumed to roughly same as the lifetime of their main-sequence stage, which depends on the stellar mass:
+%%%
+\begin{equation}
+test
+\end{equation}
+%%%
+In addition, the distance to the system is obtained based on the parallax data from Hipparcos datasets\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS}. 
 
-Using these estimates for stellar wind for equations (\ref{eq:stand-off}) and (\ref{eq:stand-off-radius}) as well as the distance to the target, we can calculate the maximum frequency and intensity of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
+Using these data, we can now calculate the maximum frequency and intensity of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
 We consider [A] a Jupiter-twin whose cyclotron frequency is $\sim 30$~MHz, [B] a larger Jovian planet with $M_p\sim 2M_p$ of 4.5 Gyrs old whose cyclotron frequency is $\sim 70$~MHz, and [C] a larger Jovian planet with $M_p\sim 4M_p$ of 4.5 Gyrs old whose cyclotron frequency is $\sim 200$~MHz
-  (equation (\ref{eq:scalingfc})).  
+  (equation (\ref{eq:scalingfc})). \memoYF{no!!}
 
 Figure \ref{fig:observability} displays the estimated radio intensity and the maximum frequency (i.e., cyclotron frequency) of Jupiters [A], [B], and [C]  around red giants within 100~pc. 
 Jupiters are placed at 1 AU and at 5 AU for reference. 
@@ -833,15 +846,28 @@ being confusion limited.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Discriminating from Background:\\Time Variability}
+\label{ss:timevariability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-(from short to long)
-\begin{itemize}
-\item Modulation due to planetary spin rotation (condition: misalignment of spin axis and magnetic axis) 
-\item modulation due to the presence of satellites??
-\item Modulation due to orbital motion of the planet (condition: near edge-on orbit)
-\item Variability of stellar wind due to stellar oscillation 
-\end{itemize}
+%In order to identify radio emission from exoplanets in the galactic background noise, it is 
+
+In order to identify radio emission from exoplanets, it is critical to discern it from the galactic background. 
+An important feature useful for this purpose is the time variability of radio emission. 
+Indeed, several processes cause the time variability of radio emission from exoplanets at different timescales; they are listed below from the ones typically with shorter timescales to those with longer timescales. 
+
+\paragraph{Modulation due to planetary spin rotation (a few hours $\sim $)} 
+If the planetary spin axis is misaligned to the planetary magnetic axis, like Jupiter, the radio intensity  will display sinusoidal modulation synchronously to the spin period. 
+%
+
+\memoYF{Modulation due to the presence of satellites (a few hours $\sim $)?} 
+%
+
+\paragraph{Variability of stellar wind due to stellar oscillation (day $\sim $)?}
+Based on the correlation between the planetary radio emission and the solar wind plasma density also suggest that the radio emission from the planet around the evolved stars, which typically oscillate, are time variable. 
+%
+\paragraph{Modulation due to orbital motion of the planet (a few years $\sim $)}
+If the planetary orbit is close to the edge-on configuration, the radio emission disappears synchronously to the orbital period, due to the increased plasma cut-off frequency along the path and/or secondary eclipse. The former is because when the planet is behind the star the path of the radio emission toward the Earth comes through the vicinity of the star where the plasma density is high. The probability of the latter one, secondary eclipse, is $\sim a/R_\star \sim 9$\% (in the case that $a=5~\mathrm{AU}$ and $R_{\star}=100R_{\odot }$). 
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussions}
