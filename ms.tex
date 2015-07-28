@@ -171,7 +171,8 @@ Planets with strong magnetic fields may generate radio or X-ray emission when in
 It has been known that Jupiter emits radio wave from the auroral region due to cyclotron-maser instability \citep{zarka1998}.  % due to the acceleration of the plasmas. \memoYF{?}.
 Potentially, exoplanets can also generate radio emission through similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
 Observations of radio emission from Solar System planets imply an empirical relation that the radio intensity is proportional to the input solar wind flux going into each planetary magnetosphere, which is known as  ``radiometric Bode's law'' \citep{desch+kaiser1984}. 
-Based on this law, it has been proposed that exoplanets in close-in orbits may be bright radio wave emitters because they are subjected to strong stellar wind and/or strong interstellar magnetic field, and thus can gain larger energy input. Motivated by such speculations, spectral radio intensity from known exoplanets have been estimated  \citep{farrell1999,zarka2001,Lazio2004,griesmeier2004,griesmeier2007a,griesmeier2007b,reiners2010}. 
+Extrapolating this law to exoplanets, radio emission from exoplanetary system has been estimated \citep{farrell1999,zarka2001,lazio2004,griesmeier2004,griesmeier2005,stevens2005,griesmeier2007a,griesmeier2007b,jardine2008,reiners2010}. \memoYF{in more detail}
+%Based on this law, it has been proposed that exoplanets in close-in orbits may be bright radio wave emitters because they are subjected to strong stellar wind and/or strong interstellar magnetic field, and thus can gain larger energy input. Motivated by such speculations, spectral radio intensity from known exoplanets have been estimated  \citep{farrell1999,zarka2001,lazio2004,griesmeier2004,griesmeier2007a,griesmeier2007b,jardine2008,reiners2010,}. 
 In addition, young planetary systems where the stellar wind activity is stronger are also taken into consideration \citep{griesmeier2005}. 
 Although the observational search for these radio signatures are underway, there is no clear detection claimed so far
 \citep{bastian2000,george2007,stroe2012,hallinan2013,murphy2015}, 
@@ -741,16 +742,18 @@ Therefore, in the following, we ignore the radio emission from the red giant as 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Radio Flux from Nearby Evolved Stars}
+\subsection{Radio Flux from Nearby M giants}
 \label{ss:actualMgiants}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tbhp]
-   \plotoneh{radio_1Mp_5AU.pdf}
+   \plotoneh{radio_1Mp.pdf}
+   \plotoneh{radio_10Mp.pdf}
+%   \plotoneh{radio_1Mp_5AU.pdf}
 %   \plotoneh{radio_5Mp_5AU.pdf}
-   \plotoneh{radio_2Mp_4-5Gyr.pdf}
-   \plotoneh{radio_4Mp_4-5Gyr.pdf}   
+%   \plotoneh{radio_2Mp_4-5Gyr.pdf}
+%   \plotoneh{radio_4Mp_4-5Gyr.pdf}   
    \caption{Radio emission from existing M-type red giants with a hypothetical planetary companion of 1$M_J$, 2$M_J$, and 4$M_J$ at 1 AU and 5AU. Cross symbols indicate that the radio emission is not observable because cyclotron frequency is less than plasma density around the planet. }
   \label{fig:observability}
 \end{figure}
@@ -762,29 +765,29 @@ For this purpose, we obtained the list of M-type red giants from Table 4 of \cit
 For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
 %%%
 \begin{equation}
-\dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
+\dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \eta \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
 \end{equation}
 %%%
 where $R_{\star }$, $L_{\star } (=4\pi R_{\star }^2 T_{\star }^4)$, and $M_{\star}$ are radius, luminosity, and mass of the star. 
+The factor $\eta $ is $\sim 0.3-3$, and we assume $\eta =1$ here. 
 The velocity of stellar wind is assumed to scale with the escape velocity, hence
 %%%
 \begin{equation}
 v \propto \sqrt{\frac{2GM_\star}{R_{\star }}}
 \end{equation}
 %%%
-The age of the system is assumed to roughly same as the lifetime of their main-sequence stage, which depends on the stellar mass:
+The age of the system is assumed to roughly same as the lifetime of their main-sequence stage, which depends on the stellar mass. We assume \memoYF{validation}:
 %%%
 \begin{equation}
-test
+t \sim 10\,{\rm Gyr}\, \left( \frac{M_{\star}}{M_{\odot }} \right)^{-2.5}
 \end{equation}
 %%%
 In addition, the distance to the system is obtained based on the parallax data from Hipparcos datasets\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS}. 
 
 Using these data, we can now calculate the maximum frequency and intensity of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
-We consider [A] a Jupiter-twin whose cyclotron frequency is $\sim 30$~MHz, [B] a larger Jovian planet with $M_p\sim 2M_p$ of 4.5 Gyrs old whose cyclotron frequency is $\sim 70$~MHz, and [C] a larger Jovian planet with $M_p\sim 4M_p$ of 4.5 Gyrs old whose cyclotron frequency is $\sim 200$~MHz
-  (equation (\ref{eq:scalingfc})). \memoYF{no!!}
+We consider [A] a Jupiter-twin whose cyclotron frequency is $\sim 30$~MHz, and [B] a larger Jovian planet with $M_p\sim 10M_p$ whose cyclotron frequency is $\sim 300$~MHz (equations (\ref{eq:scalingB}) and (\ref{eq:fcyc})). 
 
-Figure \ref{fig:observability} displays the estimated radio intensity and the maximum frequency (i.e., cyclotron frequency) of Jupiters [A], [B], and [C]  around red giants within 100~pc. 
+Figure \ref{fig:observability} displays the estimated radio intensity (i.e., cyclotron frequency) of Jupiters [A] and [B] around M-type red giants within 100~pc. 
 Jupiters are placed at 1 AU and at 5 AU for reference. 
 The difference of the symbols indicates whether the radio emission can escape from the system (circle) or not (cross). 
 
@@ -863,7 +866,7 @@ If the planetary spin axis is misaligned to the planetary magnetic axis, like Ju
 %
 
 \paragraph{Variability of stellar wind due to stellar oscillation (day $\sim $)?}
-Based on the correlation between the planetary radio emission and the solar wind plasma density also suggest that the radio emission from the planet around the evolved stars, which typically oscillate, are time variable. 
+Based on the correlation between the planetary radio emission and the solar wind plasma density also suggest that the radio emission from the planet around the evolved stars, which typically oscillate, are time variable. \memoYF{To Jason: time variability?}
 %
 \paragraph{Modulation due to orbital motion of the planet (a few years $\sim $)}
 If the planetary orbit is close to the edge-on configuration, the radio emission disappears synchronously to the orbital period, due to the increased plasma cut-off frequency along the path and/or secondary eclipse. The former is because when the planet is behind the star the path of the radio emission toward the Earth comes through the vicinity of the star where the plasma density is high. The probability of the latter one, secondary eclipse, is $\sim a/R_\star \sim 9$\% (in the case that $a=5~\mathrm{AU}$ and $R_{\star}=100R_{\odot }$). 
@@ -971,11 +974,124 @@ NM acknowledges support from [???].
 
 \bibliography{biblio.bib}
 
+\newpage
+
+\appendix
+
+\section{Comparison with previous work}
+
+
+There are rather wide variety of estimation for radio emission of Jovian exoplanets and it is worth noting how the different models return different answers. 
+
+A common part is the scaling relationship between the planetary magnetic field strength and the input kinetic energy. Combining equation (\ref{eq:Pinp_kin}), i.e.,
+%%%
+\begin{equation}
+P_{\rm inp,k}=nv^3 r_s^2 \propto \dot M_{\star} v^2 a^{-2} r_s^2 s
+\end{equation}
+%%%
+and the scaling between the radius of the magnetic stand-off point, $r_s$, and the planetary magnetic field $B$ (see equation (\ref{eq:stand-off-radius})):
+%%%
+\begin{equation}
+r_s \propto B^{1/3} a^{1/3} \dot M_{\star }^{-1/6} \dot v^{-1/6}
+\end{equation}
+%%%
+under the constant stellar wind, we obtain:
+%%%
+\begin{equation}
+P_{\rm inp, k} \propto B^{2/3} a^{-4/3} \dot M_{\star }^{2/3} \dot v^{5/3}
+\end{equation}
+%%%
+
+
+%equation (\ref{eq:stand-off-radius})
+%%%
+%\begin{equation}
+%r_s = 11.3 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{a}{5\mbox{AU}} \right)^{1/3} \left( \frac{\dot M_\star}{10^6 \dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6}
+%\end{equation}
+%%%
+Aside from this common part, the differences originate mainly from:
+\renewcommand{\theenumi}{\roman{enumi}}
+%%%
+\begin{enumerate}
+\item Assumptions for the scaling law of radio power in terms of input energy. 
+\item Assumptions for the scaling law of planetary magnetic field strength. 
+\item Different normalization (assumptions for Jovian radio emission). 
+\item Assumptions for band width (either $f_{\rm cyc}$ or $0.5f_{\rm cyc}$). 
+\item Modeling of stellar wind
+\end{enumerate}
+%%%
+
+As for i., ii. and iii., the scaling laws are summarized in Table \ref{tab:comp}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[htdp]
+\caption{Comparison for assumed scaling relationships.}
+\begin{center}
+\begin{tabular}{c|l|llcc} \hline \hline
+%
+& Paper & Radio power & Magnetic moment  & norm [W] & band width \\\hline
+%
+\#1 & \citet{farrell1999} & $P_{\rm radio} \propto P_{\rm sw}^{0.88} $ & $\mathcal{M} \propto \omega M_p^{5/3}$ & $4 \times 10^9$ & $ 0.5 f_{\rm cyc}$ \\ \hline
+%
+\#2 & \citet{farrell1999} & $P_{\rm radio} \propto P_{\rm sw}^{1.2} $ & $\mathcal{M} \propto \omega M_p^{5/3}$ & $4 \times 10^{11}$ & $ 0.5 f_{\rm cyc}$ \\
+& \citet{lazio2004} & & $\mathcal{M} \propto \omega M_p^{2}$?? & & \\
+& \citet{ignace2010} & & & & \\ \hline
+\#3 & \citet{stevens2005} & $P_{\rm radio} \propto P_{\rm sw} $ & $\mathcal{M} \propto M_p$ & - & - \\ \hline
+\#4 & \citet{griesmeier2005,griesmeier2007a,griesmeier2007b} & $P_{\rm radio} \propto P_{\rm sw}$ & $\mathcal{M} \propto \rho _c^{1/2} \omega r_c^4 $ & $2.1 \times 10^{11}$ & $ 0.5 f_{\rm cyc}$ \\
+\#5 & & & $\mathcal{M} \propto \rho _c^{1/2} \omega^{1/2} r_c^3 \sigma ^{-1/2} $ & & \\
+\#6 & & & $\mathcal{M} \propto \rho _c^{1/2} \omega^{3/4} r_c^{7/2} \sigma ^{-1/4} $ & \\
+\#7 & & & $\mathcal{M} \propto \rho _c^{1/2} \omega r_c^{7/2}$ & & \\ \hline
+%\#8 & \citet{griesmeier2007a,griesmeier2007b} & $P_{\rm radio} \propto P_{\rm sw}$ & same as above & $2.1 \times 10^{11}$ & $ f_{\rm cyc}$ \\ \hline
+\#8 & \citet{reiners2010} & $P_{\rm radio} \propto P_{\rm sw}$ & $\mathcal{M} \propto M_p^{1/6} L^{1/3} R_p^{25/6}$ \\ 
+ & this work & & \\ \hline
+\end{tabular}
+\end{center}
+\label{tab:comp}
+\tablecomments{}
+\end{table*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+If we use the assumptions that $R_p \sim R_J\;\;(const.)$, $\rho _c\sim R_p\sim const.$, and $\sigma = const.$, then the assumptions are reduced to:
+%%%%%%%%%
+\begin{eqnarray}
+\mbox{[\#1]} \; P_{\rm rad} &\sim & 4 \times 10^9 \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{0.58} \left( \frac{M_p}{M_J} \right)^{0.98} \left( \frac{a}{a_J} \right)^{-1.17} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{0.586} \left( \frac{v}{v_{\odot}} \right)^{1.46} \\
+%
+\mbox{[\#2]} \; P_{\rm rad} &\sim & 4 \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _J} \right)^{0.79} \left( \frac{M_p}{M_J} \right)^{1.33} \left( \frac{a}{a_J} \right)^{-1.60} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{0.8} \left( \frac{v}{v_{\odot}} \right)^{2.0} \\
+%
+\mbox{[\#3]} \; P_{\rm rad} &\sim & ? \times 10^{11} \,{\rm W}\,\left( \frac{M_p}{M_J} \right)^{2/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+%
+\mbox{[\#4]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{2/3} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+%
+\mbox{[\#5]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{1/3} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+%
+\mbox{[\#6]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{1/2} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+%
+\mbox{[\#7]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{2/3} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+%
+\mbox{[\#8]} \; P_{\rm rad} &\sim & ? \times 10^{11} \,{\rm W}\, \left( \frac{M_p}{M_J} \right)^{0.69}  \left( \frac{t}{4.5 \rm~Gyr} \right)^{-0.288}  \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+\end{eqnarray}
+%%%%%%%%%
+For the last equation, we used the scaling of the luminosity $L$, equation (\ref{eq:burrowsLum}):
+%%%
+\begin{equation}
+L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \tag{\ref{eq:burrowsLum}}
+\end{equation} 
+%%%
+\memoYF{Note that in \citet{ignace2010} the dependence on mass-loss rate and stellar wind velocity is not taken account consistently; in that paper, $P_{\rm rad} \propto \dot M_{\star } v^2$.}
+
+In summary, we write down the scaling of the radio emission as below, 
+%%%
+\begin{equation}
+P_{\rm rad} \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _J} \right)^{\alpha } \left( \frac{M_p}{M_J} \right)^{\beta }  \left( \frac{t}{4.5 \rm~Gyr} \right)^{-\gamma }  \left( \frac{a}{a_J} \right)^{-\delta }  \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{\epsilon } \left( \frac{v}{v_{\odot}} \right)^{\phi } \, \\
+\end{equation} 
+%%%
+with $\alpha = 0.5-0.8$, $\beta = 0.33-1.33$, $\gamma = 0-0.288$, $\gamma = 1.17-1.60$, $\epsilon = 0.58-0.8$, $\phi = 1.46-2.0$. 
 
 
 \end{document}
 
 \clearpage
+
 
 
 \section{Memo}
