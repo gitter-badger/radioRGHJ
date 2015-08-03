@@ -1,0 +1,8 @@
+telescope,dish_diam_m,max_baseline_m,num_antennas
+gmrt,45,25000,30
+hera,14,1000,350
+lofar_lba,35,100,44
+mwa,4,1000,128
+ska,1.75,65,130000
+vla,25,36000,29
+lwa,2.,100,256
