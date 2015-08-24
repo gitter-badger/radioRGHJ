@@ -1,8 +1,8 @@
-telescope,dish_diam_m,max_baseline_m,num_antennas
-gmrt,45,25000,30
-hera,14,1000,350
-lofar_lba,35,100000,44
-mwa,4,1000,128
-ska,1.75,65000,130000
-vla,25,36000,29
-lwa,2.,100000,256
+telescope,dish_diam_m,max_baseline_m,num_antennas,bandwidth_MHz
+gmrt,45,25000,30,50
+hera,14,1000,350,50
+lofar_lba,35,100000,44,50
+mwa,4,1000,128,50
+ska,1.75,65000,130000,50
+vla,25,36000,29,50
+lwa,2.,100000,256,50
