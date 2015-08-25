@@ -23,6 +23,8 @@
 
 \def\memoDS#1{\color{blue}$[${\bf #1}$]$ \color{black}}
 
+\def\memoNZ#1{\color{green}$[${\bf #1}$]$ \color{black}}
+
 \definecolor{DarkGreen}{rgb}{0.0, 0.6, 0.0}
 \def\memoTM#1{\color{DarkGreen}$[${\bf #1}$]$ \color{black}}
 
@@ -103,7 +105,7 @@ Aaron Parsons\altaffilmark{6} \\
 %
 Tony Mroczkowski\altaffilmark{7,8} \\
 %
-Neil Zimmerman\altaffilmark{9}
+Neil T. Zimmerman\altaffilmark{9}
 }
 
 \affil{$^0$Earth-Life Science Institute, Tokyo Institute of Technology, 
@@ -127,7 +129,7 @@ Neil Zimmerman\altaffilmark{9}
 
 \affil{$^8$Naval Research Laboratory, 4555 Overlook Ave SW, Washington, DC 20375}
 
-\affil{$^9$Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ 08544}
+\affil{$^9$Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218}
 
 
 \vspace{0.5\baselineskip}
@@ -734,6 +736,17 @@ Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $
 Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10M_J$ and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away. 
 As this figure indicates, even if the radio emission from the red giant itself has relatively low spectral index, the radio emission from RGHJs still dominate in the 10-200~MHz range. 
 Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
+
+% Neil's addition
+
+Over the last four decades there have been numerous radio continuum observations of nearby red giants, many with the aim of understanding the extended atmospheres and mass-loss mechanisms of K- and M-type giants~\citep[e.g.,][]{Newell1982, Knapp1995, Skinner1997, Lim1998, OGorman2013}. Almost all observations have been carried out at wavelengths of 6 cm and below, probing thermal Bremsstrahlung emission from the large, partially ionized envelopes surrounding the giant stars~\citep{drake1986}. The spectral index of this emission is of order unity, with a range of reported values for various sources between 0.8 and 1.6~\citep{OGorman2013}.
+
+Only two published studies describe attempts to detect continuum emission from single (non-binary) red giant stars at wavelengths above 20 cm ($L$ band); both yielded null results. First, a program that observed a sample of nine M-type giants at 430 MHz with the Arecibo Telescope failed to detect any of the sources down to flux density 10 mJy~\citep{Fix1976}. Later, with the Molonglo Observatory Synthesis Telescope (MOST), a sample of eight K- and M-type giants were observed at 843 MHz; the upper limits of their flux densities were placed at approximately 1 mJy~\citep{Beasley1992}. Current facilities could achieve far deeper sensitivity on similar targets. For example, as listed in Table~\ref{tab:sens}, at 235 MHz the GMRT reaches a sensitivity of under 0.2 mJy in under a half hour \memoNZ{is this projected or current performance of GMRT?}. However, any re-attempts to detect single red giants at wavelengths near 1 meter remain to be presented in the literature.
+
+The only red giants that have been detected at meter wavelengths are those in interacting binary systems like those of the RS CVn type. For example, van den Oord and de Bruyn detected plasma maser emission from II Pegasi at 360 MHz and 609 MHz with the WSRT~\citep{vandenOord1994}. Although single dwarf-type main sequence stars are also known to exhibit bright, coherent radio flares~\citep{Bastian1990}, no analog to this non-thermal emission process has been proposed to exist for evolved stars.
+
+Altogether, we lack firm observational constraints on the brightnesses of M giants near 1-m wavelengths. However, assuming thermal Bremsstrahlung emission continues to dominate in this wavelength regime, we can extrapolate down from the reported centimeter flux densities, using the specific spectral index when available. In this case, for example, extrapolating from the 0.4 mJy flux density of $\alpha$ Ori at 1.46 GHz, and using its spectral index 1.32~\citep{Newell1982}, we arrive at an estimated flux density of 0.04 mJy at 300 MHz.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tbp]
