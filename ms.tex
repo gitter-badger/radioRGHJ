@@ -11,6 +11,7 @@
 \usepackage{appendix}
 \usepackage{comment}
 \usepackage{color}
+\usepackage{url}
 %\usepackage[dvipdfmx]{color}
 %\usepackage[dvipdfmx]{graphicx}
 
@@ -708,6 +709,8 @@ F_{\nu} &<& 1.30 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right)^
 In this section, we discuss the observability of the estimated radio emission. 
 An obvious obstacle is the intrinsic radio emission from host red giant stars themselves; if they are larger than radio flux from the planets, there is no way to identify the latter. We will see in \S\ref{ss:RGradio} that radio flux from the planets will probably be larger in a certain parameter range. 
 Then, we estimate the radio emission of Jupiter-twin around known M giants in \S\ref{ss:actualMgiants}. 
+In \S\ref{ss:detectability}, we estimate the sensitivities and limitations of several current and future
+radio instruments at lower frequencies.
 Finally, \S\ref{ss:timevariability} discusses the expected time variability of the radio emission as a mean to discern the signals from the background noise. 
 
 
@@ -794,7 +797,46 @@ The difference of the symbols indicates whether the radio emission can escape fr
 %\memoYF{Up to where would the planet be engulfed by evolved stars? References?}
 %I wondered this because if planets at 1 AU would be engulfed anyway it would not be worth discussing here. According to e.g. Nordhaus and Spiegel (2013) it is the case--however, some planets may migrate inward within 1 AU after evolution. So it should be ok. In any case this is not the main point of this paper and I would leave it out. 
 
-\memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA). }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detectability with Current and Near Future Low Frequency Radio Instrumentation}
+\label{ss:detectability}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA).}
+
+We consider in this section several current and near future radio observatories that 
+operate at frequencies $\nu \lesssim 300~\rm MHz$ and can reach continuum 
+sensitivities less than 1~mJy in a few hours.  The results are summarized
+in Table~\ref{tab:sens}.
+The primary limitations to detectability are noise, characterized by the sky
+and system equivalent blackbody temperatures $T_{\rm sky}$ and $T_{\rm sys}$,
+resolution, and source confusion.  
+To estimate the source confusion $\sigma_c$ (in mJy beam$^{-1}$) reported in Table~\ref{tab:sens}, 
+we use equations provided by \cite{condon+ransom2016}, reproduced below:
+\begin{eqnarray}
+\sigma_c & \approx & 0.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^2\!\!,~(\theta > 10\arcsec) \\
+\sigma_c & \approx & 2.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^{10/3}\!\!,~(\theta < 10\arcsec)
+\end{eqnarray}
+The confusion limit is dominated by active galactic nuclei, which have low polarization 
+fractions $<2.5\%$ \citep{Stil2014} and slowly vary with time \citep{Condon1974,Condon2012}.
+Therefore both the circularly polarized nature of the emission from hot Jupiters 
+and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate 
+the source confusion limit.
+
+The LOw-Frequency ARray (LOFAR) operates in the 10-240~MHz range, split in two arrays
+using a low band and high band antenna design (LOFAR-LBA and LOFAR-HBA), 
+and different pad configuration \cite{vanHaarlem2013}.  
+LOFAR's two most sensitive bands are centered at 60~MHz for LOFAR-LBA and 150~MHz 
+for LOFAR-HBA respectively.  Given the strong frequency dependence of
+the effective aperture of a dipole antenna, and that the system noise temperature 
+$T_{\rm sys}$ for LOFAR is not fully determined by the sky noise $T_{\rm sky}$, 
+we use the LOFAR Image Noise calculator\footnote{
+Heald; \url{http://www.astron.nl/~heald/test/sens.php}} for simplicity, which 
+is based on SKA Memo 113\footnote{
+ Nijboer, Pandey-Pommier, \& de Bruyn; SKA Memo 113; 
+\url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, for
+our fiducial sensitivity and imaging parameters in Table~\ref{tab:sens}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table*}[htp]
@@ -802,18 +844,16 @@ The difference of the symbols indicates whether the radio emission can escape fr
 \begin{center}
 \begin{tabular}{c|ccccc} \hline \hline\\[-0.5pc]
 Instrument & Band & Sensitivity & Time  & Resolution & Confusion limit\\
- & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy \\[0.25pc] 
+ & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy bm$^{-1}$ \\[0.25pc] 
 \hline\\[-0.5pc]
 %ASKAP & 700-1700~MHz & 37 & 342.3 \\ % table 3 of http://www.atnf.csiro.au/projects/askap/config.html
 GMRT  & 235~MHz &  165.6 & 6860 & 13 \\ % http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html
 HERA  & 70~MHz  &  &  \\ % http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
 % https://www.astron.nl/~heald/test/sens.php; 
 % 24 core stations, 16 remote, 8 international, 488 subbands
-LOFAR & ~45  &  833!! &  &  & \\
-LOFAR & ~60  &  648!! &  &  & \\
-LOFAR & 120  &  51.73 &  &  & \\  
-LOFAR & 150  &  40.97 &  &  & \\  
-LWA   & ~70  &  &  \\
+LOFAR &  30-80  & 700 &  & 8.3 & 120 \\
+LOFAR & 110-200 &  35 &  & 3.3 & 2.6\\  
+LWA   &  30-80  &  &  \\
 SKA   & 200  &  &  \\
 UTR-2 & & & \\
 VLA P-band & 270-470  & 138  & 4760 & \\
@@ -821,31 +861,8 @@ VLA P-band & 270-470  & 138  & 4760 & \\
 \end{tabular}
 \end{center}
 \label{tab:sens}
-\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.  We consider only
-telescopes that can reach this in less than XX hours without
-being confusion limited.}
+\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.}
 \end{table*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{deluxetable}{l|lll}
-%\tablecolumns{4}
-%\tablewidth{0pt}
-%\tabletypesize{\scriptsize}
-%\tablecaption{Detectability of Hot Jupiters with Current and Future Radio Telescopes}
-%\tablehead{ Instrument & Band & Sensitivity & Time  \\ 
-% &  & $\mu$Jy~hr$^{1/2}$ &  hr} 
-%\startdata 
-%GMRT & 220~MHz   &  & \\
-%SKA  & 200~MHz)  &  &  \\
-%VLA  & P-band (270-430~MHz)  &  & 
-%\enddata
-%\tablecomments{Time estimates to reach 10~$\mu$Jy RMS.  We consider only
-%telescopes that can reach this in less than XX hours without
-%being confusion limited.}
-%\label{tab:sens}
-%\end{deluxetable}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Discriminating from Background:\\Time Variability}
