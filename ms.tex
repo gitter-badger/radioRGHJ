@@ -537,7 +537,7 @@ Reasonably, the resultant values are in a good agreement with \citet{reiners2010
 %%%%%%%%%%
 %under this model. 
 Note that the cyclotron frequency of Jovian planets typically falls between 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
-In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
+In this regime, there are a number of current and near-future radio wave detectors including GMRT, LOFAR, LWA, MWA, Hera, SKA, and upgrades to the VLA. 
 
 
 
@@ -848,6 +848,7 @@ Therefore both the circularly polarized nature of the emission from hot Jupiters
 and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate 
 the source confusion limit.
 
+
 The LOw-Frequency ARray (LOFAR) operates as two separate arrays defined by their 
 high and low bands, differing configurations, and antenna designs.  
 LOFAR-LBA operates in the 10-90~MHz range, and LOFAR-HBA operates in the 
@@ -870,16 +871,25 @@ band (130-190~MHz) exhibits receiver noise comparable to the sky noise, and
 hence we use their online calculator.\footnote{
 \href{http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html}}
 
-
-
-For the rest of the instruments considered, we assume $T_{\rm sys}\approx T_{\rm sky}$,
-and use the fit from \cite{Rogers+Bowman2008} to data taken in the 100-200~MHz range:
+The low frequency component of the  Square Kilometer Array (SKA), recently rebaselined 
+to have 0.4~km$^2$ collecting area in 130,000 elements with baselines extending
+to 65~km, will operate from 50-350~MHz.\footnote{
+\url{https://www.skatelescope.org/news/worlds-largest-radio-telescope-near-construction/}}
+We estimate the noise in the lower half of the band ($\nu<200~\rm MHz$) assuming
+$T_{\rm sys} \approx T_{\rm sky}$, and use the fit from \cite{Rogers+Bowman2008}:
 \begin{equation}
 T_{\rm sky} = T_{150} \left( \frac{\nu}{150~\rm MHz}\right)^{-\beta} + T_{\rm CMB} 
 \end{equation}
 where $T_{150} = 283.2~\rm K$ is the $T_{\rm sky}$ at 150~MHz, $\beta=2.47$,
 and $T_{\rm CMB} = 2.73~\rm K$ is the contribution from the cosmic microwave 
 background (CMB).
+While this relation was fit to data taken in the 100-200~MHz range, the authors
+found it to be consistent with published measurements from 10-408~MHz.
+
+For the rest of the instruments considered, we also assume $T_{\rm sys} \approx T_{\rm sky}$,
+and adopt the \cite{Rogers+Bowman2008} relation.  We caution that is assumption is 
+optimistic, and the time estimates could in reality be a factor of a few worse.
+
 The RMS noise ${\sigma}$ in an interferometric observation, 
 integration time $\tau$, bandwidth $\Delta\nu$, effective area $A_{\rm eff}$ 
 ($\approx0.7 \pi (D/2)^2$ for interferometers comprising antennas with dish size $D$),
@@ -898,15 +908,14 @@ and $N$ elements is \citep[see e.g.][]{condon+ransom2016}
 Instrument & Band & Sensitivity & $\tau$  & Resolution & $5\sigma_c$\\
  & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy bm$^{-1}$ \\[0.25pc] 
 \hline\\[-0.5pc]
-GMRT      & 130-190 & 430   &  460             &  20  & 1070 \\ 
-HERA      &  30-80  & 540   &  730             & 880  & $1.4\times10^6$\\ 
-LOFAR-LBA &  30-80  & 700   & 1225             & 8.3  & 120 \\ 
-LOFAR-HBA & 110-200 &  35   &    3             & 3.3  & 2.6\\  
-LWA       &  30-80  & 36000 &  3.2$\times10^6$ & 10.3 & 211\\
-MWA       &  30-80  & 18000 &  8.1$\times10^5$ & 1030 & $1.4\times10^6$ \\
-SKA-Low   & 50-350 &  3.5   &  0.03            & 7.9  & 57 \\
-UTR-2 & & & \\
-VLA P-band & 270-470  & 138  & 4760 & \\
+GMRT      & 130-190 & 430   &  460             & 16.5 & 280 \\ 
+HERA      &  30-80  & 790   &  730             & 1030 & $2.1\times10^6$\\ 
+LOFAR-LBA &  30-80  & 700   & 1225             & 8.3  & 211 \\ 
+LOFAR-HBA & 110-200 &  35   &    3             & 3.3  & 5.5 \\  
+LWA       &  30-80  & 53000 &  3.2$\times10^6$ & 10.3 & 211 \\
+MWA       &  30-80  & 27000 &  8.1$\times10^5$ & 1030 & $2.1\times10^6$ \\
+SKA-Low   & 50-350  &  4.9   &  0.03            & 7.9  & 57 \\
+VLA       & 30-80   & 138  & 4760 & \\
 \hline
 \end{tabular}
 \end{center}
