@@ -819,7 +819,7 @@ The difference of the symbols indicates whether the radio emission can escape fr
 \memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA).}
 
 We consider in this section several current and near future radio observatories that 
-operate at frequencies $\nu \lesssim 300~\rm MHz$ and can reach continuum 
+operate at frequencies $\nu \lesssim 200~\rm MHz$ and can reach continuum 
 sensitivities less than 1~mJy in a few hours.  The results are summarized
 in Table~\ref{tab:sens}.
 The primary limitations to detectability are noise, characterized by the sky
@@ -828,54 +828,92 @@ resolution, and source confusion.
 To estimate the source confusion $\sigma_c$ (in mJy beam$^{-1}$) reported in Table~\ref{tab:sens}, 
 we use equations provided by \cite{condon+ransom2016}, reproduced below:
 \begin{eqnarray}
-\sigma_c & \approx & 0.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^2\!\!,~(\theta > 10\arcsec) \\
-\sigma_c & \approx & 2.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^{10/3}\!\!,~(\theta < 10\arcsec)
+\sigma_c & \approx & 0.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^2\!\!\!\!,~(\theta > 10\arcsec) \\
+\sigma_c & \approx & 2.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^{10/3}\!\!\!\!\!\!\!\!\!\!,~(\theta < 10\arcsec).
 \end{eqnarray}
-The confusion limit is dominated by active galactic nuclei, which have low polarization 
-fractions $<2.5\%$ \citep{Stil2014} and slowly vary with time \citep{Condon1974,Condon2012}.
+The source confusion limit is dominated by active galactic nuclei, which have low polarization 
+fractions $\lesssim2.5\%$ \citep{Stil2014} and slowly vary with time \citep{Condon1974,Condon2012}.
 Therefore both the circularly polarized nature of the emission from hot Jupiters 
 and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate 
 the source confusion limit.
 
-The LOw-Frequency ARray (LOFAR) operates in the 10-240~MHz range, split in two arrays
-using a low band and high band antenna design (LOFAR-LBA and LOFAR-HBA), 
-and different pad configuration \cite{vanHaarlem2013}.  
-LOFAR's two most sensitive bands are centered at 60~MHz for LOFAR-LBA and 150~MHz 
-for LOFAR-HBA respectively.  Given the strong frequency dependence of
+The LOw-Frequency ARray (LOFAR) operates as two separate arrays defined by their 
+high and low bands, differing configurations, and antenna designs.  
+LOFAR-LBA operates in the 10-90~MHz range, and LOFAR-HBA operates in the 
+100-240~MHz range \cite{vanHaarlem2013}.  We consider it as two separate
+instruments here.
+LOFAR-LBA's most sensitive band is centered at 60~MHz, and at 150~MHz 
+for LOFAR-HBA.  Given the strong frequency dependence of
 the effective aperture of a dipole antenna, and that the system noise temperature 
 $T_{\rm sys}$ for LOFAR is not fully determined by the sky noise $T_{\rm sky}$, 
 we use the LOFAR Image Noise calculator\footnote{
-Heald; \url{http://www.astron.nl/~heald/test/sens.php}} for simplicity, which 
+Heald; \url{http://www.astron.nl/~heald/test/sens.php}}, which 
 is based on SKA Memo 113\footnote{
- Nijboer, Pandey-Pommier, \& de Bruyn; SKA Memo 113; 
+Nijboer, Pandey-Pommier, \& de Bruyn; 
 \url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, for
 our fiducial sensitivity and imaging parameters in Table~\ref{tab:sens}.
+
+The Giant Metre-wave Radio Telescope (GMRT) is an array comprising thirty 
+25-meter antennas, operating at frequencies 130-2000~MHz. The lowest
+band (130-190~MHz) exhibits receiver noise comparable to the sky noise, and
+hence we use their online calculator.\footnote{
+\href{http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html}}
+
+
+
+For the rest of the instruments considered, we assume $T_{\rm sys}\approx T_{\rm sky}$,
+and use the fit from \cite{Rogers+Bowman2008} to data taken in the 100-200~MHz range:
+\begin{equation}
+T_{\rm sky} = T_{150} \left( \frac{\nu}{150~\rm MHz}\right)^{-\beta} + T_{\rm CMB} 
+\end{equation}
+where $T_{150} = 283.2~\rm K$ is the $T_{\rm sky}$ at 150~MHz, $\beta=2.47$,
+and $T_{\rm CMB} = 2.73~\rm K$ is the contribution from the cosmic microwave 
+background (CMB).
+The RMS noise ${\sigma}$ in an interferometric observation, 
+integration time $\tau$, bandwidth $\Delta\nu$, effective area $A_{\rm eff}$ 
+($\approx0.7 \pi (D/2)^2$ for interferometers comprising antennas with dish size $D$),
+and $N$ elements is \citep[see e.g.][]{condon+ransom2016} 
+\begin{equation}
+\sigma = \frac{2 k T_{\rm sys}}{A_{\rm eff} \, \sqrt{\Delta\nu \, \tau N (N-1)}} 
+\left(\frac{\rm 10^{26} Jy}{\rm W m^{-2} Hz^{-1}}\right)
+\end{equation}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table*}[htp]
 \caption{Detectability of Hot Jupiters with Current and Future Radio Telescopes.}
 \begin{center}
 \begin{tabular}{c|ccccc} \hline \hline\\[-0.5pc]
-Instrument & Band & Sensitivity & Time  & Resolution & Confusion limit\\
+Instrument & Band & Sensitivity & $\tau$  & Resolution & $5\sigma_c$\\
  & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy bm$^{-1}$ \\[0.25pc] 
 \hline\\[-0.5pc]
-%ASKAP & 700-1700~MHz & 37 & 342.3 \\ % table 3 of http://www.atnf.csiro.au/projects/askap/config.html
-GMRT  & 235~MHz &  165.6 & 6860 & 13 \\ % http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html
-HERA  & 70~MHz  &  &  \\ % http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
-% https://www.astron.nl/~heald/test/sens.php; 
-% 24 core stations, 16 remote, 8 international, 488 subbands
-LOFAR &  30-80  & 700 &  & 8.3 & 120 \\
-LOFAR & 110-200 &  35 &  & 3.3 & 2.6\\  
-LWA   &  30-80  &  &  \\
-SKA   & 200  &  &  \\
+GMRT      & 130-190 & 430   &  460             &  20  & 1070 \\ 
+HERA      &  30-80  & 540   &  730             & 880  & $1.4\times10^6$\\ 
+LOFAR-LBA &  30-80  & 700   & 1225             & 8.3  & 120 \\ 
+LOFAR-HBA & 110-200 &  35   &    3             & 3.3  & 2.6\\  
+LWA       &  30-80  & 36000 &  3.2$\times10^6$ & 10.3 & 211\\
+MWA       &  30-80  & 18000 &  8.1$\times10^5$ & 1030 & $1.4\times10^6$ \\
+SKA-Low   & 50-350 &  3.5   &  0.03            & 7.9  & 57 \\
 UTR-2 & & & \\
 VLA P-band & 270-470  & 138  & 4760 & \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:sens}
-\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.}
+\tablecomments{Time estimates to reach 20~$\mu$Jy RMS.}
 \end{table*}
+
+% HERA
+% http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
+%
+% LOFAR
+% https://www.astron.nl/~heald/test/sens.php; 
+% 24 core stations, 16 remote, 8 international, 488 subbands
+%
+% GMRT
+% http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html
+% 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Discriminating from Background:\\Time Variability}
