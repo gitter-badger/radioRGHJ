@@ -11,6 +11,7 @@
 \usepackage{appendix}
 \usepackage{comment}
 \usepackage{color}
+\usepackage{url}
 %\usepackage[dvipdfmx]{color}
 %\usepackage[dvipdfmx]{graphicx}
 
@@ -21,6 +22,8 @@
 \def\memoYF#1{\color{red}$[${\bf #1}$]$ \color{black}}
 
 \def\memoDS#1{\color{blue}$[${\bf #1}$]$ \color{black}}
+
+\def\memoNZ#1{\color{green}$[${\bf #1}$]$ \color{black}}
 
 \definecolor{DarkGreen}{rgb}{0.0, 0.6, 0.0}
 \def\memoTM#1{\color{DarkGreen}$[${\bf #1}$]$ \color{black}}
@@ -102,7 +105,7 @@ Aaron Parsons\altaffilmark{6} \\
 %
 Tony Mroczkowski\altaffilmark{7,8} \\
 %
-Neil Zimmerman\altaffilmark{9}
+Neil T. Zimmerman\altaffilmark{9}
 }
 
 \affil{$^0$Earth-Life Science Institute, Tokyo Institute of Technology, 
@@ -126,7 +129,7 @@ Neil Zimmerman\altaffilmark{9}
 
 \affil{$^8$Naval Research Laboratory, 4555 Overlook Ave SW, Washington, DC 20375}
 
-\affil{$^9$Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ 08544}
+\affil{$^9$Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218}
 
 
 \vspace{0.5\baselineskip}
@@ -534,7 +537,7 @@ Reasonably, the resultant values are in a good agreement with \citet{reiners2010
 %%%%%%%%%%
 %under this model. 
 Note that the cyclotron frequency of Jovian planets typically falls between 10~MHz, the plasma cut-off frequency of Earth's ionosphere, and less than 1~GHz. 
-In this regime, there are a number of current and near-future radio wave detectors including UTR-2, LOFAR, LWA, and SKA. 
+In this regime, there are a number of current and near-future radio wave detectors including GMRT, LOFAR, LWA, MWA, Hera, SKA, and upgrades to the VLA. 
 
 
 
@@ -708,6 +711,8 @@ F_{\nu} &<& 1.30 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right)^
 In this section, we discuss the observability of the estimated radio emission. 
 An obvious obstacle is the intrinsic radio emission from host red giant stars themselves; if they are larger than radio flux from the planets, there is no way to identify the latter. We will see in \S\ref{ss:RGradio} that radio flux from the planets will probably be larger in a certain parameter range. 
 Then, we estimate the radio emission of Jupiter-twin around known M giants in \S\ref{ss:actualMgiants}. 
+In \S\ref{ss:detectability}, we estimate the sensitivities and limitations of several current and future
+radio instruments at lower frequencies.
 Finally, \S\ref{ss:timevariability} discusses the expected time variability of the radio emission as a mean to discern the signals from the background noise. 
 
 
@@ -731,6 +736,28 @@ Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $
 Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10M_J$ and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away. 
 As this figure indicates, even if the radio emission from the red giant itself has relatively low spectral index, the radio emission from RGHJs still dominate in the 10-200~MHz range. 
 Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
+
+% Neil's addition
+
+Over the last four decades there have been numerous radio continuum observations of nearby red giants, many with the aim of understanding the extended atmospheres and mass-loss mechanisms of K- and M-type giants~\citep[e.g.,][]{Newell1982, Knapp1995, Skinner1997, Lim1998, OGorman2013}.
+Almost all observations have been carried out at wavelengths of 6 cm and below, probing thermal Bremsstrahlung emission from the large, partially ionized envelopes surrounding the giant stars~\citep{drake1986}.
+The spectral index of this emission is of order unity, with a range of reported values for various sources between 0.8 and 1.6~\citep{OGorman2013}.
+
+Only two published studies describe attempts to detect continuum emission from single (non-binary) red giant stars at wavelengths above 20 cm ($L$ band); both yielded null results.
+First, a program that observed a sample of nine M-type giants at 430 MHz with the Arecibo Telescope failed to detect any of the sources down to flux density 10 mJy~\citep{Fix1976}.
+Later, with the Molonglo Observatory Synthesis Telescope (MOST), a sample of eight K- and M-type giants were observed at 843 MHz; the upper limits of their flux densities were placed at approximately 1 mJy~\citep{Beasley1992}.
+Current facilities could achieve far deeper sensitivity on similar targets.
+For example, as listed in Table~\ref{tab:sens}, at 235 MHz the GMRT reaches a sensitivity of under 0.2 mJy in under a half hour \memoNZ{is this projected or current performance of GMRT?}.
+However, any re-attempts to detect single red giants at wavelengths near 1 meter remain to be presented in the literature.
+
+The only red giants that have been detected at meter wavelengths are those in interacting binary systems like those of the RS CVn type.
+For example, van den Oord and de Bruyn detected plasma maser emission from II Pegasi at 360 MHz and 609 MHz with the WSRT~\citep{vandenOord1994}.
+Although single dwarf-type main sequence stars are also known to exhibit bright, coherent radio flares~\citep{Bastian1990}, no analog to this non-thermal emission process has been proposed to exist for evolved stars.
+
+Altogether, we lack firm observational constraints on the brightnesses of M giants near 1-m wavelengths.
+However, assuming thermal Bremsstrahlung emission continues to dominate in this wavelength regime, we can extrapolate down from the reported centimeter flux densities, using the specific spectral index when available.
+In this case, for example, extrapolating from the 0.4 mJy flux density of $\alpha$ Ori at 1.46 GHz, and using its spectral index 1.32~\citep{Newell1982}, we arrive at an estimated flux density of 0.04 mJy at 300 MHz.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tbp]
@@ -794,57 +821,118 @@ The difference of the symbols indicates whether the radio emission can escape fr
 %\memoYF{Up to where would the planet be engulfed by evolved stars? References?}
 %I wondered this because if planets at 1 AU would be engulfed anyway it would not be worth discussing here. According to e.g. Nordhaus and Spiegel (2013) it is the case--however, some planets may migrate inward within 1 AU after evolution. So it should be ok. In any case this is not the main point of this paper and I would leave it out. 
 
-\memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA). }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detectability with Current and Near Future Low Frequency Radio Instrumentation}
+\label{ss:detectability}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\memoYF{discussion about detectability... Figures 1-3 of \citet{griesmeier2007b} show $10^{-3}$ Jy limit for 10-100 MHz (LWA, LOFAR) and $10^{-5}-10^{-4}$ Jy for 100-1000 MHz (LOFAR, SKA).}
+
+We consider in this section several current and near future radio observatories that 
+operate at frequencies $\nu \lesssim 200~\rm MHz$ and can reach continuum 
+sensitivities less than 1~mJy in a few hours.  The results are summarized
+in Table~\ref{tab:sens}.
+The primary limitations to detectability are noise, characterized by the sky
+and system equivalent blackbody temperatures $T_{\rm sky}$ and $T_{\rm sys}$,
+resolution, and source confusion.  
+To estimate the source confusion $\sigma_c$ (in mJy beam$^{-1}$) reported in Table~\ref{tab:sens}, 
+we use equations provided by \cite{condon+ransom2016}, reproduced below:
+\begin{eqnarray}
+\sigma_c & \approx & 0.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^2\!\!\!\!,~(\theta > 10\arcsec) \\
+\sigma_c & \approx & 2.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^{10/3}\!\!\!\!\!\!\!\!\!\!,~(\theta < 10\arcsec).
+\end{eqnarray}
+The source confusion limit is dominated by active galactic nuclei, which have low polarization 
+fractions $\lesssim2.5\%$ \citep{Stil2014} and slowly vary with time \citep{Condon1974,Condon2012}.
+Therefore both the circularly polarized nature of the emission from hot Jupiters 
+and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate 
+the source confusion limit.
+
+
+The LOw-Frequency ARray (LOFAR) operates as two separate arrays defined by their 
+high and low bands, differing configurations, and antenna designs.  
+LOFAR-LBA operates in the 10-90~MHz range, and LOFAR-HBA operates in the 
+100-240~MHz range \cite{vanHaarlem2013}.  We consider it as two separate
+instruments here.
+LOFAR-LBA's most sensitive band is centered at 60~MHz, and at 150~MHz 
+for LOFAR-HBA.  Given the strong frequency dependence of
+the effective aperture of a dipole antenna, and that the system noise temperature 
+$T_{\rm sys}$ for LOFAR is not fully determined by the sky noise $T_{\rm sky}$, 
+we use the LOFAR Image Noise calculator\footnote{
+Heald; \url{http://www.astron.nl/~heald/test/sens.php}}, which 
+is based on SKA Memo 113\footnote{
+Nijboer, Pandey-Pommier, \& de Bruyn; 
+\url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, for
+our fiducial sensitivity and imaging parameters in Table~\ref{tab:sens}.
+
+The Giant Metre-wave Radio Telescope (GMRT) is an array comprising thirty 
+25-meter antennas, operating at frequencies 130-2000~MHz. The lowest
+band (130-190~MHz) exhibits receiver noise comparable to the sky noise, and
+hence we use their online calculator.\footnote{
+\href{http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html}}
+
+The low frequency component of the  Square Kilometer Array (SKA), recently rebaselined 
+to have 0.4~km$^2$ collecting area in 130,000 elements with baselines extending
+to 65~km, will operate from 50-350~MHz.\footnote{
+\url{https://www.skatelescope.org/news/worlds-largest-radio-telescope-near-construction/}}
+We estimate the noise in the lower half of the band ($\nu<200~\rm MHz$) assuming
+$T_{\rm sys} \approx T_{\rm sky}$, and use the fit from \cite{Rogers+Bowman2008}:
+\begin{equation}
+T_{\rm sky} = T_{150} \left( \frac{\nu}{150~\rm MHz}\right)^{-\beta} + T_{\rm CMB} 
+\end{equation}
+where $T_{150} = 283.2~\rm K$ is the $T_{\rm sky}$ at 150~MHz, $\beta=2.47$,
+and $T_{\rm CMB} = 2.73~\rm K$ is the contribution from the cosmic microwave 
+background (CMB).
+While this relation was fit to data taken in the 100-200~MHz range, the authors
+found it to be consistent with published measurements from 10-408~MHz.
+
+For the rest of the instruments considered, we also assume $T_{\rm sys} \approx T_{\rm sky}$,
+and adopt the \cite{Rogers+Bowman2008} relation.  We caution that is assumption is 
+optimistic, and the time estimates could in reality be a factor of a few worse.
+
+The RMS noise ${\sigma}$ in an interferometric observation, 
+integration time $\tau$, bandwidth $\Delta\nu$, effective area $A_{\rm eff}$ 
+($\approx0.7 \pi (D/2)^2$ for interferometers comprising antennas with dish size $D$),
+and $N$ elements is \citep[see e.g.][]{condon+ransom2016} 
+\begin{equation}
+\sigma = \frac{2 k T_{\rm sys}}{A_{\rm eff} \, \sqrt{\Delta\nu \, \tau N (N-1)}} 
+\left(\frac{\rm 10^{26} Jy}{\rm W m^{-2} Hz^{-1}}\right)
+\end{equation}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table*}[htp]
 \caption{Detectability of Hot Jupiters with Current and Future Radio Telescopes.}
 \begin{center}
 \begin{tabular}{c|ccccc} \hline \hline\\[-0.5pc]
-Instrument & Band & Sensitivity & Time  & Resolution & Confusion limit\\
- & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy \\[0.25pc] 
+Instrument & Band & Sensitivity & $\tau$  & Resolution & $5\sigma_c$\\
+ & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy bm$^{-1}$ \\[0.25pc] 
 \hline\\[-0.5pc]
-%ASKAP & 700-1700~MHz & 37 & 342.3 \\ % table 3 of http://www.atnf.csiro.au/projects/askap/config.html
-GMRT  & 235~MHz &  165.6 & 6860 & 13 \\ % http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html
-HERA  & 70~MHz  &  &  \\ % http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
-% https://www.astron.nl/~heald/test/sens.php; 
-% 24 core stations, 16 remote, 8 international, 488 subbands
-LOFAR & ~45  &  833!! &  &  & \\
-LOFAR & ~60  &  648!! &  &  & \\
-LOFAR & 120  &  51.73 &  &  & \\  
-LOFAR & 150  &  40.97 &  &  & \\  
-LWA   & ~70  &  &  \\
-SKA   & 200  &  &  \\
-UTR-2 & & & \\
-VLA P-band & 270-470  & 138  & 4760 & \\
+GMRT      & 130-190 & 430   &  460             & 16.5 & 280 \\ 
+HERA      &  30-80  & 790   &  730             & 1030 & $2.1\times10^6$\\ 
+LOFAR-LBA &  30-80  & 700   & 1225             & 8.3  & 211 \\ 
+LOFAR-HBA & 110-200 &  35   &    3             & 3.3  & 5.5 \\  
+LWA       &  30-80  & 53000 &  3.2$\times10^6$ & 10.3 & 211 \\
+MWA       &  30-80  & 27000 &  8.1$\times10^5$ & 1030 & $2.1\times10^6$ \\
+SKA-Low   & 50-350  &  4.9   &  0.03            & 7.9  & 57 \\
+VLA       & 30-80   & 138  & 4760 & \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:sens}
-\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.  We consider only
-telescopes that can reach this in less than XX hours without
-being confusion limited.}
+\tablecomments{Time estimates to reach 20~$\mu$Jy RMS.}
 \end{table*}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{deluxetable}{l|lll}
-%\tablecolumns{4}
-%\tablewidth{0pt}
-%\tabletypesize{\scriptsize}
-%\tablecaption{Detectability of Hot Jupiters with Current and Future Radio Telescopes}
-%\tablehead{ Instrument & Band & Sensitivity & Time  \\ 
-% &  & $\mu$Jy~hr$^{1/2}$ &  hr} 
-%\startdata 
-%GMRT & 220~MHz   &  & \\
-%SKA  & 200~MHz)  &  &  \\
-%VLA  & P-band (270-430~MHz)  &  & 
-%\enddata
-%\tablecomments{Time estimates to reach 10~$\mu$Jy RMS.  We consider only
-%telescopes that can reach this in less than XX hours without
-%being confusion limited.}
-%\label{tab:sens}
-%\end{deluxetable}
-
+% HERA
+% http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
+%
+% LOFAR
+% https://www.astron.nl/~heald/test/sens.php; 
+% 24 core stations, 16 remote, 8 international, 488 subbands
+%
+% GMRT
+% http://gmrt.ncra.tifr.res.in/~astrosupp/obs_setup/sensitivity.html
+% 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
