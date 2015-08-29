@@ -1,10 +1,10 @@
-%% This is emulateapj.cls, version Febduary 16, 2010
+%% This is emulateapj.cls, version January 23, 2015
 %% For the latest version check http://hea-www.harvard.edu/~alexey/emulateapj
 %%
 %% NOTE: ApJ has moved its publishing to IOP and they have slightly changed
 %% the formatting. To implement these changes, call emulateapj with the iop
 %% option, as in
-%% \usepackage[iop]{emulateapj}
+%% \documentclass[iop]{emulateapj}
 %%
 %% Other available options:
 %%
@@ -16,16 +16,22 @@
 %% [tighten]   - some adjustments to approximate grid typesetting
 %% [numberedappendix]   - number appendix sections as A, B, etc
 %% [appendixfloats]  - use separate numbering for floats within appendix
+%% [twocolappendix]  - make appendix in two-col mode in a two-col paper
+%% [revtex4]   - force using revtex4
+%% [astrosymb] - load Astrosymb font and define \astro commands from aastex
 %%
 %% NOTE 2: Starting from version 11/10/2009, emulateapj tries to load
 %% revtex4-1 if present on the system. This may cause small changes in
-%% typesetting for old documents. If you want full compatibility, please
+%% typesetting for old documents. Also, revtex4-1 does not interact
+%% well with the lscape package which is needed for typesetting of
+%% long rotated tables. If you want full compatibility, please
 %% download the last version based on revtex4,
 %% http://hea-www.harvard.edu/~alexey/emulateapj/emulateapj-rtx4.cls
-%% and bundle it with your TeX source code
+%% and bundle it with your TeX source code. Starting with the
+%% 8/17/2012 version, you can also use the [revtex4] option. 
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Copyright 2000-2010 Alexey Vikhlinin
+%% Copyright 2000-2015 Alexey Vikhlinin
 %%
 %% The first version of this package was written by Maxim Markevitch. 
 %% Pieces of AASTeX code are used for compatibility with aastex.cls.
@@ -62,23 +68,23 @@
 %% For release notes and change log, see at bottom
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\emulapj@ver{2/16/10}
+\def\emulapj@ver{01/23/15}
 
 
 \ProvidesClass{emulateapj}
 
 \newif\if@revtex@four@one@
-\IfFileExists{revtex4-1.cls}{
 \@revtex@four@one@true
-\def\@revtex@cls{revtex4-1}
-}{
-\@revtex@four@one@false
-\def\@revtex@cls{revtex4}
-}
+\DeclareOption{revtex4}{\@revtex@four@one@false}
 
 \newif\if@two@col
 \DeclareOption{twocolumn}{\@two@coltrue}
 \DeclareOption{onecolumn}{\@two@colfalse}
+
+\newif\if@two@col@app
+\DeclareOption{twocolappendix}{\@two@col@apptrue}
+\DeclareOption{onecolappendix}{\@two@col@appfalse}
+
 
 \newif\if@chicago
 \DeclareOption{chicago}{\@chicagotrue}
@@ -99,6 +105,14 @@
   \def\secnum@size{\small}
   \def\subsecnum@size{\small}
   \@apj@lettertrue
+}
+
+\DeclareOption{astrosymb}{
+  \def\astro#1{\leavevmode\hbox{\astro@font#1}}%
+  \def\load@astro@font{%
+    \font\astro@font=Astrosym at\f@size pt
+  }%
+  \AtBeginDocument{\load@astro@font}
 }
 
 \DeclareOption{tighten}{
@@ -130,16 +144,27 @@
 
 \left@just@table@notes
 
-\ExecuteOptions{apjl,twocolumn,chicago}
+\ExecuteOptions{apjl,twocolumn,chicago,onecolappendix}
 
 \ProcessOptions
+
+\if@revtex@four@one@
+  \IfFileExists{revtex4-1.cls}{
+    \def\@revtex@cls{revtex4-1}
+  }{
+    \@revtex@four@one@false
+    \def\@revtex@cls{revtex4}
+  }
+\else
+   \def\@revtex@cls{revtex4}
+\fi 
 
 \let\@startsection@from@latex=\@startsection
 
 \if@two@col
-  \LoadClass[twocolumn,nofootinbib,showkeys,twoside,floatfix,unsortedaddress,flushbottom]{\@revtex@cls}
+  \LoadClass[twocolumn,nofootinbib,showkeys,twoside,floatfix,unsortedaddress,flushbottom,10pt,aps,pra]{\@revtex@cls}
 \else
-  \LoadClass[nofootinbib,showkeys,twoside,floatfix,unsortedaddress,flushbottom]{\@revtex@cls}
+  \LoadClass[nofootinbib,showkeys,twoside,floatfix,unsortedaddress,flushbottom,notitlepage,10pt,aps,pra]{\@revtex@cls}
 \fi
 \def\blankaffiliation{~}%
 
@@ -147,10 +172,12 @@
  \def\@eapj@cap@font{\scshape}
  \def\@eapj@figname{Fig.}
  \def\@eapj@tabname{TABLE}
+ \def\@eapj@ApJLetters{ApJ}
 \else
  \def\@eapj@cap@font{\bfseries}
  \def\@eapj@figname{Figure}
  \def\@eapj@tabname{Table}
+ \def\@eapj@ApJLetters{ApJL}
 \fi
 
 % Restore natbib package without sorting. 
@@ -343,6 +370,7 @@
 \let\shorttitle=\lefthead        % New AASTEX commands
 \let\shortauthors\righthead      % New AASTEX commands
 
+\if@chicago
 %% MM Create "apjheads" page style:
 \def\ps@apjheads{\let\@mkboth\markboth
     \def\@evenfoot{}
@@ -351,6 +379,16 @@
     \def\@oddfoot{}
     \def\@oddhead{\lower9mm\hbox to\textwidth{
                      \hfil\rm\@versohead\hfil \rm\thepage}}
+\else
+\def\ps@apjheads{\let\@mkboth\markboth
+    \def\@evenfoot{}
+    \def\@evenhead{\lower9mm\hbox to\textwidth{
+                     \rm\thepage\hfil \rm\textsc{\@rectohead} \hfil}}}
+    \def\@oddfoot{}
+    \def\@oddhead{\lower9mm\hbox to\textwidth{
+                     \hfil\rm\textsc{\@versohead}\hfil \rm\thepage}}
+\fi
+
 \@twosidetrue
 \ps@apjheads
 
@@ -456,7 +494,11 @@
 \def\footnotetext[#1]#2{\altaffiltext{#1}{#2}}
 
 %   ABSTRACT
-\def\frontmatter@abstractfont{\normalsize\parindent=0.125in}%
+\if@chicago
+ \def\frontmatter@abstractfont{\normalsize\parindent=0.125in}%
+\else
+ \def\frontmatter@abstractfont{\normalsize\parindent=0.0in}%
+\fi
 \def\frontmatter@abstractwidth{6in}
 \def\frontmatter@preabstractspace{0.0\baselineskip}
 \def\frontmatter@postabstractspace{0.0\baselineskip}
@@ -483,7 +525,11 @@
 %  *             KEYWORDS                 *
 %  ****************************************
 
-\def\@keys@name{\textit{Subject headings:}\/~\mbox{}}%
+\if@chicago
+  \def\@keys@name{\textit{Subject headings:}\/~\mbox{}}%
+\else
+  \def\@keys@name{\textit{Keywords:}\/~\mbox{}}%
+\fi
 \newlength{\keys@width}
 \def\frontmatter@keys@format{\vspace*{0.5mm}%
   \settowidth{\keys@width}{\normalsize\@keys@name}%
@@ -544,12 +590,27 @@
 \long\gdef\lastfootnote{\mbox{}}
 \let\spit@out@footnotes\spit@out@footnotes@
 \long\def\footnote##1{\refstepcounter{lastfootnote}\footnotemark\g@addto@macro\lastfootnote{\\[\footnotesep]\refstepcounter{footnote}\mbox{}\hspace*{3mm}\textsuperscript{\thefootnote}~##1}}
+% We need to mess with footnotes in appendiz only if it is in a
+% different mode (twocol vs onecol) than the main text
+\def\mess@with@appendix@footnotes{
 \BeforeBegin{appendix}{\spit@out@footnotes\let\spit@out@footnotes\relax}
+\BeforeEnd{appendix}{\spit@out@footnotes\let\spit@out@footnotes\relax}
+\AfterEnd{appendix}{\let\footnote=\orig@footnote}
+}
+\if@two@col
+  \if@two@col@app\else
+    \mess@with@appendix@footnotes
+  \fi
+% \else % Something is broken for pathological case of 2col appendix in
+%       % a 1col paper, so comment this out
+%   \if@two@col@app
+%     \mess@with@appendix@footnotes
+%   \fi
+\fi
+
 \BeforeBegin{references}{\spit@out@footnotes\let\spit@out@footnotes\relax}
 \BeforeBegin{thebibliography}{\spit@out@footnotes\let\spit@out@footnotes\relax}
 % in case \lastpagefootnotes were given inside \begin{appendix}\end{appendix},
-\BeforeEnd{appendix}{\spit@out@footnotes\let\spit@out@footnotes\relax}
-\AfterEnd{appendix}{\let\footnote=\orig@footnote}
 \AfterEnd{references}{\let\footnote=\orig@footnote}
 \AfterEnd{thebibliography}{\let\footnote=\orig@footnote}
 }
@@ -688,7 +749,16 @@
 \renewenvironment{appendix}[0]{
   \vspace*{0pt plus 20pt minus 5pt} % otherwise revtex4-1 sometimes eats
 % away the last line before appendix
-  \onecolumngrid
+  \if@two@col 
+    \if@two@col@app\else
+      \onecolumngrid
+    \fi 
+  % \else% Something is broken for pathological case of 2col appendix in
+  %      % a 1col paper, so comment this out
+  %   \if@two@col@app
+  %      \set@column@hsize{2}\twocolumngrid
+  %   \fi
+  \fi
         \vskip 10pt plus 2pt minus 1pt
         \noindent\mbox{}\hfill{\apjsecfont APPENDIX}\hfill\mbox{}\par
         \nopagebreak\medskip\@nobreaktrue\def\ApjSectionpenalty{\@M}
@@ -756,18 +826,21 @@
 
 \newdimen\bibindent
 \renewenvironment{thebibliography}[1]{
- \if@chicago \onecolumngrid \fi
+ \if@chicago \onecolumngrid \else \twocolumngrid \fi
  \par
  \raggedright
  \vspace{10pt plus 3pt}
  \if@chicago
     \noindent \makebox[\textwidth][c]{\footnotesize REFERENCES}
  \else
-    \centerline{\footnotesize REFERENCES}
+    \centerline{\normalsize REFERENCES}
  \fi
  \par
- \vspace*{4pt plus 3pt}
- \if@chicago\set@column@hsize{2} \twocolumngrid \fi
+ \if@chicago
+    \vspace*{4pt plus 3pt}
+    \set@column@hsize{2}
+    \twocolumngrid
+ \fi
  \list{}%
    {
      \parindent=0pt \parskip=0pt \parsep=0pt % AV
@@ -791,7 +864,8 @@
   {\def\@noitemerr
     {\@latex@warning{Empty `thebibliography' environment}}%
     \endlist
-    \onecolumngrid
+    \onecolumngrid % to balance references
+    \if@two@col \twocolumngrid \fi
   }
 
 % %% AV: 
@@ -892,7 +966,7 @@
    \else
    \vspace*{\abovecaptionskip}\noindent\footnotesize #1 #2\par\vskip \belowcaptionskip
    \fi
- \end{minipage}
+ \end{minipage}\par
  }
 
 
@@ -1081,6 +1155,42 @@
 \newcommand\Capricornus{\astro{\char20}}% 
 \newcommand\Aquarius{\astro{\char21}}% 
 \newcommand\Pisces{\astro{\char22}}% 
+ 
+\newcommand\sbond{\chem@bnd{\@sbnd}}%
+\newcommand\dbond{\chem@bnd{\@dbnd}}%
+\newcommand\tbond{\chem@bnd{\@tbnd}}%
+\def\chem@bnd#1{%
+ {%
+  \kern.1em\relax
+  \setbox\z@\hbox{M}%
+  \dimen@ii.8em\relax
+  \p@=.1em\relax
+  \dimen@.5\ht\z@\dimen@i-\dimen@
+  \advance\dimen@1.5\p@\advance\dimen@i-1.0\p@
+  #1%
+  \kern.1em\relax
+  }%
+ }%
+\def\@sbnd{%
+ \advance\dimen@-1.5\p@\advance\dimen@i1.5\p@
+ \vrule\@height\dimen@\@depth\dimen@i\@width\dimen@ii\nobreak
+ }%
+\def\@dbnd{%
+ \advance\dimen@-0.5\p@\advance\dimen@i0.5\p@
+ \vrule\@height\dimen@\@depth\dimen@i\@width\dimen@ii\nobreak
+ \advance\dimen@-1.5\p@\advance\dimen@i1.5\p@
+ \hskip-\dimen@ii
+ \vrule\@height\dimen@\@depth\dimen@i\@width\dimen@ii\nobreak
+ }%
+\def\@tbnd{%
+ \vrule\@height\dimen@\@depth\dimen@i\@width\dimen@ii\nobreak
+ \advance\dimen@-1.5\p@\advance\dimen@i1.5\p@
+ \hskip-\dimen@ii
+ \vrule\@height\dimen@\@depth\dimen@i\@width\dimen@ii\nobreak
+ \advance\dimen@-1.5\p@\advance\dimen@i1.5\p@
+ \hskip-\dimen@ii
+ \vrule\@height\dimen@\@depth\dimen@i\@width\dimen@ii\nobreak
+ }%
 
 \newcommand\anchor[2]{#2}% 
 \renewcommand\url{\@dblarg\@url}% 
@@ -1088,98 +1198,64 @@
 
 \let\jnl@style=\rmfamily 
 \def\ref@jnl#1{{\jnl@style#1}}% 
-\newcommand\aj{\ref@jnl{AJ}}% 
-          % Astronomical Journal 
-\newcommand\araa{\ref@jnl{ARA\&A}}% 
-          % Annual Review of Astron and Astrophys 
-\renewcommand\apj{\ref@jnl{ApJ}}% 
-          % Astrophysical Journal 
-\newcommand\apjl{\ref@jnl{ApJ}}% 
-          % Astrophysical Journal, Letters 
-\newcommand\apjs{\ref@jnl{ApJS}}% 
-          % Astrophysical Journal, Supplement 
-\renewcommand\ao{\ref@jnl{Appl.~Opt.}}% 
-          % Applied Optics 
-\newcommand\apss{\ref@jnl{Ap\&SS}}% 
-          % Astrophysics and Space Science 
-\newcommand\aap{\ref@jnl{A\&A}}% 
-          % Astronomy and Astrophysics 
-\newcommand\aapr{\ref@jnl{A\&A~Rev.}}% 
-          % Astronomy and Astrophysics Reviews 
-\newcommand\aaps{\ref@jnl{A\&AS}}% 
-          % Astronomy and Astrophysics, Supplement 
-\newcommand\azh{\ref@jnl{AZh}}% 
-          % Astronomicheskii Zhurnal 
-\newcommand\baas{\ref@jnl{BAAS}}% 
-          % Bulletin of the AAS 
-\newcommand\jrasc{\ref@jnl{JRASC}}% 
-          % Journal of the RAS of Canada 
-\newcommand\memras{\ref@jnl{MmRAS}}% 
-          % Memoirs of the RAS 
-\newcommand\mnras{\ref@jnl{MNRAS}}% 
-          % Monthly Notices of the RAS 
-\renewcommand\pra{\ref@jnl{Phys.~Rev.~A}}% 
-          % Physical Review A: General Physics 
-\renewcommand\prb{\ref@jnl{Phys.~Rev.~B}}% 
-          % Physical Review B: Solid State 
-\renewcommand\prc{\ref@jnl{Phys.~Rev.~C}}% 
-          % Physical Review C 
-\renewcommand\prd{\ref@jnl{Phys.~Rev.~D}}% 
-          % Physical Review D 
-\renewcommand\pre{\ref@jnl{Phys.~Rev.~E}}% 
-          % Physical Review E 
-\renewcommand\prl{\ref@jnl{Phys.~Rev.~Lett.}}% 
-          % Physical Review Letters 
-\newcommand\pasp{\ref@jnl{PASP}}% 
-          % Publications of the ASP 
-\newcommand\pasj{\ref@jnl{PASJ}}% 
-          % Publications of the ASJ 
-\newcommand\qjras{\ref@jnl{QJRAS}}% 
-          % Quarterly Journal of the RAS 
-\newcommand\skytel{\ref@jnl{S\&T}}% 
-          % Sky and Telescope 
-\newcommand\solphys{\ref@jnl{Sol.~Phys.}}% 
-          % Solar Physics 
-\newcommand\sovast{\ref@jnl{Soviet~Ast.}}% 
-          % Soviet Astronomy 
-\newcommand\ssr{\ref@jnl{Space~Sci.~Rev.}}% 
-          % Space Science Reviews 
-\newcommand\zap{\ref@jnl{ZAp}}% 
-          % Zeitschrift fuer Astrophysik 
-\renewcommand\nat{\ref@jnl{Nature}}% 
-          % Nature 
-\newcommand\iaucirc{\ref@jnl{IAU~Circ.}}% 
-          % IAU Cirulars 
-\newcommand\aplett{\ref@jnl{Astrophys.~Lett.}}% 
-          % Astrophysics Letters 
-\newcommand\apspr{\ref@jnl{Astrophys.~Space~Phys.~Res.}}% 
-          % Astrophysics Space Physics Research 
-\newcommand\bain{\ref@jnl{Bull.~Astron.~Inst.~Netherlands}}% 
-          % Bulletin Astronomical Institute of the Netherlands 
-\newcommand\fcp{\ref@jnl{Fund.~Cosmic~Phys.}}% 
-          % Fundamental Cosmic Physics 
-\newcommand\gca{\ref@jnl{Geochim.~Cosmochim.~Acta}}% 
-          % Geochimica Cosmochimica Acta 
-\newcommand\grl{\ref@jnl{Geophys.~Res.~Lett.}}% 
-          % Geophysics Research Letters 
-\renewcommand\jcp{\ref@jnl{J.~Chem.~Phys.}}% 
-          % Journal of Chemical Physics 
-\newcommand\jgr{\ref@jnl{J.~Geophys.~Res.}}% 
-          % Journal of Geophysics Research 
-\newcommand\jqsrt{\ref@jnl{J.~Quant.~Spec.~Radiat.~Transf.}}% 
-          % Journal of Quantitiative Spectroscopy and Radiative Trasfer 
-\newcommand\memsai{\ref@jnl{Mem.~Soc.~Astron.~Italiana}}% 
-          % Mem. Societa Astronomica Italiana 
-\newcommand\nphysa{\ref@jnl{Nucl.~Phys.~A}}% 
-          % Nuclear Physics A 
-\newcommand\physrep{\ref@jnl{Phys.~Rep.}}% 
-          % Physics Reports 
-\newcommand\physscr{\ref@jnl{Phys.~Scr}}% 
-          % Physica Scripta 
-\newcommand\planss{\ref@jnl{Planet.~Space~Sci.}}% 
-          % Planetary Space Science 
-\newcommand\procspie{\ref@jnl{Proc.~SPIE}}% 
-          % Proceedings of the SPIE 
+\newcommand\aj{\ref@jnl{AJ}}%        % Astronomical Journal 
+\newcommand\araa{\ref@jnl{ARA\&A}}%  % Annual Review of Astron and Astrophys 
+\renewcommand\apj{\ref@jnl{ApJ}}%    % Astrophysical Journal 
+\newcommand\apjl{\ref@jnl{\@eapj@ApJLetters}}%     % Astrophysical Journal, Letters 
+\newcommand\apjs{\ref@jnl{ApJS}}%    % Astrophysical Journal, Supplement 
+\renewcommand\ao{\ref@jnl{Appl.~Opt.}}%   % Applied Optics 
+\newcommand\apss{\ref@jnl{Ap\&SS}}%  % Astrophysics and Space Science 
+\newcommand\aap{\ref@jnl{A\&A}}%     % Astronomy and Astrophysics 
+\newcommand\aapr{\ref@jnl{A\&A~Rev.}}%  % Astronomy and Astrophysics Reviews 
+\newcommand\aaps{\ref@jnl{A\&AS}}%    % Astronomy and Astrophysics, Supplement 
+\newcommand\azh{\ref@jnl{AZh}}%       % Astronomicheskii Zhurnal 
+\newcommand\baas{\ref@jnl{BAAS}}%     % Bulletin of the AAS 
+\newcommand\icarus{\ref@jnl{Icarus}}% % Icarus
+\newcommand\jrasc{\ref@jnl{JRASC}}%   % Journal of the RAS of Canada 
+\newcommand\memras{\ref@jnl{MmRAS}}%  % Memoirs of the RAS 
+\newcommand\mnras{\ref@jnl{MNRAS}}%   % Monthly Notices of the RAS 
+\renewcommand\pra{\ref@jnl{Phys.~Rev.~A}}% % Physical Review A: General Physics 
+\renewcommand\prb{\ref@jnl{Phys.~Rev.~B}}% % Physical Review B: Solid State 
+\renewcommand\prc{\ref@jnl{Phys.~Rev.~C}}% % Physical Review C 
+\renewcommand\prd{\ref@jnl{Phys.~Rev.~D}}% % Physical Review D 
+\renewcommand\pre{\ref@jnl{Phys.~Rev.~E}}% % Physical Review E 
+\renewcommand\prl{\ref@jnl{Phys.~Rev.~Lett.}}% % Physical Review Letters 
+\newcommand\pasp{\ref@jnl{PASP}}%     % Publications of the ASP 
+\newcommand\pasj{\ref@jnl{PASJ}}%     % Publications of the ASJ 
+\newcommand\qjras{\ref@jnl{QJRAS}}%   % Quarterly Journal of the RAS 
+\newcommand\skytel{\ref@jnl{S\&T}}%   % Sky and Telescope 
+\newcommand\solphys{\ref@jnl{Sol.~Phys.}}% % Solar Physics 
+\newcommand\sovast{\ref@jnl{Soviet~Ast.}}% % Soviet Astronomy 
+\newcommand\ssr{\ref@jnl{Space~Sci.~Rev.}}% % Space Science Reviews 
+\newcommand\zap{\ref@jnl{ZAp}}%       % Zeitschrift fuer Astrophysik 
+\renewcommand\nat{\ref@jnl{Nature}}%  % Nature 
+\newcommand\iaucirc{\ref@jnl{IAU~Circ.}}% % IAU Cirulars 
+\newcommand\aplett{\ref@jnl{Astrophys.~Lett.}}%  % Astrophysics Letters 
+\newcommand\apspr{\ref@jnl{Astrophys.~Space~Phys.~Res.}}% % Astrophysics Space Physics Research 
+\newcommand\bain{\ref@jnl{Bull.~Astron.~Inst.~Netherlands}}% % Bulletin Astronomical Institute of the Netherlands 
+\newcommand\fcp{\ref@jnl{Fund.~Cosmic~Phys.}}%   % Fundamental Cosmic Physics 
+\newcommand\gca{\ref@jnl{Geochim.~Cosmochim.~Acta}}% % Geochimica Cosmochimica Acta 
+\newcommand\grl{\ref@jnl{Geophys.~Res.~Lett.}}%  % Geophysics Research Letters 
+\renewcommand\jcp{\ref@jnl{J.~Chem.~Phys.}}%     % Journal of Chemical Physics 
+\newcommand\jgr{\ref@jnl{J.~Geophys.~Res.}}%     % Journal of Geophysics Research 
+\newcommand\jqsrt{\ref@jnl{J.~Quant.~Spec.~Radiat.~Transf.}}%   % Journal of Quantitiative Spectroscopy and Radiative Trasfer 
+\newcommand\memsai{\ref@jnl{Mem.~Soc.~Astron.~Italiana}}% % Mem. Societa Astronomica Italiana 
+\newcommand\nphysa{\ref@jnl{Nucl.~Phys.~A}}%     % Nuclear Physics A 
+\newcommand\physrep{\ref@jnl{Phys.~Rep.}}%       % Physics Reports 
+\newcommand\physscr{\ref@jnl{Phys.~Scr}}%        % Physica Scripta 
+\newcommand\planss{\ref@jnl{Planet.~Space~Sci.}}%  % Planetary Space Science 
+\newcommand\procspie{\ref@jnl{Proc.~SPIE}}%      % Proceedings of the SPIE 
+
+\newcommand\actaa{\ref@jnl{Acta Astron.}}%  % Acta Astronomica
+\newcommand\caa{\ref@jnl{Chinese Astron. Astrophys.}}%  % Chinese Astronomy and Astrophysics
+\newcommand\cjaa{\ref@jnl{Chinese J. Astron. Astrophys.}}%  % Chinese Journal of Astronomy and Astrophysics
+\newcommand\jcap{\ref@jnl{J. Cosmology Astropart. Phys.}}%  % Journal of Cosmology and Astroparticle Physics
+\newcommand\na{\ref@jnl{New A}}%  % New Astronomy
+\newcommand\nar{\ref@jnl{New A Rev.}}%  % New Astronomy Review
+\newcommand\pasa{\ref@jnl{PASA}}%  % Publications of the Astron. Soc. of Australia
+\newcommand\rmxaa{\ref@jnl{Rev. Mexicana Astron. Astrofis.}}%  % Revista Mexicana de Astronomia y Astrofisica
+
+
 \let\astap=\aap 
 \let\apjlett=\apjl 
 \let\apjsupp=\apjs 
@@ -1371,7 +1447,10 @@
     \centering
     \begin{minipage}{\deluxe@table@width}
       \lt@expand@linewidth
-      \begin{longtable}{\lt@expand@linewidth@#1}
+      \def\@tmpa{\begin{longtable}}
+      \expandafter\expandafter\expandafter\@tmpa%
+      \expandafter\expandafter\expandafter{\lt@expand@linewidth@#1}
+%      \begin{longtable}{\lt@expand@linewidth@#1}
       }{
         \restore@tablenum%
       \end{longtable}%
@@ -1402,7 +1481,10 @@
     \find@table@width
     \begin{minipage}{\deluxe@table@width}
     \lt@expand@linewidth
-    \begin{longtable*}{\lt@expand@linewidth@#1}
+    \def\@tmpa{\begin{longtable*}}
+    \expandafter\expandafter\expandafter\@tmpa%
+    \expandafter\expandafter\expandafter{\lt@expand@linewidth@#1}
+    %\begin{longtable*}{\lt@expand@linewidth@#1}
     }{\gdef\pt@width{\LTcapwidth}%
       \restore@tablenum%
     \end{longtable*}%
@@ -1437,7 +1519,7 @@
   \renewenvironment{deluxetable*}[1]{
     \def\tablenotetext{\tablenotetext@DT}
     \global\DT@p@ftn{}%
-    \@table@not@headedtrue
+    %\@table@not@headedtrue % -- wrong per exchange with Giovanni Fossati
     \def\nl{\\}
 %    \def\tabcolsep{5pt}
     \let\caption=\LT@caption
@@ -1779,5 +1861,34 @@
 %%
 %% 11/10/09 Add stretchable space before appendix; otherwise, the last
 %% line can be eaten away.
+%%
+%% 5/25/10  call revtex with notitlepage in the 1-col mode
+%%
+%% 8/13/10  put \par after \end{minipage} in makecaption to avoid
+%%          underfull boxes
+%%
+%% 5/3/11   new option: twocolappendix
+%%          comment out \table@not@headedtrue in deluxtable* after
+%%          \LongTables per exchange with Giovanni Fossati
+%%
+%% 12/16/11: copy \sbond, dbond, tbond commands from AASTeX
+%
+%% 08/17/12: option to force using revtex4
+%% 
+%% 03/07/13: load astro@font to go with the \astro commands
+%%           ([astrosymb] option)
+%%
+%% 04/17/13: in the two column mode, force a switch to twocolumngrid
+%%           after references. This is needed for twocolappendix,
+%%           among other things
+%%
+%% 05/03/13 add 10pt,aps,pra option to \LoadClass revtex4  to avoid warnings
+%%
+%% 05/12/14 More journal abbreviations
+%%
+%% 01/23/15 Fix collision with array package: expand
+%%          \lt@expand@linewidth@ twice before passing into longtable
+%%
+%% 01/23/15 \apjl with the iop option expands to ApJL
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
