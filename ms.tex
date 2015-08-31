@@ -452,11 +452,11 @@ Therefore, combining Eq.~(\ref{eq:n}) and Eq.~(\ref{eq:fplasma}), we have
 The auroral radio spectral flux of exoplanets observed at the Earth, $F_{\nu}$, can be expressed by:
 %%%
 \begin{equation}
-F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta f}
+F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta \nu}
 \label{eq:Fnu}
 \end{equation}
 %%%
-where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega $ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta f$ is frequency bandwidth. 
+where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega$ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta \nu$ is frequency bandwidth. 
 
 We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission, $P_{\rm radio,\,J}$, with the input energy from stellar wind, in the same manner as \citet{griesmeier2005,griesmeier2007a,griesmeier2007b}. 
 The scaling is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy, $P_{\rm inp,\,k}$, or the magnetic energy of the solar wind, $P_{\rm inp,\,m}$, \citep[``radio Bode's law''; ][]{desch+kaiser1984}, i.e.,
@@ -476,7 +476,7 @@ It is not clear from the observations of the Solar System planets which is the f
 In this paper, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$ and consider the possible effects of massive stellar wind. 
 
 On the other hand, in the case that the correlation with input magnetic energy is fundamental, it is difficult to estimate the planetary radio emission at this point because magnetic field of evolved stars are not well constrained for highly evolved stars; most of observations only set an upper limit \citep[e.g.,][]{konstantinova2010,petit2013,tsvetkova2013,konstantinova2013,auriere2015}. 
-In the case of M-type giant EK boo, surface magnetic field $\sim 0.1-10 $G has been measured; In this particular case, given the large stellar radius $R_\star \sim 210 R_{\odot }$ the magnetic moment may be about $10^3$ times larger than the Sun and thus also may also increase the planetary radio emission. However, because of the lack of universal understanding of the stellar magnetic field, we leave the magnetic model of radio emission for evolved stars for future work. 
+In the case of M-type giant EK boo, surface magnetic field $\sim 0.1-10 $G has been measured; In this particular case, given the large stellar radius $R_\star \sim 210 R_{\odot }$ the magnetic moment may be about $10^3$ times larger than the Sun and thus may also increase the planetary radio emission. However, because of the lack of universal understanding of the stellar magnetic field, we leave the magnetic model of radio emission for evolved stars for future work. 
 
 In reality, the total power of Jovian auroral emission varies greatly over time: $1.3\times 10^{10}$ W for the average, $3.2\times 10^{10}$ W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. 
 Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}.
@@ -509,7 +509,7 @@ By scaling this radius with equations (\ref{eq:n}) and (\ref{eq:stand-off}), the
 
 We assume that the solid angle of the emission is same as the Jupiter's one for all of the exoplanets. In reality, the solid angles of auroral radio emission from  Jupiter, Saturn, and Earth are $\sim 1.6$, $\sim $6.3, and $\sim $3.5, respectively \citep{desch+kaiser1984}, which are on the same order and will not significantly affect our order-of-magnitude estimate of radio emission. 
 
-The bandwidth, $\Delta f$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
+The bandwidth, $\Delta \nu$, is assumed to be proportional to the representative frequency of the emission, which is the cyclotron frequency, following the assumption of \citet{griesmeier2007b}.
 
 %We estimate the radio brightness of RGHJs by simply scaling \memoDS{stray sentence fragment?}
 
@@ -735,8 +735,8 @@ We estimate the thermal radio flux from the host star to be consistent with thes
 %%%
 Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $\alpha = 0.6$, while observations suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}. 
 
-Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10M_J$ and that of the host red giant stars with 100 $R_{\odot }$, both of which is placed at 10 pc away. 
-As this figure indicates, even if the radio emission from the red giant itself has relatively low spectral index, the radio emission from RGHJs still dominate in the 10-200~MHz range. 
+Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant stars with 100~$R_{\odot }$, both of which is placed at 10 pc away. 
+As this figure indicates, even if the radio emission from the red giant itself has a relatively shallow spectral index, the radio emission from the RGHJ still dominates in the 10-200~MHz range. 
 Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
 
 % Neil's addition
@@ -749,7 +749,8 @@ Only two published studies describe attempts to detect continuum emission from s
 First, a program that observed a sample of nine M-type giants at 430 MHz with the Arecibo Telescope failed to detect any of the sources down to flux density 10 mJy~\citep{Fix1976}.
 Later, with the Molonglo Observatory Synthesis Telescope (MOST), a sample of eight K- and M-type giants were observed at 843 MHz; the upper limits of their flux densities were placed at approximately 1 mJy~\citep{Beasley1992}.
 Current facilities could achieve far deeper sensitivity on similar targets.
-For example, as listed in Table~\ref{tab:sens}, at 235 MHz the GMRT reaches a sensitivity of under 0.2 mJy in under a half hour \memoNZ{is this projected or current performance of GMRT?}.
+For example, as listed in Table~\ref{tab:sens}, the Giant Metrewave Radio Telescope (GMRT) at 150 MHz reaches a 
+sensitivity better than 0.5~mJy in under an hour.
 However, any re-attempts to detect single red giants at wavelengths near 1 meter remain to be presented in the literature.
 
 The only red giants that have been detected at meter wavelengths are those in interacting binary systems like those of the RS CVn type.
@@ -764,7 +765,7 @@ In this case, for example, extrapolating from the 0.4 mJy flux density of $\alph
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tbp]
    \plotonesc{cartoon2.pdf}
-   \caption{A cartoon of radio emission spectra of a RGHJ with 10$M_J$ and the host red giants with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[e.g.][]{zarka_et_al2004}, while that of the host red giant is obtained simply by extrapolating observed radio spectra above 1~GHz with power law. }
+   \caption{A cartoon spectrum of the radio emission of a RGHJ with 10~$M_J$ and the host red giant with 100 $R_{\odot }$. The spectrum of RGHJ is modeled after Jovian radio spectra \citep[e.g.][]{zarka_et_al2004}, while that of the host red giant is obtained simply by extrapolating the radio spectrum observed above 1~GHz to lower ffrequencies assuming a power law. }
   \label{fig:cartoon}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -851,38 +852,44 @@ the source confusion limit, allowing hot Jupiters, like other time-variable sour
 to be detected below the imaging confusion limit.
 
 The RMS noise ${\sigma}$ in an interferometric observation, 
-integration time $\tau$, bandwidth $\Delta\nu$, effective area $A_{\rm eff}$ 
+integration time $\tau$, bandwidth $\Delta \nu$, effective area $A_{\rm eff}$ 
 ($\approx0.7 \pi (D/2)^2$ for interferometers comprising antennas with dish size $D$),
 and $N$ elements is \citep[see e.g.][]{condon+ransom2016} 
 \begin{equation}
-\sigma = \frac{2 k T_{\rm sys}}{A_{\rm eff} \, \sqrt{\Delta\nu \, \tau N (N-1)}} 
+\sigma = \frac{2 k T_{\rm sys}}{A_{\rm eff} \, \sqrt{\Delta \nu \, \tau N (N-1)}} 
 \left(\frac{\rm 10^{26} Jy}{\rm W m^{-2} Hz^{-1}}\right)
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table*}[htp]
-\caption{Detectability of Hot Jupiters with Current and Future Radio Telescopes.}
-\begin{center}
-\begin{tabular}{c|ccccc} \hline \hline\\[-0.5pc]
-Instrument & Band & Sensitivity & $\tau$  & Resolution & $5\sigma_c$\\
- & MHz & $\mu$Jy~hr$^{1/2}$ &  hr & \arcsec\ & $\mu$Jy bm$^{-1}$ \\[0.25pc] 
-\hline\\[-0.5pc]
-GMRT       & 130-190 & 430   &  460             & 16.5 & 280 \\ 
-HERA       &  30-80  & 870   & 1900             & 1030 & $2.1\times10^6$\\ 
-LOFAR-LBA  &  30-80  & 700   & 1225             & 8.3  & 210 \\ 
-LOFAR-HBA  & 110-200 &  35   &    3             & 3.3  & 5.5 \\  
+%\begin{center}
+\begin{deluxetable*}{cccccc}
+\tabletypesize{\scriptsize}
+\tablecolumns{6}
+\tablecaption{Detectability of Hot Jupiters with Current 
+and Future Radio Telescopes.\label{tab:sens}}
+\tablehead{
+Instrument & Band  & Sensitivity\tablenotemark{a} & $\tau$\tablenotemark{b}  & Resolution & $\sigma_c$\tablenotemark{c}\\
+           & (MHz) & ($\mu$Jy~hr$^{1/2}$)         &  (hr)                    & (\arcsec)  & ($\mu$Jy bm$^{-1}$)} 
+\startdata
+GMRT       & 130-190 & 430   &  460             & 16.5 & 56.9 \\ 
+HERA       &  30-80  & 870   & 1900             & 1030 & 4.2$\times10^5$\\ 
+LOFAR-LBA  &  30-80  & 700   & 1225             & 8.3  & 42 \\ 
+LOFAR-HBA  & 110-200 &  35   &    3             & 3.3  & 1.1 \\  
 %LWA        &  30-80  & 53000 &  3.2$\times10^6$ & 10.3 & 211 \\
 %MWA        &  30-80  & 27000 &  8.1$\times10^5$ & 1030 & $2.1\times10^6$ \\
-SKA-Low (part) & 50-200 & 7.8 &  0.15           & 7.8  & 48 \\
-SKA-Low (full) & 50-350 & 2.2 &  0.012          & 2.2  & 7.2 \\
-%VLA 4-Band & 30-80   & 3300  & 1100             & 28.6 & 1600 \\
-VLA-LOBO   &  50-350 &  92   &  21              & 8.6  & 52 \\
-\hline
-\end{tabular}
-\end{center}
-\label{tab:sens}
+SKA-Low (part) & 50-200 & 7.8 &  0.15           & 7.8  & 9.7 \\
+SKA-Low (full) & 50-350 & 2.2 &  0.012          & 2.2  & 1.5 \\
+%VLA 4-Band & 30-80   & 3300  & 1100             & 28.6 & 330 \\
+VLA-LOBO   &  50-350 &  92   &  21              & 8.6  & 10
+\enddata
 \tablecomments{Time estimates to reach 20~$\mu$Jy RMS.}
-\end{table*}
+\tablenotetext{a}{RMS noise in a 1-hour observation, computed for imaging of the full band reported in this table.}
+\tablenotetext{b}{The integration time in hours required to reach an RMS of 20~$\mu$Jy (i.e.\ 5-$\sigma$ detection
+of a typical source with 100~$\mu$Jy bm$^{-1}$ average flux) \memoTM{Should we compute this instead for a 5-sigma detection
+of a $\sim$400~$\mu$Jy bm$^{-1}$ average flux, like in Figure \ref{fig:cartoon}?  Going to 80~$\mu$Jy RMS would be $16\times$ shorter.}.}
+\tablenotetext{c}{Source confusion limit RMS contribution.}
+\end{deluxetable*}
+%\end{center}
 
 % HERA
 % http://reionization.org/wp-content/uploads/2015/05/HERA0_imaging.pdf
@@ -1058,8 +1065,7 @@ In this paper, we propose that ``hot Jupiters'' around evolved stars (RGHJ) may 
 Massive stellar wind of red giants and AGB stars would put the kinetic energy into magnetospheres of distant Jovian planets, which could lead to the intrinsic bright radio emission, comparable to or greater than canonical hot Jupiters in close-in orbits. 
 
 The maximum radio emission we can expect to observe is limited by the plasma cut-off frequency of the stellar wind in the vicinity of the planets. 
-For a planet with the same magnetic moment as Jupiter, the maximum radio emission from the planets which can penetrate through the surrounding plasma is $\sim 10^{-3}$ Jy or $\sim 10^{-5}$ Jy at 10 pc and 100 pc, respectively. 
-\memoYF{comment on observability...}
+For a planet with the same magnetic moment as Jupiter, the maximum radio emission from the planets which can penetrate through the surrounding plasma is $\sim 10^{-3}$ Jy or $\sim 10^{-5}$ Jy at 10~pc and 100~pc, respectively.  As we showed in \S\ref{ss:detectability}, the upper end of this range is detectable with the current generation of radio facilities, while farther hot Jupiters should soon be detectable using the next generation of instruments.
 
 Admittedly, uncertainties exist in the relation between radio emission of Jovian planets and the input energy from stellar wind, as well as in the scaling of planetary magnetic field. 
 Alternatively, once we detect both the gravitational perturbation and radio emission of Jovian planets, these models will be contested. The viability of these scaling relations will be examined in the future. 
@@ -1078,6 +1084,10 @@ YF is supported from the Grant-in-Aid No. 25887024 by the Japan Society for the 
 DSS gratefully acknowledges support from a fellowship from the AMIAS group.
 We thank David Hogg for encouraging us to pursue calculations of explanetary radio emission.
 NM acknowledges support from [???].
+The portion of this research for which TM is responsible was performed while he
+held a National Research Council Research Associateship Award at the Naval 
+Research Laboratory (NRL).  Basic research in radio astronomy at NRL 
+is supported by 6.1 Base funding.
 
 
 \bibliography{biblio.bib}
@@ -1334,7 +1344,7 @@ Should we think more about the spectrum?}
 According to Eq.~(\ref{eq:Pkinp}), the total emitted power scales with $B^{2/3}$.
 In detail, it is not obvious how the power spectral density scales with a planet's surface magnetic field, because the emission process involves electrons passing through a wide range of magnetic field conditions (dipolar field strength drops off as $r^{-3}$, and only in an idealized model is a planet a perfect magnetic dipole).
 Nevertheless, a reasonable ansatz is that the radio emission is spread over a range of wavelengths in an approximately scale-independent way.
-In other words, the frequency bandwidth $\Delta f$ of Eq.~(\ref{eq:Fnu}) is proportional to $f_{\rm cyc}$, as described in Section~\ref{ss:model_intensity} and in \citet{griesmeier2007b}.
+In other words, the frequency bandwidth $\Delta \nu$ of Eq.~(\ref{eq:Fnu}) is proportional to $f_{\rm cyc}$, as described in Section~\ref{ss:model_intensity} and in \citet{griesmeier2007b}.
 This means that the power spectral density is likely to scale as the total power divided by the cyclotron frequency corresponding to a characteristic field strength where the emission peaks.
 Since $f_{\rm cyc}$ scales as $B$ (a higher power of $B$ than the scaling of total power), this implies that the power spectral density in the radio scales as $B^{-1/3}$.
 Planets that are intrinsically brighter, owing to a greater magnetic field strength, probably have their emission spread out over a broader set of frequencies, and therefore have a lower flux density as measured in Janskys!
