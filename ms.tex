@@ -92,7 +92,7 @@
 %
 Yuka Fujii\altaffilmark{0} \\
 %
-David S. Spiegel\altaffilmark{1, 2} \\
+David S. Spiegel\altaffilmark{1,2} \\
 %
 {\bf and some order:} \\
 %
@@ -239,7 +239,7 @@ B_{\rm dynamo} ^2 \propto f_{\rm ohm}\;\rho_{\rm dynamo}  ^{1/3} \;  (Fq_o)^{2/3
 \end{equation}
 %%%%%%%%%%
 %where $\rho _c$ and $r_c$ are the density and the radius of the dynamo region, and $q_c$ is the internal convected energy flux in the core region. 
-where $B_{\rm dynamo}$ is the mean magnetic field in the dynamo region, $f_{\rm ohm}$ is the ratio of ohmic dissipation to the total dissipation, $\rho_{\rm dynamo} $ is the mean density in the dynamo region, $F$ is the efficiency factor of order unity, and $q_o$ is the convected flux at the outer boundary of the dynamo region \citep[see][for the comprehensive description]{christensen_et_al2009}. 
+where $B_{\rm dynamo}$ is the mean magnetic field in the dynamo region, $f_{\rm ohm}$ is the ratio of ohmic dissipation to the total dissipation, $\rho_{\rm dynamo} $ is the mean density in the dynamo region, $F$ is an efficiency factor of order unity, and $q_o$ is the convected flux at the outer boundary of the dynamo region \citep[see][for the comprehensive description]{christensen_et_al2009}. 
 Here, $f_{\rm ohm}$ and $F$ are assumed to be constant for the bodies considered in this paper. 
 Dipole magnetic field strength at the planetary surface, denoted by $B$, is then scaled by
 %%%%%%%%%%
@@ -249,11 +249,11 @@ B \propto B_{\rm dynamo} \left( \frac{r_{\rm dynamo}}{R_p} \right)^3.  \label{eq
 %%%%%%%%%%
 where $r_{\rm dynamo}$ is the radius of the outer boundary of the dynamo region. 
 
-Note that the scaling law, equation (\ref{eq:Bscaling}), would be reasonable only for the rapidly rotating objects. Indeed, unlike canonical hot Jupiters, RGHJs are not subjected to tidal lock and we do not have to assume slow spin rotation rate for them \citep{spiegel+madhusudhan2012}. Thus, we implicitly assume that RGHJs we consider are rapidly rotating so that they generate  planetary magnetic fields through the same mechanism as Jupiter. 
+Note that the scaling law, Equation (\ref{eq:Bscaling}), would be reasonable only for rapidly rotating objects. Indeed, unlike canonical hot Jupiters, RGHJs are not subjected to tidal lock and as such, we do not have to assume slow spin rotation rates \citep{spiegel+madhusudhan2012}. Therefore, we implicitly assume that the RGHJs we consider in this paper are rapidly rotating so that they generate planetary magnetic fields through the same mechanism as Jupiter. 
 
 
-In order to evaluate $\rho _{\rm dynamo}$ and $q_o$, we need a model of internal structure of planets. 
-In this paper, we consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,J}$, because the numerical calculations show that the radii of gaseous planets over the range of $0.1 M_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ within 1 Gyr \citep{fortney2007}. 
+In order to evaluate $\rho _{\rm dynamo}$ and $q_o$, we need models of the internal planetary structure. 
+We consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,J}$, as numerical calculations show that the radii of gaseous planets over the range of $0.1 M_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ within 1 Gyr \citep{fortney2007}. 
 For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
@@ -263,9 +263,9 @@ For the density profile, we assume a polytrope gas sphere with index $n=1$, whic
 We determine the radius of outer boundary of the dynamo region, $r_{\rm dynamo}$, by assuming that the hydrogen becomes metallic when $\rho (r)$ exceeds the critical density $\rho_{\rm crit}=0.7\,\mbox{g/cm}^3$ \citep{exoplanets2006, griesmeier2007b}. The density of the metallic core, $\rho _{\rm dynamo}$ is obtained by averaging the density in the core. 
 In the case of Jupiter, $r_{\rm dynamo, J} = 0.85 R_{\rm J}$ and $\rho_{\rm dynamo, J} = 1.899~{\rm g/cm}^3$  .  
 
-The scaling of convected heat flux at the outer boundary, $q_o$, is obtained by dividing the age-dependent net planetary luminosity by the surface area of the core region, i.e., $4\pi r_{\rm dynamo}^2$. 
-The model of luminosity evolution is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}. 
-Ignoring the relatively weak dependence on  average atmospheric Rosseland mean opacity, the result leads to:
+The scaling of convected heat flux at the outer boundary, $q_o$, is obtained by dividing the age-dependent net-planetary luminosity by the surface area of the core region, i.e., $4\pi r_{\rm dynamo}^2$. 
+The time-dependence luminosity is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}. 
+Ignoring the relatively weak dependence on average atmospheric Rosseland mean opacity leads to:
 %%%%%%%%%%
 \begin{equation}
 L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 	
@@ -280,7 +280,7 @@ q_o \sim q_{o, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{
 \end{equation}
 %%%%%%%%%%
 
-Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling2}) and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is roughly, we find that:
+Substituting Equation~\ref{eq:burrowsHeatFlux} into Equation~\ref{eq:Bscaling2} and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is roughly, we find that:
 %%%%%%%%%% 
 \begin{equation}
 %B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} \label{eq:scalingB} \\
