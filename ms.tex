@@ -832,7 +832,7 @@ The difference of the symbols indicates whether the radio emission can escape fr
 \tablecaption{Detectability of Hot Jupiters with Current 
 and Future Radio Telescopes.\label{tab:sens}}
 \tablehead{
-Instrument & Band  & Sensitivity\tablenotemark{a} & $\tau$\tablenotemark{b}  & Resolution & $\sigma_c$\tablenotemark{c}\\
+Instrument & Band  & $\sigma_{\rm RMS}$\tablenotemark{a} & $\tau$\tablenotemark{b}  & Resolution & $\sigma_c$\tablenotemark{c}\\
            & (MHz) & ($\mu$Jy~hr$^{1/2}$)         &  (hr)                    & (\arcsec)  & ($\mu$Jy bm$^{-1}$)} 
 \startdata
 LOFAR-LBA  &  30-80  & 700   & 120000             & 8.3  & 42 \\ 
@@ -847,7 +847,8 @@ SKA-Low (full) & 50-350 & 2.2 &  1.0              & 4.8  & 1.5 \\
 VLA-LOBO   &  50-350 &  92   &  1800              & 8.6  & 10.4
 \enddata
 %\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.}
-\tablenotetext{a}{RMS noise in a 1-hour observation, computed for imaging of the full band reported in this table.}
+\tablenotetext{a}{RMS noise in a 1-hour observation, computed for imaging of the full band reported 
+in this table (Equation~\ref{eq:rms_sens}).}
 \tablenotetext{b}{The integration time in hours required to reach an RMS of 2~$\mu$Jy (i.e.\ 5-$\sigma$ detection
 of a typical source at 100~pc with 10~$\mu$Jy bm$^{-1}$ average flux).}
 \tablenotetext{c}{Source confusion RMS contribution.}
@@ -879,6 +880,7 @@ and $N$ antennas is \citep[see e.g.][]{condon+ransom2016}
 \begin{equation}
 \sigma_{\rm RMS} = \frac{2 k T_{\rm sys}}{A_{\rm eff} \, \sqrt{\Delta \nu \, \tau N (N-1)}} 
 \left(\frac{\rm 10^{26} Jy}{\rm W m^{-2} Hz^{-1}}\right).
+\label{eq:rms_sens}
 \end{equation}
 %%%
 Here, $T_{\rm sys}$ is the blackbody temperature equivalent of the total system noise, which is the sum
