@@ -354,66 +354,65 @@ Based on equations (\ref{eq:scale_Mdot}) and (\ref{eq:scale_v}), the number dens
 %%%%%%%%%% 
 \begin{eqnarray}
 n &=& 1.80 \times 10^6 \; {\rm cm^{-3}} \\
-&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \label{eq:n_normalized}
+&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2}. \label{eq:n_normalized}
 \end{eqnarray}
 %%%%%%%%%% 
 
-
-\memoYF{check from here}
-As discussed in \citet{ignace2010}, one potential problem of the stellar wind of evolved stars which is unfavorable for radio emission is that their ionization fraction is usually as low as $10^{-3}$ \memoYF{cite something}, which would lead to inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
-However, at this stage the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
-Based on \citet{spiegel+madhusudhan2012}, the accretion luminosity $L_{\rm acc}$ and the temperature $T_{\rm acc}$ are: 
+As discussed in \citet{ignace2010}, the ionization fraction of the stellar wind of evolved stars are supposedly as low as $\sim 10^{-3}$\memoYF{cite something}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
+However, at this stage, the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
+\citet{spiegel+madhusudhan2012} computed the accretion luminosity $L_{\rm acc}$ and the temperature $T_{\rm acc}$ are: 
 %%%%%%%%%
 \begin{eqnarray}
-L_{\rm acc} \sim &&  10^{28} \; {\rm erg\;s}^{-1} \\
-&& \times \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right) \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right) \\
+L_{\rm acc} \sim &&  10^{28} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right)  \\
+&& \times \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right) \\
 %
-T_{\rm acc} \sim && 2 \times 10^6 \left( \frac{M_p}{10 M_J} \right)
+T_{\rm acc} \sim && 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_J} \right) \\
+\sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_J} \right). 
 \end{eqnarray}
 %%%%%%%%%
 The accretion disks around planets therefore emit X-ray radiation. 
-We estimate the scale of the ionized region by computing Stromgren radius of the accretion disk: 
+We estimate the scale of the ionized region by computing Stromgren radius of the accretion disk \citep{stromgren1939}: 
 %%%%%%%%%
 \begin{equation}
 R_{\rm stromgren} = \frac{3}{4\pi} \left( \frac{S}{n^2 \beta } \right)^{1/3}
 \end{equation}
 %%%%%%%%%
-where $S$ is the source rate of ionizing photons, $n$ is the density of hydrogen, and $\beta $ is the coefficient for recombination \memoYF{need to check}:
+where $S$ is the source rate of ionizing photons, $n$ is the density of hydrogen, and $\beta $ is the coefficient for recombination \memoYF{cite something}:
 % http://www.tapir.caltech.edu/~chirata/ay102/Photoionized.pdf
 % T \propto 4.3e-13 ( T /10^4 K )^-0.7
 %%%%%%%%%
 \begin{eqnarray}
-\beta &=& 4.3? \times 10^{-13} \; \left( \frac{T}{10^4 \;{\rm K}} \right) ^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} \\
-&\sim& 5.28 \times 10^{-14} \; \left( \frac{M_p}{M_J} \right)^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} 
+%\beta &=& 4.3? \times 10^{-13} \; \left( \frac{T}{10^4 \;{\rm K}} \right) ^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} \\
+\beta &=& 2.6 \times 10^{-13} \; \left( \frac{T}{10^4 \;{\rm K}} \right) ^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} \\
+&\sim& 2.74 \times 10^{-14} \; \left( \frac{M_p}{M_J} \right)^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} 
 \end{eqnarray}
 %%%%%%%%%
-The source rate is obtained by counting the number of photons whose energy is higher than 13.6~eV, the energy needed to ionize hydrogen atoms.
-As a result, \memoYF{need to check}
+The source rate is obtained by counting the number of photons whose energy is higher than 13.6~eV ($\lambda = $), the energy needed to ionize hydrogen atoms.
+As a result, 
 %%%%%%%%%
 \begin{eqnarray}
-S_* = 
+S_* \sim  
   \left\{
     \begin{array}{ll}
-      1.18 \times 10^{42} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
-      2.66 \times 10^{44} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
+      2 \times 10^{42} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
+      3 \times 10^{44} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
+    \end{array}. 
+  \right.
+\end{eqnarray}
+%%%%%%%%%
+Using the number density of hydrogen atoms given by equation (\ref{eq:n_normalized}), 
+%%%%%%%%%
+\begin{eqnarray}
+R_{\rm stromgren} \sim  
+  \left\{
+    \begin{array}{ll}
+      4 \;{\rm AU} & \;\;\;(M_p = M_J) \\
+      40 \;{\rm AU} & \;\;\;(M_p = 10 M_J)
     \end{array}
   \right.
 \end{eqnarray}
 %%%%%%%%%
-and the number density of hydrogen atoms are given by equation (\ref{eq:n_normalized}). 
-These values give \memoYF{need to check}
-%%%%%%%%%
-\begin{eqnarray}
-R_{\rm stromgren} = 
-  \left\{
-    \begin{array}{ll}
-      3 \;{\rm AU} & \;\;\;(M_p = M_J) \\
-      30 \;{\rm AU} & \;\;\;(M_p = 10 M_J)
-    \end{array}
-  \right.
-\end{eqnarray}
-%%%%%%%%%
-
+for a planet around a red giants at 5~AU. 
 
 We therefore expect that the X-ray emission from the accretion disk is enough to ionize the stellar wind.
 This implies that the stellar wind particles represented by (equation~\ref{eq:n}) are fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
@@ -1078,6 +1077,9 @@ Therefore, unless the density increases more drastically than $1/r^5$, the ratio
 
 In this paper, we propose that ``hot Jupiters'' around evolved stars (RGHJ) may be bright radio wave emitters, on the assumption of the simple empirical correlation between the radio emission and the kinetic input energy. 
 Massive stellar wind of red giants and AGB stars would put the kinetic energy into magnetospheres of distant Jovian planets, which could lead to the intrinsic bright radio emission, comparable to or greater than canonical hot Jupiters in close-in orbits. 
+
+% -
+% - the obstacle is not the ionization fraction but the plasma cut-off 
 
 The maximum radio emission we can expect to observe is limited by the plasma cut-off frequency of the stellar wind in the vicinity of the planets. 
 For a planet with the same magnetic moment as Jupiter, the maximum radio emission from the planets which can penetrate through the surrounding plasma is $\sim 10^{-3}$ Jy or $\sim 10^{-5}$ Jy at 10~pc and 100~pc, respectively.
