@@ -183,11 +183,17 @@ Planets with strong magnetic fields may generate radio or X-ray emission when in
 It is well known that Jupiter emits radio waves from its auroral region due to the cyclotron-maser instability \citep{zarka1998}.  % due to the acceleration of the plasmas. \memoYF{?}.
 Potentially, exoplanets can also generate radio emission through similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
 Observations of radio emission from Solar System planets imply an empirical relation that the radio intensity is proportional to the input solar wind flux going into each planetary magnetosphere, which is commonly referred to as the ``radiometric Bode's law'' \citep{desch+kaiser1984}. 
-Extrapolating this scaling to exoplanets, radio emission from exoplanetary systems have been estimated \citep{farrell1999,zarka2001,lazio2004,griesmeier2004,griesmeier2005,stevens2005,griesmeier2007a,griesmeier2007b,jardine2008,reiners2010}. \memoYF{in more detail}
-%Based on this law, it has been proposed that exoplanets in close-in orbits may be bright radio wave emitters because they are subjected to strong stellar wind and/or strong interstellar magnetic field, and thus can gain larger energy input. Motivated by such speculations, spectral radio intensity from known exoplanets have been estimated  \citep{farrell1999,zarka2001,lazi o2004,griesmeier2004,griesmeier2007a,griesmeier2007b,jardine2008,reiners2010,}. 
-In addition, young planetary systems where stellar wind activity is strong have also been considered \citep{griesmeier2005}. 
+Extrapolating this scaling to exoplanets, radio emission from exoplanetary systems have been examined. 
+\citet{farrell1999,zarka2001,lazio2004} pointed out that a few of the known exoplanetary systems may have radio flux of $\sim $1 mJy level, due to the small orbital distance of the planet and/or the larger planetary mass. 
+%\citet{griesmeier2004} modeled in detail the evolution of atmosphere and magnetic field of the tidally-locked close-in stars and found that 
+\citet{stevens2005} gave improved estimates of the stellar mass-loss rate based on X-ray flux and re-evaluated the radio flux of known exoplanetary systems. 
+\citet{griesmeier2005} took account of the high stellar activity in the early stage of the planetary system and proposed that the young system would be good candidates to search for radio emission. 
+\citet{griesmeier2007a, griesmeier2007b} discussed the effects of the detailed model of stellar wind property in the proximity of the stars. They considered not only the kinetic energy of the stellar wind but also the magnetic energy of the stellar wind and coronal mass ejection (CME). 
+Note that in these paperes, the scaling relation of planetary magnetic fields  differ from paper to paper.    
+In \citet{reiners2010}, the authors adopted new scaling relation of planetary magnetic field based on \citet{christensen2009}.
+\citet{jardine2008} modeled the reconnection between the magnetic fields of close-in planets and of the star, which would accelerate electrons and produce radio emission.  
 Although observational searches for these radio signatures are underway, no clear detection has been claimed \citep{bastian2000,george2007,stroe2012,hallinan2013,murphy2015}, 
-though there are some promising intial results \citep{lecavelier_et_al2013,sirothia2014}. 
+though there are some promising initial results \citep{lecavelier_et_al2013,sirothia2014}. 
 
 When stars less than $\sim$8~$M_\sun$ evolve off the main sequence,
 they evolve through the red-giant branch (RGB) and the
@@ -209,7 +215,7 @@ In \S2, we describe our assumptions for the stellar wind, planetary magnetospher
 \S3 presents an estimate of the spectral radio intensity of RGHJs and compares the predictions with what might be expected from canonical hot Jupiters as well as those from Jupiter-twins.
 \S4 gives predictions for the signals from evolved systems within 400 pc, taking account of the intrinsic radio emission from the host evolved stars. Considering the sensitivity of the current and future radio instruments, we argue that SKA, and perhaps LOFAR-HBA as well, would be capable of detecting these signals within a reasonable integration time. 
 %In \S5, we discuss the usefulness of radio emission in exploring Jupiter-like planets around evolved stars. 
-In \S5, we mention the effects of canceling magnetic fields resulting from the plasmas spiraling in the planetary magnetosphere.  
+In \S5, we mention the effects of canceling magnetic field which results from the plasmas spiraling in the planetary magnetosphere.  
 Finally, \S6 concludes the paper with a brief summary. 
 
 %Roughly 20\% of the more than 700 \memoYF{check!} currently known exoplanets around main-sequence stars \footnote{See online catalogs such as http://www.openexoplanetcatalogue.com/ \citep{rein2012}, http://exoplanet.eu \citep{schneider_et_al2011}, or http://exoplanets.org \citep{wright_et_al2011} for up-to-date lists.} have masses greater than half of Jupiter's, orbital radii greater than 1~AU, and will become hot Jupiters (i.e., for the present purposes, this means they will receive at least as much irradiation as the currently known hot Jupiters/Neptunes \citep{spiegel+madhusudhan2012}. 
@@ -346,9 +352,10 @@ Therefore,
 
 Based on equations (\ref{eq:scale_Mdot}) and (\ref{eq:scale_v}), the number density of the stellar wind (equation (\ref{eq:n})) are normalized as follows:
 %%%%%%%%%% 
-\begin{equation}
-n = 1.80 \times 10^6 \; {\rm cm^{-3}} \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30\; {\rm km}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \label{eq:n_normalized}
-\end{equation}
+\begin{eqnarray}
+n &=& 1.80 \times 10^6 \; {\rm cm^{-3}} \\
+&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30\; {\rm km}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \label{eq:n_normalized}
+\end{eqnarray}
 %%%%%%%%%% 
 
 
@@ -977,8 +984,9 @@ Indeed, several processes cause the time variability of radio emission from exop
 If the planetary spin axis is misaligned to the planetary magnetic axis, like Jupiter, the radio intensity will display sinusoidal modulation synchronously to the spin period.
 %
 
-\memoYF{Modulation due to the presence of satellites (a few hours $\sim $)?} 
-%
+\paragraph{Modulation due to the presence of satellites (a few hours $\sim $)}
+ 
+
 
 \paragraph{Variability of stellar wind due to stellar oscillation (day $\sim $)?}
 Based on the correlation between the planetary radio emission and the solar wind plasma density also suggest that the radio emission from the planet around the evolved stars, which typically oscillate, are time variable.
