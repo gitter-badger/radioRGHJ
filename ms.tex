@@ -733,11 +733,11 @@ F_{\nu} &<& 1.30 \times 10^{-3}~\mbox{Jy} \left( \frac{d}{10~\mbox{pc}} \right)^
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section, we discuss the observability of the estimated radio emission. 
-An obvious obstacle is the intrinsic radio emission from host red giant stars themselves; if they are larger than radio flux from the planets, there is no way to identify the latter.
+An obvious potential obstacle is the intrinsic radio emission from host red giant stars themselves; if they are larger than radio flux from the planets, there is no way to identify the latter.
 We will see in \S\ref{ss:RGradio} that radio flux from the planets will probably be larger in a certain parameter range. 
 Then, we estimate the radio emission of Jupiter-twin around known M giants in \S\ref{ss:actualMgiants}. 
 In \S\ref{ss:detectability}, we estimate the sensitivities and limitations of several current and future
-radio instruments at lower frequencies.
+radio instruments at relevant frequencies.
 Finally, \S\ref{ss:timevariability} discusses the expected time variability of the radio emission as a mean to discern the signals from the background noise. 
 
 
@@ -746,44 +746,48 @@ Finally, \S\ref{ss:timevariability} discusses the expected time variability of t
 \label{ss:RGradio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The radio intensity of evolved stars in the range of 10~MHz and 1~GHz is not constrained through observation. 
-Above 1~GHz, there are several observations.
-For example, \citet{gorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3,910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
-
-We estimate the thermal radio flux from the host star to be consistent with these observed data and by extrapolating to the lower frequency range with a simple power law:
-%%%
-\begin{eqnarray}
-\nonumber f_{\star }(\nu ) &\sim & (0.4-1.375) \times 10^{-3} ~\mbox{Jy} \\
-&& \times \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
-\end{eqnarray}
-%%%
-Constant property wind model \citep{wright1975,panagia1975,olnon1975} predicts $\alpha = 0.6$, while observations suggested that the power index $\alpha $ is steeper than 0.6 \citep{gorman2013}. 
-
-Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant stars with 100~$R_{\odot }$, both of which is placed at 10 pc away. 
-As this figure indicates, even if the radio emission from the red giant itself has a relatively shallow spectral index, the radio emission from the RGHJ still dominates in the 10-200~MHz range. 
-Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
-
-% Neil's addition
-
 Over the last four decades there have been numerous radio continuum observations of nearby red giants, many with the aim of understanding the extended atmospheres and mass-loss mechanisms of K- and M-type giants~\citep[e.g.,][]{Newell1982, Knapp1995, Skinner1997, Lim1998, OGorman2013}.
-Almost all observations have been carried out at wavelengths of 6 cm and below, probing thermal Bremsstrahlung emission from the large, partially ionized envelopes surrounding the giant stars~\citep{drake1986}.
+Almost all observations have been carried out 
+%at wavelengths of 6 cm and below, 
+at frequency of 5 GHz or above, 
+probing thermal Bremsstrahlung emission from the large, partially ionized envelopes surrounding the giant stars~\citep{drake1986}.
 The spectral index of this emission is of order unity, with a range of reported values for various sources between 0.8 and 1.6~\citep{OGorman2013}.
 
-Only two published studies describe attempts to detect continuum emission from single (non-binary) red giant stars at wavelengths above 20 cm ($L$ band); both yielded null results.
+Only two published studies describe attempts to detect continuum emission from single (non-binary) red giant stars 
+%at wavelengths above 20 cm 
+at frequencies below 1 GHz ($L$ band); both yielded null results.
 First, a program that observed a sample of nine M-type giants at 430 MHz with the Arecibo Telescope failed to detect any of the sources down to flux density 10 mJy~\citep{Fix1976}.
 Later, with the Molonglo Observatory Synthesis Telescope (MOST), a sample of eight K- and M-type giants were observed at 843 MHz; the upper limits of their flux densities were placed at approximately 1 mJy~\citep{Beasley1992}.
 Current facilities could achieve far deeper sensitivity on similar targets.
-For example, as listed in Table~\ref{tab:sens}, the Giant Metrewave Radio Telescope (GMRT) at 150 MHz reaches a 
-sensitivity better than 0.5~mJy in under an hour.
+For example, as listed in Table~\ref{tab:sens}, the Giant Metrewave Radio Telescope (GMRT) at 150 MHz reaches a sensitivity better than 0.5~mJy in under an hour.
 However, any re-attempts to detect single red giants at wavelengths near 1 meter remain to be presented in the literature.
 
 The only red giants that have been detected at meter wavelengths are those in interacting binary systems like those of the RS CVn type.
 For example, van den Oord and de Bruyn detected plasma maser emission from II Pegasi at 360 MHz and 609 MHz with the WSRT~\citep{vandenOord1994}.
 Although single dwarf-type main sequence stars are also known to exhibit bright, coherent radio flares~\citep{Bastian1990}, no analog to this non-thermal emission process has been proposed to exist for evolved stars.
 
-Altogether, we lack firm observational constraints on the brightnesses of M giants near 1-m wavelengths.
-However, assuming thermal Bremsstrahlung emission continues to dominate in this wavelength regime, we can extrapolate down from the reported centimeter flux densities, using the specific spectral index when available.
-In this case, for example, extrapolating from the 0.4 mJy flux density of $\alpha$ Ori at 1.46 GHz, and using its spectral index 1.32~\citep{Newell1982}, we arrive at an estimated flux density of 0.04 mJy at 300 MHz.
+Altogether, we lack firm observational constraints on the brightnesses of M giants near %1-m wavelengths.
+30-300 MHz frequencies. 
+
+However, assuming thermal Bremsstrahlung emission continues to dominate in this wavelength regime, we can extrapolate down from the reported centimeter flux densities, using the specific spectral index when available. 
+%In this case, for example, extrapolating from the 0.4 mJy flux density of $\alpha$ Ori at 1.46 GHz, and using its spectral index 1.32~\citep{Newell1982}, we arrive at an estimated flux density of 0.04 mJy at 300 MHz. 
+% YF: This is consistent with the following equation, so I removed it to avoid redundancy. 
+%
+\citet{OGorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3,910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
+Using these data, we extrapolate the radio flux from the host star to the lower frequency range with a simple power law as follows:
+%%%
+\begin{eqnarray}
+\nonumber f_{\star }(\nu ) &\sim & (0.4-1.4) \times 10^{-3} ~\mbox{Jy} \\
+&& \times \left( \frac{d}{10 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
+\end{eqnarray}
+%%%
+where the power index $\alpha $ is order of unity. 
+
+Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
+The spectral shape is modeled by simply scaling the Jovian radio spectra e.g. Figure 8 of \citet{zarka_et_al2004}. 
+The continuum from the star in the case of $\alpha =0.6$ is shown as an extreme case; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
+As Figure \ref{fig:cartoon} indicates, with the reasonable range of spectral index, radio emission from the stars is by order of magnitude smaller than the expected radio flux from RGHJs at frequencies below 300~MHz. 
+For less massive planets (with weaker magnetic fields), the distinction is even clearer, as the peak flux is larger and the peak frequencies is smaller. Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
