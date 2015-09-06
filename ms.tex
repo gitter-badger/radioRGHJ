@@ -98,47 +98,45 @@
 
 \author{
 %
-Yuka Fujii\altaffilmark{0} \\
+Yuka Fujii\altaffilmark{1} 
 %
-David S. Spiegel\altaffilmark{1,2} \\
+David S. Spiegel\altaffilmark{2,3}
 %
-{\bf and some order:} \\
+Tony Mroczkowski\altaffilmark{4,5}
 %
-Jason Nordhaus\altaffilmark{3,4} \\
+Jason Nordhaus\altaffilmark{6,7}\\
 %
-Nikku Madhusudhan\altaffilmark{5} \\
+Neil T. Zimmerman\altaffilmark{8}
 %
-Mehrdad Mirbabayi\altaffilmark{1} \\
+Aaron Parsons\altaffilmark{9}
 %
-Aaron Parsons\altaffilmark{6} \\
+Nikku Madhusudhan\altaffilmark{10}
 %
-Tony Mroczkowski\altaffilmark{7,8} \\
-%
-Neil T. Zimmerman\altaffilmark{9}
+Mehrdad Mirbabayi\altaffilmark{2}
 }
 
-\affil{$^0$Earth-Life Science Institute, Tokyo Institute of Technology, 
+\affil{$^1$Earth-Life Science Institute, Tokyo Institute of Technology, 
   Tokyo, JAPAN, 152-8550}
   
-\affil{$^1$Astrophysics Department, Institute for Advanced Study,
+\affil{$^2$Astrophysics Department, Institute for Advanced Study,
   Princeton, NJ 08540}
 
-\affil{$^2$Research \& Development, Sum Labs,
+\affil{$^3$Research \& Development, Sum Labs,
   New York, NY  10001}
 
-\affil{$^3$Department of Science and Mathematics, National Technical Institute for the Deaf, Rochester Institute of Technology, Rochester, NY 14623}
+\affil{$^4$National Research Council Fellow}
 
-\affil{$^4$Center for Computational Relativity and Gravitation, Department of Mathematics, Rochester Institute of Technology, Rochester, NY 14623}
+\affil{$^5$Naval Research Laboratory, 4555 Overlook Ave SW, Washington, DC 20375}
 
-\affil{$^5$Astronomy Department, University of Cambridge, UK}
+\affil{$^6$Department of Science and Mathematics, National Technical Institute for the Deaf, Rochester Institute of Technology, Rochester, NY 14623}
 
-\affil{$^6$Astronomy Department, University of California Berkeley}
+\affil{$^7$Center for Computational Relativity and Gravitation, Department of Mathematics, Rochester Institute of Technology, Rochester, NY 14623}
 
-\affil{$^7$National Research Council Fellow}
+\affil{$^8$Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218}
 
-\affil{$^8$Naval Research Laboratory, 4555 Overlook Ave SW, Washington, DC 20375}
+\affil{$^9$Astronomy Department, University of California Berkeley}
 
-\affil{$^9$Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218}
+\affil{$^10$Astronomy Department, University of Cambridge, UK}
 
 
 \vspace{0.5\baselineskip}
@@ -357,13 +355,14 @@ n &=& 1.80 \times 10^6 \; {\rm cm^{-3}} \\
 &&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2}. \label{eq:n_normalized}
 \end{eqnarray}
 %%%%%%%%%% 
+\memoYF{check the values above}
 
 As discussed in \citet{ignace2010}, the ionization fraction of the stellar wind of evolved stars are supposedly as low as $\sim 10^{-3}$\memoYF{cite something}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
 However, at this stage, the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
 \citet{spiegel+madhusudhan2012} computed the accretion luminosity $L_{\rm acc}$ and the temperature $T_{\rm acc}$ are: 
 %%%%%%%%%
 \begin{eqnarray}
-L_{\rm acc} \sim &&  10^{28} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right)  \\
+L_{\rm acc} \sim &&  10^{28} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right)  \notag \\
 && \times \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right) \\
 %
 T_{\rm acc} \sim && 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_J} \right) \\
@@ -443,7 +442,7 @@ f_{\rm cyc} = \frac{eB}{2\pi m_e} \approx 27.9 {\rm~MHz} \left( \frac{B}{10 \rm~
 %%%%%%%%%%
 where $e$ and $m_e$ are the charge and mass of the electron, respectively.
 
-Radio emission from the planet is observable from ground only when the maximum frequency is larger than the plasma frequency of Earth's ionosphere $f_{\rm plasma}^\oplus$ and the maximum plasma frequency along the line of sight $f_{\rm plasma}^{\rm los}$.
+Radio emission from the planet is observable from ground only when the frequencies of the radio emission are larger than the plasma frequency of Earth's ionosphere $f_{\rm plasma}^\oplus$ and the maximum plasma frequency along the line of sight $f_{\rm plasma}^{\rm los}$.
 The plasma frequency may be expressed as
 \begin{eqnarray}
 f_{\rm plasma} & = & \sqrt{\frac{n_e e^2}{\pi m_e}} \\
@@ -631,12 +630,10 @@ Depending on the modeling of magnetic field strength, there is also a speculatio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[bp]
-   \plotonesc{radio_emission_Mdot1e-8_constRp_christensen.pdf}
-   \plotonesc{radio_emission_Mdot1e-5_constRp_christensen.pdf}
-   \caption{[{\bf New version: based on scaling relationship of Christensen 2010}] Top panel: Intensity of radio emission (in the unit of Jy) from a companion to a RG star (left) and an AGB star at 10 pc.
-The hashed region with vertical lines are not observable because of the plasma frequency cut-off of Earth's ionosphere. 
-he hashed region with horizontal lines are not observable because of the plasma frequency cut-off of the stellar wind plasma in the vicinity of the companion.
-Bottom panel: cyclotron frequency, i.e., the frequency of radio emission. }
+%   \plotonesc{radio_emission_Mdot1e-8_constRp_christensen.pdf}
+%   \plotonesc{radio_emission_Mdot1e-5_constRp_christesnsen.pdf}
+	\plotonesc{radio_emission_ChristensenAubert_multiplecriteria.pdf}
+   \caption{Radio flux in unit of Jy from a planetary companion to a red giant with mass loss rate $10^{-8} M_{\odot }/\mbox{yr}$ (top) and an AGB star with mass loss rate $10^{-5} M_{\odot }/\mbox{yr}$ (bottom). The systems are located at 100 pc away. The doubly hashed regions show the parameter space where the planetary radio emission would not be observable at all because the maximum frequency of the emission (cyclotron frequency at the planetary surface, $f_{\rm cyc}$) is below the plasma frequency cut-off, $f_{\rm plasma}^{\rm los}$. The hashed regions with vertical lines show the parameter space where the frequencies of bulk radio emission, estimated as $\sim 0.1f_{\rm cyc}$, is below $f_{\rm plasma}^{\rm los}$, i.e., the large part of the emission would not be able to get out of the system. }
   \label{fig:radio}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
