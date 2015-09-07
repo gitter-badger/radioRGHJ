@@ -393,8 +393,8 @@ As a result,
 S_* \sim  
   \left\{
     \begin{array}{ll}
-      2 \times 10^{42} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
-      3 \times 10^{44} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
+      2 \times 10^{35} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
+      3 \times 10^{37} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
     \end{array}. 
   \right.
 \end{eqnarray}
@@ -405,8 +405,8 @@ Using the number density of hydrogen atoms given by equation (\ref{eq:n_normaliz
 R_{\rm stromgren} \sim  
   \left\{
     \begin{array}{ll}
-      4 \;{\rm AU} & \;\;\;(M_p = M_J) \\
-      40 \;{\rm AU} & \;\;\;(M_p = 10 M_J)
+      40 ~R_J & \;\;\;(M_p = M_J) \\
+      400 ~R_J & \;\;\;(M_p = 10 M_J)
     \end{array}
   \right.
 \end{eqnarray}
@@ -497,8 +497,7 @@ In the case of M-type giant EK boo, surface magnetic field $\sim 0.1-10 $G has b
 However, because of the lack of universal understanding of the stellar magnetic field, we leave the magnetic model of radio emission for evolved stars for future work. 
 
 In reality, the total power of Jovian auroral emission varies greatly over time: $1.3\times 10^{10}$ W for the average, $3.2\times 10^{10}$ W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. 
-Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}.
-\memoYF{reconsidering...}
+Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}. 
 
 The radius of the magnetic stand-off point, $r_s$, is obtained based on the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
@@ -761,10 +760,14 @@ Using these data, we extrapolate the radio flux from the host star to the lower 
 where the power index $\alpha $ is order of unity. 
 
 Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
+Note that the thermal contribution from accretion disk is negligible in this figure. 
 The spectral shape is modeled by simply scaling the Jovian radio spectra e.g. Figure 8 of \citet{zarka_et_al2004}. 
 The continuum from the star in the case of $\alpha =0.6$ is shown as an extreme case; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
 As Figure \ref{fig:cartoon} indicates, with the reasonable range of spectral index, radio emission from the stars is by order of magnitude smaller than the expected radio flux from RGHJs at frequencies below 300~MHz. 
-For less massive planets (with weaker magnetic fields), the distinction is even clearer, as the peak flux is larger and the peak frequencies is smaller. Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
+For less massive planets (with weaker magnetic fields), the distinction is even clearer, as the peak flux is larger and the peak frequencies is smaller. 
+
+
+Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -965,12 +968,13 @@ Another key is that auroral radio emission from planets is not a static source b
 The potential factors that cause time variability of the auroral radio emission are  listed below. 
 
 \paragraph{Modulation due to planetary spin rotation (a few hours $\sim $)}
-... \memoYF{write here (YF)}
+The probability of the occurrence of the Jovian radio burst is correlated with the spin rotation phase \citep{dessler1983} due to the misalignment between the magnetic axis and the spin axis. 
 %
-\paragraph{Modulation due to the presence of satellites (a few hours $\sim $)}
-... \memoYF{write here (YF)}
+\paragraph{Modulation due to the presence of satellites (a few days $\sim $)}
+The occurrence probability of Jovian radio burst is affected by the location of Io as well \citep{dessler1983}, because the presence of Io inputs plasmas into the system. 
+Likewise, if the exoplanets have moons that emit plasmas, then the radio flux is  modulated by the orbital motion of the moon \citep[see e.g.,][]{noyola2014}. 
 
-\paragraph{Variability of stellar wind due to stellar oscillation (months $\sim $)?}
+\paragraph{Variability of stellar wind (months $\sim $)?}
 Based on the correlation between the planetary radio emission and the solar wind plasma density also suggest that the radio emission from the planet around the evolved stars, which typically oscillate, are time variable.
 \memoYF{To Jason: time variability?}
 %
@@ -995,11 +999,17 @@ The probability of the latter one, secondary eclipse, is $\sim a/R_\star \sim 9$
 
 \memoYF{Need to elaborate. References are needed. }
 
-For now, it is difficult to detect planetary-mass companions around low-mass evolved stars through other means. The major difficulty in radial velocity measurement is the stellar pulsation (rms of $>30m/s$ for K giants). If the orbital period is long enough compared to the period of pulsation, it is possible to average out the pulsation and detect radial velocity of planetary component, but this requires long period monitoring. For transit observation Pulsation also contributes to the noise in detecting transit signals \memoYF{?} and besides the transit signals would be as low as 1ppm. Due to the great luminosity of the host star, direct imaging is also difficult \memoYF{?}. Thus, for the time being, one would have to aim at discovering planetary companions around evolved stars, rather than targeting at known planetary systems. 
+So far, more than 60 exoplanets are found around evolved stars \citep[e.g.][and references therein]{trifonov2015}. 
+Therefore, one possible strategy is to target at the know planetary systems.  
+One complication of the radial velocity observations of evolved stars is the high degree of jitter due to chromospheric activities and stellar pulsations, which typically produces RV errors of $\sim 30 \mbox[m/s]$. 
+Therefore, there are some parameter spaces where current radial velocity observations cannot survey. For this parameter space, radio emission would work as a  probe to discover the possible sub-stellar companions. 
+
+%For now, it is difficult to detect planetary-mass companions around low-mass evolved stars through other means. 
+%The major difficulty in radial velocity measurement is the stellar pulsation (rms of $>30m/s$ for K giants). If the orbital period is long enough compared to the period of pulsation, it is possible to average out the pulsation and detect radial velocity of planetary component, but this requires long period monitoring. For transit observation Pulsation also contributes to the noise in detecting transit signals \memoYF{?} and besides the transit signals would be as low as 1ppm. Due to the great luminosity of the host star, direct imaging is also difficult \memoYF{?}. Thus, for the time being, one would have to aim at discovering planetary companions around evolved stars, rather than targeting at known planetary systems. 
 
 Once radio emission is detected, it provides some useful information through both time dependence and frequency dependence. 
 As mentioned in \S\ref{ss:timevariability}, auroral radio flux significantly varies in time in association with several physical processes. In turn, we could utilize the time variability to characterize the system. For example, if the system is near edge-on, we will observe the time variability corresponding to orbital period, which can tell us the orbital distance of the planets. 
-It the time resolution of the observation is sufficiently high (with full SKA, for instance), the time variation associated with planetary spin rotation could also be detectable (This is an advantage of searching for RGHJs rather than canonical hot Jupiters, because the latter is likely to be tidally locked to the stars).  
+If the time resolution of the observation is sufficiently high (with full SKA, for instance), the time variation associated with planetary spin rotation could also be detectable (This is an advantage of searching for RGHJs rather than canonical hot Jupiters, because the latter is likely to be tidally locked to the stars).  
 
 If the spectra are obtained, the upper cut-off frequency of the radio spectra will imply us the magnetic field strengths of the planetary surface. Such information would be most useful if we could follow up the system by radial velocity to get constraints on the planetary mass, because once both magnetic field strength and the planetary mass is constrained, the proposed scaling law of planetary dynamo may be contested. 
 On the other hand, the lower cut-off frequency indicates the plasma frequency in the vicinity of the planets, which might be used as a probe of the density of the stellar wind at the planetary orbit. 
@@ -1012,7 +1022,8 @@ On the other hand, the lower cut-off frequency indicates the plasma frequency in
 
 In principle, if the expected luminosity function (LF) and positional distribution of possible RGHJ emitters were known one could estimate the likelihood of detecting RGHJs in radio surveys. For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N(L) \propto L^{-\alpha}$, where, $N(L)$ is the number of objects per unit volume with a luminosity of L, and assume an isotropic distribution of sources in the observed volume. Under these assumptions, the observed flux from the brightest source in a volume limited sample will scale with distance as $f_{\rm max} \propto d^{\frac{3}{\alpha} - 2}$, implying that the likelihood of finding the brightest source increases with distance for $\alpha < 3/2$. Such a scenario would indeed be favorable to detect RGHJs given that AGB stars, which are good sources for bright RGHJs due to their high mass loss rates, are rare and would require probing out to larger distances for detection. For example, for an $N(L) \propto L^{-1}$ the brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. Therefore, it is important to determine the LF for RGHJ emitters in order to estimate their detectability. 
 
-Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. As discussed in section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate as $\dot{M}_\star^{1/2}$. Recent empirical studies of stellar mass-loss rates, including those for evolved giant stars, suggest $\dot{M}_\star \propto L_\star^{7.5/4} (R_\star/M_\star)(1+A/g_\star)$, where, $L_\star$,  $R_\star$, $M_\star$, and $g_\star$ are the stellar luminosity, radius, mass, and gravity, respectively, and $A  = g_\odot/4300$ is a constant (Schr\"{o}der \& Cuntz~2005,2007). Therefore, the luminosity of a RGHJ varies nearly linearly as the luminosity of the host star, and is given by $L \propto L_\star^{7.5/8} [(R_\star/M_\star)(1+A/g_\star)]^{1/2}$. Therefore, the LF of giant host stars is an essential ingredient for determining the LF for RGHJs which future surveys would need to consider. 
+Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. As discussed in section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate as $\dot{M}_\star^{1/2}$. Recent empirical studies of stellar mass-loss rates, including those for evolved giant stars, suggest $\dot{M}_\star \propto L_\star^{7.5/4} (R_\star/M_\star)(1+A/g_\star)$, where, $L_\star$,  $R_\star$, $M_\star$, and $g_\star$ are the stellar luminosity, radius, mass, and gravity, respectively, and $A  = g_\odot/4300$ is a constant \citep{schroder2005,schroder2007}. 
+Therefore, the luminosity of a RGHJ varies nearly linearly as the luminosity of the host star, and is given by $L \propto L_\star^{7.5/8} [(R_\star/M_\star)(1+A/g_\star)]^{1/2}$. Therefore, the LF of giant host stars is an essential ingredient for determining the LF for RGHJs which future surveys would need to consider. 
 
 
 
@@ -1115,7 +1126,8 @@ Once the planetary radio emission is detected, ...\memoYF{write here}.
 YF is supported from the Grant-in-Aid No. 25887024 by the Japan Society for the Promotion of Science.
 DSS gratefully acknowledges support from a fellowship from the AMIAS group.
 We thank David Hogg for encouraging us to pursue calculations of explanetary radio emission.
-NM acknowledges support from [???].
+NM acknowledges support from [???]. 
+YF greatly acknowledges insightful and helpful discussions with Tomoki Kimura and Hiroki Harakawa. 
 The portion of this research for which TM is responsible was performed while he held a National Research Council Research Associateship Award at the Naval Research Laboratory (NRL).
 Basic research in radio astronomy at NRL is supported by 6.1 Base funding.
 
